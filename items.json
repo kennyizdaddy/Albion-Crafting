@@ -1,0 +1,3035 @@
+[
+  {
+    "name": "Battleaxe",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 8.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 16.0
+      }
+    ]
+  },
+  {
+    "name": "Bear Paws",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 12.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 20.0
+      },
+      {
+        "name": "Adept's Keeper Axeheads",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Carrioncaller",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 12.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 20.0
+      },
+      {
+        "name": "Adept's Morgana Halberd Head",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Crystal Reaper",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 12.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 20.0
+      },
+      {
+        "name": "Weapon-specific Tier 4 artifact",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Halberd",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 12.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 20.0
+      }
+    ]
+  },
+  {
+    "name": "Infernal Scythe",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 12.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 20.0
+      },
+      {
+        "name": "Adept's Hellish Sicklehead",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Realmbreaker",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 12.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 20.0
+      },
+      {
+        "name": "Adept's Avalonian Battle Memoir",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "The Hand of Khor",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 12.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 20.0
+      },
+      {
+        "name": "Weapon-specific Tier 4 artifact",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Forge Hammers",
+    "materials": [
+      {
+        "name": "Tier 4 Bar",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 12.0
+      },
+      {
+        "name": "Adept's Hellish Hammer Heads",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Great Hammer",
+    "materials": [
+      {
+        "name": "Tier 4 Bar",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 12.0
+      }
+    ]
+  },
+  {
+    "name": "Grovekeeper",
+    "materials": [
+      {
+        "name": "Tier 4 Bar",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 12.0
+      },
+      {
+        "name": "Adept's Engraved Log",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Hammer",
+    "materials": [
+      {
+        "name": "Tier 4 Bar",
+        "qty": 24.0
+      }
+    ]
+  },
+  {
+    "name": "Hand of Justice",
+    "materials": [
+      {
+        "name": "Tier 4 Bar",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 12.0
+      },
+      {
+        "name": "Adept's Massive Metallic Hand",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Polehammer",
+    "materials": [
+      {
+        "name": "Tier 4 Bar",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 12.0
+      }
+    ]
+  },
+  {
+    "name": "Tombhammer",
+    "materials": [
+      {
+        "name": "Tier 4 Bar",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 12.0
+      },
+      {
+        "name": "Adept's Ancient Hammer Head",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Truebolt Hammer",
+    "materials": [
+      {
+        "name": "Tier 4 Bar",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 12.0
+      },
+      {
+        "name": "Weapon-specific Tier 4 artifact",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Bedrock Mace",
+    "materials": [
+      {
+        "name": "Tier 4 Bar",
+        "qty": 16.0
+      },
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 8.0
+      },
+      {
+        "name": "Adept's Runed Rock",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Camlann Mace",
+    "materials": [
+      {
+        "name": "Tier 4 Bar",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 12.0
+      },
+      {
+        "name": "Adept's Imbued Mace Head",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Dreadstorm Monarch",
+    "materials": [
+      {
+        "name": "Tier 4 Bar",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 12.0
+      },
+      {
+        "name": "Weapon-specific Tier 4 artifact",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Heavy Mace",
+    "materials": [
+      {
+        "name": "Tier 4 Bar",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 12.0
+      }
+    ]
+  },
+  {
+    "name": "Incubus Mace",
+    "materials": [
+      {
+        "name": "Tier 4 Bar",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 12.0
+      },
+      {
+        "name": "Adept's Infernal Mace Head",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Mace",
+    "materials": [
+      {
+        "name": "Tier 4 Bar",
+        "qty": 16.0
+      },
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 8.0
+      }
+    ]
+  },
+  {
+    "name": "Morning Star",
+    "materials": [
+      {
+        "name": "Tier 4 Bar",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 12.0
+      }
+    ]
+  },
+  {
+    "name": "Oathkeepers",
+    "materials": [
+      {
+        "name": "Tier 4 Bar",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 12.0
+      },
+      {
+        "name": "Adept's Broken Oaths",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Battle Bracers",
+    "materials": [
+      {
+        "name": "Tier 4 Leather",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 12.0
+      }
+    ]
+  },
+  {
+    "name": "Brawler Gloves",
+    "materials": [
+      {
+        "name": "Tier 4 Leather",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 12.0
+      }
+    ]
+  },
+  {
+    "name": "Fists of Avalon",
+    "materials": [
+      {
+        "name": "Tier 4 Leather",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 12.0
+      },
+      {
+        "name": "Weapon-specific Tier 4 artifact",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Forcepulse Bracers",
+    "materials": [
+      {
+        "name": "Tier 4 Leather",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 12.0
+      },
+      {
+        "name": "Weapon-specific Tier 4 artifact",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Hellfire Hands",
+    "materials": [
+      {
+        "name": "Tier 4 Leather",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 12.0
+      },
+      {
+        "name": "Weapon-specific Tier 4 artifact",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Ravenstrike Cestus",
+    "materials": [
+      {
+        "name": "Tier 4 Leather",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 12.0
+      },
+      {
+        "name": "Weapon-specific Tier 4 artifact",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Spiked Gauntlets",
+    "materials": [
+      {
+        "name": "Tier 4 Leather",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 12.0
+      }
+    ]
+  },
+  {
+    "name": "Ursine Maulers",
+    "materials": [
+      {
+        "name": "Tier 4 Leather",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 12.0
+      },
+      {
+        "name": "Weapon-specific Tier 4 artifact",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Arclight Blasters",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 12.0
+      },
+      {
+        "name": "Weapon-specific Tier 4 artifact",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Boltcasters",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 12.0
+      },
+      {
+        "name": "Adept's Hellish Bolts",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Crossbow",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 12.0
+      }
+    ]
+  },
+  {
+    "name": "Energy Shaper",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 12.0
+      },
+      {
+        "name": "Adept's Humming Avalonian Whirligig",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Heavy Crossbow",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 12.0
+      }
+    ]
+  },
+  {
+    "name": "Light Crossbow",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 16.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 8.0
+      }
+    ]
+  },
+  {
+    "name": "Siegebow",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 12.0
+      },
+      {
+        "name": "Adept's Alluring Bolts",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Weeping Repeater",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 12.0
+      },
+      {
+        "name": "Adept's Lost Crossbow Mechanism",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Broadsword",
+    "materials": [
+      {
+        "name": "Tier 4 Bar",
+        "qty": 16.0
+      },
+      {
+        "name": "Tier 4 Leather",
+        "qty": 8.0
+      }
+    ]
+  },
+  {
+    "name": "Carving Sword",
+    "materials": [
+      {
+        "name": "Tier 4 Bar",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Leather",
+        "qty": 12.0
+      },
+      {
+        "name": "Adept's Demonic Blade",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Clarent Blade",
+    "materials": [
+      {
+        "name": "Tier 4 Bar",
+        "qty": 16.0
+      },
+      {
+        "name": "Tier 4 Leather",
+        "qty": 8.0
+      },
+      {
+        "name": "Adept's Bloodforged Blade",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Claymore",
+    "materials": [
+      {
+        "name": "Tier 4 Bar",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Leather",
+        "qty": 12.0
+      }
+    ]
+  },
+  {
+    "name": "Dual Swords",
+    "materials": [
+      {
+        "name": "Tier 4 Bar",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Leather",
+        "qty": 12.0
+      }
+    ]
+  },
+  {
+    "name": "Galatine Pair",
+    "materials": [
+      {
+        "name": "Tier 4 Bar",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Leather",
+        "qty": 12.0
+      },
+      {
+        "name": "Adept's Cursed Blades",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Infinity Blade",
+    "materials": [
+      {
+        "name": "Tier 4 Bar",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Leather",
+        "qty": 12.0
+      },
+      {
+        "name": "Weapon-specific Tier 4 artifact",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Kingmaker",
+    "materials": [
+      {
+        "name": "Tier 4 Bar",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Leather",
+        "qty": 12.0
+      },
+      {
+        "name": "Adept's Remnants of the Old King",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Bow",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 32.0
+      }
+    ]
+  },
+  {
+    "name": "Bow of Badon",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 32.0
+      },
+      {
+        "name": "Adept's Carved Bone",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Longbow",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 32.0
+      }
+    ]
+  },
+  {
+    "name": "Mistpiercer",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 32.0
+      },
+      {
+        "name": "Adept's Immaculately Crafted Riser",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Skystrider Bow",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 32.0
+      },
+      {
+        "name": "Weapon-specific Tier 4 artifact",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Wailing Bow",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 32.0
+      },
+      {
+        "name": "Adept's Demonic Arrowheads",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Warbow",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 32.0
+      }
+    ]
+  },
+  {
+    "name": "Whispering Bow",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 32.0
+      },
+      {
+        "name": "Adept's Ghastly Arrows",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Bloodletter",
+    "materials": [
+      {
+        "name": "Tier 4 Bar",
+        "qty": 16.0
+      },
+      {
+        "name": "Tier 4 Leather",
+        "qty": 8.0
+      },
+      {
+        "name": "Adept's Hardened Debole",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Bridled Fury",
+    "materials": [
+      {
+        "name": "Tier 4 Bar",
+        "qty": 12.0
+      },
+      {
+        "name": "Tier 4 Leather",
+        "qty": 20.0
+      },
+      {
+        "name": "Adept's Bloodstained Antiquities",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Claws",
+    "materials": [
+      {
+        "name": "Tier 4 Bar",
+        "qty": 12.0
+      },
+      {
+        "name": "Tier 4 Leather",
+        "qty": 20.0
+      }
+    ]
+  },
+  {
+    "name": "Dagger",
+    "materials": [
+      {
+        "name": "Tier 4 Bar",
+        "qty": 12.0
+      },
+      {
+        "name": "Tier 4 Leather",
+        "qty": 12.0
+      }
+    ]
+  },
+  {
+    "name": "Dagger Pair",
+    "materials": [
+      {
+        "name": "Tier 4 Bar",
+        "qty": 16.0
+      },
+      {
+        "name": "Tier 4 Leather",
+        "qty": 16.0
+      }
+    ]
+  },
+  {
+    "name": "Deathgivers",
+    "materials": [
+      {
+        "name": "Tier 4 Bar",
+        "qty": 16.0
+      },
+      {
+        "name": "Tier 4 Leather",
+        "qty": 16.0
+      },
+      {
+        "name": "Adept's Ghastly Blades",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Demonfang",
+    "materials": [
+      {
+        "name": "Tier 4 Bar",
+        "qty": 12.0
+      },
+      {
+        "name": "Tier 4 Leather",
+        "qty": 12.0
+      },
+      {
+        "name": "Weapon-specific Tier 4 artifact",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Twin Slayers",
+    "materials": [
+      {
+        "name": "Tier 4 Bar",
+        "qty": 16.0
+      },
+      {
+        "name": "Tier 4 Leather",
+        "qty": 16.0
+      },
+      {
+        "name": "Weapon-specific Tier 4 artifact",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Daybreaker",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 16.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 8.0
+      },
+      {
+        "name": "Adept's Ruined Ancestral Vamplate",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Glaive",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 12.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 20.0
+      }
+    ]
+  },
+  {
+    "name": "Heron Spear",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 16.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 8.0
+      },
+      {
+        "name": "Adept's Keeper Spearhead",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Pike",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 12.0
+      }
+    ]
+  },
+  {
+    "name": "Rift Glaive",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 12.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 20.0
+      },
+      {
+        "name": "Weapon-specific Tier 4 artifact",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Spear",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 16.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 8.0
+      }
+    ]
+  },
+  {
+    "name": "Spirithunter",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 12.0
+      },
+      {
+        "name": "Adept's Infernal Harpoon Tip",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Trinity Spear",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 12.0
+      },
+      {
+        "name": "Adept's Cursed Barbs",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Black Monk Staff",
+    "materials": [
+      {
+        "name": "Tier 4 Leather",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 12.0
+      },
+      {
+        "name": "Adept's Reinforced Morgana Pole",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Double Bladed Staff",
+    "materials": [
+      {
+        "name": "Tier 4 Leather",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 12.0
+      }
+    ]
+  },
+  {
+    "name": "Grailseeker",
+    "materials": [
+      {
+        "name": "Tier 4 Leather",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 12.0
+      },
+      {
+        "name": "Adept's Timeworn Walking Staff",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Iron-clad Staff",
+    "materials": [
+      {
+        "name": "Tier 4 Leather",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 12.0
+      }
+    ]
+  },
+  {
+    "name": "Phantom Twinblade",
+    "materials": [
+      {
+        "name": "Tier 4 Leather",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 12.0
+      },
+      {
+        "name": "Weapon-specific Tier 4 artifact",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Quarterstaff",
+    "materials": [
+      {
+        "name": "Tier 4 Leather",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 12.0
+      }
+    ]
+  },
+  {
+    "name": "Soulscythe",
+    "materials": [
+      {
+        "name": "Tier 4 Leather",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 12.0
+      },
+      {
+        "name": "Adept's Hellish Sicklehead Pair",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Staff of Balance",
+    "materials": [
+      {
+        "name": "Tier 4 Leather",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 12.0
+      },
+      {
+        "name": "Adept's Preserved Rocks",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Bloodmoon Staff",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Leather",
+        "qty": 12.0
+      },
+      {
+        "name": "Weapon-specific Tier 4 artifact",
+        "qty": 2.0
+      }
+    ]
+  },
+  {
+    "name": "Earthrune Staff",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Leather",
+        "qty": 12.0
+      },
+      {
+        "name": "Weapon-specific Tier 4 artifact",
+        "qty": 2.0
+      }
+    ]
+  },
+  {
+    "name": "Hellspawn Staff",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Leather",
+        "qty": 12.0
+      },
+      {
+        "name": "Weapon-specific Tier 4 artifact",
+        "qty": 2.0
+      }
+    ]
+  },
+  {
+    "name": "Lightcaller",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Leather",
+        "qty": 12.0
+      },
+      {
+        "name": "Weapon-specific Tier 4 artifact",
+        "qty": 2.0
+      }
+    ]
+  },
+  {
+    "name": "Primal Staff",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Leather",
+        "qty": 12.0
+      },
+      {
+        "name": "Weapon-specific Tier 4 artifact",
+        "qty": 2.0
+      }
+    ]
+  },
+  {
+    "name": "Prowling Staff",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Leather",
+        "qty": 12.0
+      },
+      {
+        "name": "Weapon-specific Tier 4 artifact",
+        "qty": 2.0
+      }
+    ]
+  },
+  {
+    "name": "Rootbound Staff",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Leather",
+        "qty": 12.0
+      },
+      {
+        "name": "Weapon-specific Tier 4 artifact",
+        "qty": 2.0
+      }
+    ]
+  },
+  {
+    "name": "Stillgaze Staff",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Leather",
+        "qty": 12.0
+      },
+      {
+        "name": "Weapon-specific Tier 4 artifact",
+        "qty": 2.0
+      }
+    ]
+  },
+  {
+    "name": "Blight Staff",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 12.0
+      },
+      {
+        "name": "Weapon-specific Tier 4 artifact",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Druidic Staff",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 16.0
+      },
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 8.0
+      },
+      {
+        "name": "Weapon-specific Tier 4 artifact",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Forgebark Staff",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 12.0
+      },
+      {
+        "name": "Weapon-specific Tier 4 artifact",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Great Nature Staff",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 12.0
+      }
+    ]
+  },
+  {
+    "name": "Ironroot Staff",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 12.0
+      },
+      {
+        "name": "Weapon-specific Tier 4 artifact",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Nature Staff",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 16.0
+      },
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 8.0
+      }
+    ]
+  },
+  {
+    "name": "Rampant Staff",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 12.0
+      },
+      {
+        "name": "Weapon-specific Tier 4 artifact",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Wild Staff",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 12.0
+      }
+    ]
+  },
+  {
+    "name": "Arcane Staff",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 16.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 8.0
+      }
+    ]
+  },
+  {
+    "name": "Astral Staff",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 12.0
+      },
+      {
+        "name": "Weapon-specific Tier 4 artifact",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Enigmatic Staff",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 12.0
+      }
+    ]
+  },
+  {
+    "name": "Evensong",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 12.0
+      },
+      {
+        "name": "Weapon-specific Tier 4 artifact",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Great Arcane Staff",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 12.0
+      }
+    ]
+  },
+  {
+    "name": "Malevolent Locus",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 12.0
+      },
+      {
+        "name": "Weapon-specific Tier 4 artifact",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Occult Staff",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 12.0
+      },
+      {
+        "name": "Weapon-specific Tier 4 artifact",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Witchwork Staff",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 16.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 8.0
+      },
+      {
+        "name": "Weapon-specific Tier 4 artifact",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Cursed Skull",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 12.0
+      },
+      {
+        "name": "Weapon-specific Tier 4 artifact",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Cursed Staff",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 16.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 8.0
+      }
+    ]
+  },
+  {
+    "name": "Damnation Staff",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 12.0
+      },
+      {
+        "name": "Weapon-specific Tier 4 artifact",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Demonic Staff",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 12.0
+      }
+    ]
+  },
+  {
+    "name": "Great Cursed Staff",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 12.0
+      }
+    ]
+  },
+  {
+    "name": "Lifecurse Staff",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 16.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 8.0
+      },
+      {
+        "name": "Weapon-specific Tier 4 artifact",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Rotcaller Staff",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 12.0
+      },
+      {
+        "name": "Weapon-specific Tier 4 artifact",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Shadowcaller",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 16.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 8.0
+      },
+      {
+        "name": "Weapon-specific Tier 4 artifact",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Blazing Staff",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 12.0
+      },
+      {
+        "name": "Weapon-specific Tier 4 artifact",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Brimstone Staff",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 12.0
+      },
+      {
+        "name": "Weapon-specific Tier 4 artifact",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Dawnsong",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 12.0
+      },
+      {
+        "name": "Weapon-specific Tier 4 artifact",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Fire Staff",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 16.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 8.0
+      }
+    ]
+  },
+  {
+    "name": "Flamewalker Staff",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 12.0
+      },
+      {
+        "name": "Weapon-specific Tier 4 artifact",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Great Fire Staff",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 12.0
+      }
+    ]
+  },
+  {
+    "name": "Infernal Staff",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 12.0
+      }
+    ]
+  },
+  {
+    "name": "Wildfire Staff",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 16.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 8.0
+      },
+      {
+        "name": "Weapon-specific Tier 4 artifact",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Arctic Staff",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 12.0
+      },
+      {
+        "name": "Weapon-specific Tier 4 artifact",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Chillhowl",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 16.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 8.0
+      },
+      {
+        "name": "Weapon-specific Tier 4 artifact",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Frost Staff",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 16.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 8.0
+      }
+    ]
+  },
+  {
+    "name": "Glacial Staff",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 12.0
+      }
+    ]
+  },
+  {
+    "name": "Great Frost Staff",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 12.0
+      }
+    ]
+  },
+  {
+    "name": "Hoarfrost Staff",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 16.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 8.0
+      },
+      {
+        "name": "Weapon-specific Tier 4 artifact",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Icicle Staff",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 12.0
+      },
+      {
+        "name": "Weapon-specific Tier 4 artifact",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Permafrost Prism",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 12.0
+      },
+      {
+        "name": "Weapon-specific Tier 4 artifact",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Divine Staff",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 12.0
+      }
+    ]
+  },
+  {
+    "name": "Exalted Staff",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 12.0
+      },
+      {
+        "name": "Weapon-specific Tier 4 artifact",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Fallen Staff",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 12.0
+      },
+      {
+        "name": "Weapon-specific Tier 4 artifact",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Great Holy Staff",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 12.0
+      }
+    ]
+  },
+  {
+    "name": "Hallowfall",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 16.0
+      },
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 8.0
+      },
+      {
+        "name": "Weapon-specific Tier 4 artifact",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Holy Staff",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 16.0
+      },
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 8.0
+      }
+    ]
+  },
+  {
+    "name": "Lifetouch Staff",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 16.0
+      },
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 8.0
+      },
+      {
+        "name": "Weapon-specific Tier 4 artifact",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Redemption Staff",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 20.0
+      },
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 12.0
+      },
+      {
+        "name": "Weapon-specific Tier 4 artifact",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Scholar Cowl",
+    "materials": [
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 8.0
+      }
+    ]
+  },
+  {
+    "name": "Cleric Cowl",
+    "materials": [
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 8.0
+      }
+    ]
+  },
+  {
+    "name": "Mage Cowl",
+    "materials": [
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 8.0
+      }
+    ]
+  },
+  {
+    "name": "Druid Cowl",
+    "materials": [
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 8.0
+      },
+      {
+        "name": "Adept's Druidic Preserved Beak",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Fiend Cowl",
+    "materials": [
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 8.0
+      },
+      {
+        "name": "Adept's Infernal Cloth Visor",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Cultist Cowl",
+    "materials": [
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 8.0
+      },
+      {
+        "name": "Adept's Alluring Padding",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Royal Cowl",
+    "materials": [
+      {
+        "name": "Adept's Scholar Cowl",
+        "qty": 1.0
+      },
+      {
+        "name": "Adept's Royal Sigil",
+        "qty": 2.0
+      }
+    ]
+  },
+  {
+    "name": "Cowl of Purity",
+    "materials": [
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 8.0
+      },
+      {
+        "name": "Adept's Sanctified Mask",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Feyscale Hat",
+    "materials": [
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 8.0
+      },
+      {
+        "name": "Adept's Intact Fey Fibula",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Hunter Hood",
+    "materials": [
+      {
+        "name": "Tier 4 Leather",
+        "qty": 8.0
+      }
+    ]
+  },
+  {
+    "name": "Mercenary Hood",
+    "materials": [
+      {
+        "name": "Tier 4 Leather",
+        "qty": 8.0
+      }
+    ]
+  },
+  {
+    "name": "Assassin Hood",
+    "materials": [
+      {
+        "name": "Tier 4 Leather",
+        "qty": 8.0
+      }
+    ]
+  },
+  {
+    "name": "Stalker Hood",
+    "materials": [
+      {
+        "name": "Tier 4 Leather",
+        "qty": 8.0
+      },
+      {
+        "name": "Adept's Imbued Visor",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Hellion Hood",
+    "materials": [
+      {
+        "name": "Tier 4 Leather",
+        "qty": 8.0
+      },
+      {
+        "name": "Adept's Demonhide Padding",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Specter Hood",
+    "materials": [
+      {
+        "name": "Tier 4 Leather",
+        "qty": 8.0
+      },
+      {
+        "name": "Adept's Ghastly Visor",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Royal Hood",
+    "materials": [
+      {
+        "name": "Adept's Mercenary Hood",
+        "qty": 1.0
+      },
+      {
+        "name": "Adept's Royal Sigil",
+        "qty": 2.0
+      }
+    ]
+  },
+  {
+    "name": "Hood of Tenacity",
+    "materials": [
+      {
+        "name": "Tier 4 Leather",
+        "qty": 8.0
+      },
+      {
+        "name": "Adept's Augured Padding",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Mistwalker Hood",
+    "materials": [
+      {
+        "name": "Tier 4 Leather",
+        "qty": 8.0
+      },
+      {
+        "name": "Adept's Flawless Griffin Beak",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Soldier Helmet",
+    "materials": [
+      {
+        "name": "Tier 4 Bar",
+        "qty": 8.0
+      }
+    ]
+  },
+  {
+    "name": "Knight Helmet",
+    "materials": [
+      {
+        "name": "Tier 4 Bar",
+        "qty": 8.0
+      }
+    ]
+  },
+  {
+    "name": "Guardian Helmet",
+    "materials": [
+      {
+        "name": "Tier 4 Bar",
+        "qty": 8.0
+      }
+    ]
+  },
+  {
+    "name": "Judicator Helmet",
+    "materials": [
+      {
+        "name": "Tier 4 Bar",
+        "qty": 8.0
+      },
+      {
+        "name": "Adept's Carved Skull Padding",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Demon Helmet",
+    "materials": [
+      {
+        "name": "Tier 4 Bar",
+        "qty": 8.0
+      },
+      {
+        "name": "Adept's Demonic Scraps",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Graveguard Helmet",
+    "materials": [
+      {
+        "name": "Tier 4 Bar",
+        "qty": 8.0
+      },
+      {
+        "name": "Adept's Ancient Padding",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Royal Helmet",
+    "materials": [
+      {
+        "name": "Adept's Soldier Helmet",
+        "qty": 1.0
+      },
+      {
+        "name": "Adept's Royal Sigil",
+        "qty": 2.0
+      }
+    ]
+  },
+  {
+    "name": "Helmet of Valor",
+    "materials": [
+      {
+        "name": "Tier 4 Bar",
+        "qty": 8.0
+      },
+      {
+        "name": "Adept's Exalted Visor",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Duskweaver Helmet",
+    "materials": [
+      {
+        "name": "Tier 4 Bar",
+        "qty": 8.0
+      },
+      {
+        "name": "Adept's Veilweaver Mandibles",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Scholar Robe",
+    "materials": [
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 16.0
+      }
+    ]
+  },
+  {
+    "name": "Cleric Robe",
+    "materials": [
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 16.0
+      }
+    ]
+  },
+  {
+    "name": "Mage Robe",
+    "materials": [
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 16.0
+      }
+    ]
+  },
+  {
+    "name": "Druid Robe",
+    "materials": [
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 16.0
+      },
+      {
+        "name": "Adept's Druidic Feathers",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Fiend Robe",
+    "materials": [
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 16.0
+      },
+      {
+        "name": "Adept's Infernal Cloth Folds",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Cultist Robe",
+    "materials": [
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 16.0
+      },
+      {
+        "name": "Adept's Alluring Amulet",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Royal Robe",
+    "materials": [
+      {
+        "name": "Adept's Scholar Robe",
+        "qty": 1.0
+      },
+      {
+        "name": "Adept's Royal Sigil",
+        "qty": 4.0
+      }
+    ]
+  },
+  {
+    "name": "Robe of Purity",
+    "materials": [
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 16.0
+      },
+      {
+        "name": "Adept's Sanctified Belt",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Feyscale Robe",
+    "materials": [
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 16.0
+      },
+      {
+        "name": "Adept's Fey Dorsal Wing",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Mercenary Jacket",
+    "materials": [
+      {
+        "name": "Tier 4 Leather",
+        "qty": 16.0
+      }
+    ]
+  },
+  {
+    "name": "Hunter Jacket",
+    "materials": [
+      {
+        "name": "Tier 4 Leather",
+        "qty": 16.0
+      }
+    ]
+  },
+  {
+    "name": "Assassin Jacket",
+    "materials": [
+      {
+        "name": "Tier 4 Leather",
+        "qty": 16.0
+      }
+    ]
+  },
+  {
+    "name": "Stalker Jacket",
+    "materials": [
+      {
+        "name": "Tier 4 Leather",
+        "qty": 16.0
+      },
+      {
+        "name": "Adept's Imbued Leather Folds",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Hellion Jacket",
+    "materials": [
+      {
+        "name": "Tier 4 Leather",
+        "qty": 16.0
+      },
+      {
+        "name": "Adept's Demonhide Leather",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Specter Jacket",
+    "materials": [
+      {
+        "name": "Tier 4 Leather",
+        "qty": 16.0
+      },
+      {
+        "name": "Adept's Ghastly Leather",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Royal Jacket",
+    "materials": [
+      {
+        "name": "Adept's Mercenary Jacket",
+        "qty": 1.0
+      },
+      {
+        "name": "Adept's Royal Sigil",
+        "qty": 4.0
+      }
+    ]
+  },
+  {
+    "name": "Jacket of Tenacity",
+    "materials": [
+      {
+        "name": "Tier 4 Leather",
+        "qty": 16.0
+      },
+      {
+        "name": "Adept's Augured Sash",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Mistwalker Jacket",
+    "materials": [
+      {
+        "name": "Tier 4 Leather",
+        "qty": 16.0
+      },
+      {
+        "name": "Adept's Untarnished Griffin Feathers",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Soldier Armor",
+    "materials": [
+      {
+        "name": "Tier 4 Bar",
+        "qty": 16.0
+      }
+    ]
+  },
+  {
+    "name": "Knight Armor",
+    "materials": [
+      {
+        "name": "Tier 4 Bar",
+        "qty": 16.0
+      }
+    ]
+  },
+  {
+    "name": "Guardian Armor",
+    "materials": [
+      {
+        "name": "Tier 4 Bar",
+        "qty": 16.0
+      }
+    ]
+  },
+  {
+    "name": "Judicator Armor",
+    "materials": [
+      {
+        "name": "Tier 4 Bar",
+        "qty": 16.0
+      },
+      {
+        "name": "Adept's Preserved Animal Fur",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Demon Armor",
+    "materials": [
+      {
+        "name": "Tier 4 Bar",
+        "qty": 16.0
+      },
+      {
+        "name": "Adept's Demonic Plates",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Graveguard Armor",
+    "materials": [
+      {
+        "name": "Tier 4 Bar",
+        "qty": 16.0
+      },
+      {
+        "name": "Adept's Ancient Chain Rings",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Royal Armor",
+    "materials": [
+      {
+        "name": "Adept's Soldier Armor",
+        "qty": 1.0
+      },
+      {
+        "name": "Adept's Royal Sigil",
+        "qty": 4.0
+      }
+    ]
+  },
+  {
+    "name": "Armor of Valor",
+    "materials": [
+      {
+        "name": "Tier 4 Bar",
+        "qty": 16.0
+      },
+      {
+        "name": "Adept's Exalted Plating",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Duskweaver Armor",
+    "materials": [
+      {
+        "name": "Tier 4 Bar",
+        "qty": 16.0
+      },
+      {
+        "name": "Adept's Veilweaver Carapace",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Scholar Sandals",
+    "materials": [
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 8.0
+      }
+    ]
+  },
+  {
+    "name": "Cleric Sandals",
+    "materials": [
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 8.0
+      }
+    ]
+  },
+  {
+    "name": "Mage Sandals",
+    "materials": [
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 8.0
+      }
+    ]
+  },
+  {
+    "name": "Druid Sandals",
+    "materials": [
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 8.0
+      },
+      {
+        "name": "Adept's Druidic Bindings",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Fiend Sandals",
+    "materials": [
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 8.0
+      },
+      {
+        "name": "Adept's Infernal Cloth Bindings",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Cultist Sandals",
+    "materials": [
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 8.0
+      },
+      {
+        "name": "Adept's Alluring Bindings",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Royal Sandals",
+    "materials": [
+      {
+        "name": "Adept's Scholar Sandals",
+        "qty": 1.0
+      },
+      {
+        "name": "Adept's Royal Sigil",
+        "qty": 2.0
+      }
+    ]
+  },
+  {
+    "name": "Sandals of Purity",
+    "materials": [
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 8.0
+      },
+      {
+        "name": "Adept's Sanctified Bindings",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Feyscale Sandals",
+    "materials": [
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 8.0
+      },
+      {
+        "name": "Adept's Fey Dragonscales",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Mercenary Shoes",
+    "materials": [
+      {
+        "name": "Tier 4 Leather",
+        "qty": 8.0
+      }
+    ]
+  },
+  {
+    "name": "Hunter Shoes",
+    "materials": [
+      {
+        "name": "Tier 4 Leather",
+        "qty": 8.0
+      }
+    ]
+  },
+  {
+    "name": "Assassin Shoes",
+    "materials": [
+      {
+        "name": "Tier 4 Leather",
+        "qty": 8.0
+      }
+    ]
+  },
+  {
+    "name": "Stalker Shoes",
+    "materials": [
+      {
+        "name": "Tier 4 Leather",
+        "qty": 8.0
+      },
+      {
+        "name": "Adept's Imbued Soles",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Hellion Shoes",
+    "materials": [
+      {
+        "name": "Tier 4 Leather",
+        "qty": 8.0
+      },
+      {
+        "name": "Adept's Demonhide Bindings",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Specter Shoes",
+    "materials": [
+      {
+        "name": "Tier 4 Leather",
+        "qty": 8.0
+      },
+      {
+        "name": "Adept's Ghastly Bindings",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Royal Shoes",
+    "materials": [
+      {
+        "name": "Adept's Mercenary Shoes",
+        "qty": 1.0
+      },
+      {
+        "name": "Adept's Royal Sigil",
+        "qty": 2.0
+      }
+    ]
+  },
+  {
+    "name": "Shoes of Tenacity",
+    "materials": [
+      {
+        "name": "Tier 4 Leather",
+        "qty": 8.0
+      },
+      {
+        "name": "Adept's Augured Fasteners",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Mistwalker Shoes",
+    "materials": [
+      {
+        "name": "Tier 4 Leather",
+        "qty": 8.0
+      },
+      {
+        "name": "Adept's Griffin Underfur",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Soldier Boots",
+    "materials": [
+      {
+        "name": "Tier 4 Bar",
+        "qty": 8.0
+      }
+    ]
+  },
+  {
+    "name": "Knight Boots",
+    "materials": [
+      {
+        "name": "Tier 4 Bar",
+        "qty": 8.0
+      }
+    ]
+  },
+  {
+    "name": "Guardian Boots",
+    "materials": [
+      {
+        "name": "Tier 4 Bar",
+        "qty": 8.0
+      }
+    ]
+  },
+  {
+    "name": "Graveguard Boots",
+    "materials": [
+      {
+        "name": "Tier 4 Bar",
+        "qty": 8.0
+      },
+      {
+        "name": "Adept's Ancient Bindings",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Demon Boots",
+    "materials": [
+      {
+        "name": "Tier 4 Bar",
+        "qty": 8.0
+      },
+      {
+        "name": "Adept's Demonic Filling",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Judicator Boots",
+    "materials": [
+      {
+        "name": "Tier 4 Bar",
+        "qty": 8.0
+      },
+      {
+        "name": "Adept's Inscribed Bindings",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Royal Boots",
+    "materials": [
+      {
+        "name": "Adept's Soldier Boots",
+        "qty": 1.0
+      },
+      {
+        "name": "Adept's Royal Sigil",
+        "qty": 2.0
+      }
+    ]
+  },
+  {
+    "name": "Boots of Valor",
+    "materials": [
+      {
+        "name": "Tier 4 Bar",
+        "qty": 8.0
+      },
+      {
+        "name": "Adept's Exalted Greave",
+        "qty": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Duskweaver Boots",
+    "materials": [
+      {
+        "name": "Tier 4 Bar",
+        "qty": 8.0
+      },
+      {
+        "name": "Adept's Veilweaver Claws",
+        "qty": 1.0
+      }
+    ]
+  }
+]
