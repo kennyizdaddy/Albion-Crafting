@@ -8,3 +8,5 @@
 
 /* Journal */
 .journal-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:20px 0}.journal-kpis .panel{padding:18px}.journal-kpis small{display:block;color:#a3b5ca}.journal-kpis strong{display:block;font-size:22px;color:#6ee2ba;margin-top:9px;overflow-wrap:anywhere}.journal-actions{display:flex;align-items:center;gap:15px;flex-wrap:wrap}.journal-import{display:inline-flex!important;align-items:center;gap:10px;margin:0!important;cursor:pointer}.journal-import input{width:230px;max-width:100%;font-size:12px}.journal-delete{border:1px solid #7c3d4b;color:#ffb5bc;background:#3b202b;border-radius:7px;padding:7px;cursor:pointer}.journal-loss{color:#f3a5a5!important}.journal-ok{color:#6ee2ba!important}@media(max-width:900px){.journal-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:500px){.journal-kpis{grid-template-columns:1fr 1fr}.journal-kpis strong{font-size:17px}.journal-kpis .panel{padding:12px}}
+
+.node-track{height:11px;background:#263444;border-radius:99px;overflow:hidden;margin:16px 0 8px}.node-track>div{height:100%;width:0;background:#d3a84f;transition:width .2s ease}

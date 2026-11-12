@@ -34,3 +34,6 @@ The Refining tab now autofills previous-tier refined quantity when raw quantity 
 
 ### Refining enchantment
 The Refining tab now includes an enchantment selector (0–4) beside tier. The selected enchantment appears in the material recipe note and is stored in My Journal for refining batches. Prices remain user-entered and must correspond to the chosen enchantment.
+
+
+General node progression: uses fame per refined resource from the Crafting Fame Database workbook, multiplied by standard category resource counts, enchantment multiplier and optional 1.5x premium. Browser-local per-node current fame and manually entered target; no unverified level threshold assumptions.
