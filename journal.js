@@ -39,7 +39,7 @@ function craftingClass(item){
  return classes[entry.category]?.[entry.family]||entry.family+' '+entry.category;
 }
 const byClass=new Map();
-for(const b of chosen){const cls=craftingClass(b.item);if(!byClass.has(cls))byClass.set(cls,new Map());const byName=byClass.get(cls),itemKey=b.item.trim().toLowerCase();if(!byName.has(itemKey))byName.set(itemMapEntry(b.item));const byVariant=byName.get(itemKey).variants,key=`${b.tier}.${b.enchant}`;if(!byVariant.has(key))byVariant.set(key,[]);byVariant.get(key).push(b)}
+for(const b of chosen){const cls=craftingClass(b.item);if(!byClass.has(cls))byClass.set(cls,new Map());const byName=byClass.get(cls),itemKey=b.item.trim().toLowerCase();if(!byName.has(itemKey))byName.set(itemKey,itemMapEntry(b.item));const byVariant=byName.get(itemKey).variants,key=`${b.tier}.${b.enchant}`;if(!byVariant.has(key))byVariant.set(key,[]);byVariant.get(key).push(b)}
 function itemMapEntry(name){return {name,variants:new Map()}}
 const sort=$('jSort').value;
 function orderGroups(a,b){const x=summary(a),y=summary(b);return sort==='profit'?y.profit-x.profit:sort==='percent'?sortValue(y.percent)-sortValue(x.percent):sort==='spf'?sortValue(y.spf)-sortValue(x.spf):sort==='quantity'?y.qty-x.qty:y.recent-x.recent}
