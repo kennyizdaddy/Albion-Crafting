@@ -96,3 +96,9 @@ Removed the specialization/base-focus calculator. In Gear Crafting > Crafting se
 
 
 Theme update: unified navigation, calculators, Journal, forms, cards and buttons with the homepage charcoal/gold palette. No JavaScript or journal data schema changes.
+
+
+## Navigation update
+- Gear Crafting and Refining now have their own top-level navigation tabs instead of a shared Calculators dropdown.
+- Item Database has been removed from visible navigation and homepage feature cards; its underlying item data and lookup code remain intact.
+- Journal and other features are unchanged.

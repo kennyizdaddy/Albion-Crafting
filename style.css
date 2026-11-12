@@ -64,3 +64,9 @@ footer{border-color:#39464b;color:#aab7bb}
 
 /* Search existing item catalog without changing the dependent dropdown behavior. */
 .item-quick-search{position:relative;margin:0 0 17px}.item-quick-search label{margin-bottom:0}.item-quick-search .hint{margin:7px 0 0}.item-search-results{position:absolute;z-index:20;top:72px;left:0;right:0;max-height:270px;overflow:auto;background:#18252b;border:1px solid #a98a50;border-radius:10px;box-shadow:0 15px 30px #0009;padding:5px}.item-search-results[hidden]{display:none}.item-search-choice{display:block;width:100%;text-align:left;padding:11px 12px;background:transparent;border:0;border-radius:6px;color:#f3eee6;font:inherit;cursor:pointer}.item-search-choice:hover,.item-search-choice:focus{background:#3a3427;color:#f0d29a;outline:none}.item-search-empty{padding:12px;color:#b7c6d7}
+
+/* Gear crafting: search-first category fallback and Journal batch actions */
+.craft-category-fallback{margin:0 0 17px;padding:12px 15px;border:1px solid #736144;border-radius:10px;background:#1b272b}.craft-category-fallback summary{cursor:pointer;color:#e6c989;font-weight:650}.craft-category-fallback[open] summary{margin-bottom:14px}.craft-category-fallback label{margin-top:10px}.journal-batch-actions{grid-column:1/-1;padding-top:9px;border-top:1px solid #455158}.journal-batch-actions .journal-delete{font-size:12px}.item-quick-search{margin-bottom:12px}
+
+/* Keep four primary navigation tabs usable on narrow screens. */
+@media(max-width:750px){.top nav{gap:12px;flex-wrap:wrap}.top nav a{white-space:nowrap;padding:5px 0}}
