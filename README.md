@@ -42,3 +42,6 @@ General node progression: uses fame per refined resource from the Crafting Fame 
 ## Generalist node progression (V2)
 
 The Crafting tab has an independent Generalist node planner with workbook names and dependent item selection, tier 4-8, enchantment .0-.4, and a Yes/No Premium dropdown. Fame per item = workbook standard resources × tier fame per resource × 2^enchantment × (1.5 if Premium is Yes, otherwise 1). Enter current node level, fame already earned in that level, and target level. Items required = CEILING(MAX(0, cumulative target fame − cumulative current level fame − fame earned in current level) / fame per item). Fame curves reproduce the workbook's decade block interpolation; values are estimates rather than guaranteed in-game data. Progress is saved per node in browser storage. The additional `node-data.js` file must be uploaded with the site.
+
+## Daily crafting bonus update
+Crafting daily bonus is manually selectable: No, Yes 10%, or Yes 20%. The 20% values are computed from the existing production-bonus model (bonus-city 33%, other-city 18%, focus adds 59%): RRR = production bonus / (100 + production bonus). Manual return-rate overrides still take priority. Refining already supports all three options.

@@ -1,11 +1,10 @@
 const $=id=>document.getElementById(id);let items=[];const silver=n=>Number.isFinite(n)?Math.round(n).toLocaleString()+' silver':'—';const num=id=>Math.max(0,Number($(id).value)||0);const qty=[1,2,2,3,4,5,5];function route(){let page=location.hash.slice(1)||'home';if(!$(page)||!$(page).classList.contains('page'))page='home';document.querySelectorAll('.page').forEach(p=>p.hidden=p.id!==page);window.scrollTo(0,0)}window.addEventListener('hashchange',route);route();
 // Rates copied from Crafting!Q7 in the November 2026 workbook.
-const craftingRates={No:{bonus:{No:0.248,Yes:0.479},other:{No:0.152,Yes:0.435}},'Yes 10%':{bonus:{No:0.30,Yes:0.504},other:{No:0.218,Yes:0.465}}};
+const craftingRates={No:{bonus:{No:0.248,Yes:0.479},other:{No:0.152,Yes:0.435}},'Yes 10%':{bonus:{No:0.30,Yes:0.504},other:{No:0.218,Yes:0.465}},'Yes 20%':{bonus:{No:53/153,Yes:112/212},other:{No:38/138,Yes:97/197}}};
 function craftingRate(){
  const custom=$('craftRrr').value;
  if(custom!==''){const v=Number(custom);if(!Number.isFinite(v)||v<0||v>=100){$('craftRateNote').textContent='Enter a manual rate between 0 and 99.9%.';return null} $('craftRateNote').textContent='Manual return-rate override: '+v+'%';return v/100}
  const item=items.find(x=>x.name===$('itemSelect').value),daily=$('craftDaily').value;
- if(daily==='Yes 20%'){$('craftRateNote').textContent='20% daily bonus rates have not been provided yet. Use a manual rate override if known.';return null}
  if(!item){$('craftRateNote').textContent='Choose an item.';return null}
  const city=item.bonusCity,selected=$('craftCity').value,match=Boolean(city)&&city===selected;
  const r=craftingRates[daily][match?'bonus':'other'][$('craftFocus').value];
