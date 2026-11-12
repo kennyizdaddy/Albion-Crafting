@@ -12,12 +12,21 @@ function craftingRate(){
  $('craftRateNote').textContent='Return rate: '+(r*100).toFixed(1)+'% · '+(match?'Bonus city':'Other city')+' · '+(city?'Item bonus city: '+city:'No bonus city listed in workbook');
  return r;
 }
+const refiningCities={'Cloth':'Lymhurst','Leather':'Martlock','Metal Bar':'Thetford','Plank':'Fort Sterling','Stone Block':'Bridgewatch'};
 function refiningRate(){
+ const resource=$('resource').value,city=refiningCities[resource]||'Unknown';
+ $('refCityNote').textContent='Refining bonus city: '+city+' · +40% production bonus when refining there.';
  const custom=$('refRrr').value;
- if(custom!==''){const v=Number(custom);if(Number.isFinite(v)&&v>=0&&v<100){$('refRateNote').textContent='Manual refining return rate: '+v+'%';return v/100} $('refRateNote').textContent='Enter a valid rate from 0 to 99.9%.';return null}
- if($('refDaily').value!=='No'||$('refBonus').value==='Yes'){$('refRateNote').textContent='Refining city/daily bonus rate not supplied. Enter a manual override.';return null}
- const r=$('refFocus').value==='Yes'?0.539:0.367;
- $('refRateNote').textContent='Workbook settings baseline: '+(r*100).toFixed(1)+'%';return r;
+ if(custom!==''){
+  const v=Number(custom);
+  if(Number.isFinite(v)&&v>=0&&v<100){$('refRateNote').textContent='Manual refining return rate: '+v.toFixed(1)+'% (overrides all automatic settings)';return v/100}
+  $('refRateNote').textContent='Enter a valid rate from 0 to 99.9%.';return null;
+ }
+ const bonus=$('refBonus').value==='Yes',focus=$('refFocus').value==='Yes',daily=Number($('refDaily').value)||0;
+ const productionBonus=18+(bonus?40:0)+(focus?59:0)+daily;
+ const r=productionBonus/(100+productionBonus);
+ $('refRateNote').textContent='Automatic return rate: '+(r*100).toFixed(1)+'% · '+(bonus?city+' bonus':'Other royal city')+' · Focus '+(focus?'on':'off')+(daily?' · Daily +'+daily+'%':'')+'.';
+ return r;
 }
 function fillSelect(id,values,selected){const el=$(id);el.replaceChildren();values.forEach(v=>{const o=document.createElement('option');o.value=o.textContent=v;el.append(o)});if(values.includes(selected))el.value=selected}
 function updateTypes(){const category=$('equipmentSelect').value;const types=[...new Set(items.filter(x=>x.category===category).map(x=>x.subcategory))].sort();fillSelect('typeSelect',types,types.includes($('typeSelect').value)?$('typeSelect').value:types[0]);updateItems()}
