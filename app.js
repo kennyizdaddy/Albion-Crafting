@@ -23,6 +23,7 @@ function fillSelect(id,values,selected){const el=$(id);el.replaceChildren();valu
 function updateTypes(){const category=$('equipmentSelect').value;const types=[...new Set(items.filter(x=>x.category===category).map(x=>x.subcategory))].sort();fillSelect('typeSelect',types,types.includes($('typeSelect').value)?$('typeSelect').value:types[0]);updateItems()}
 function updateItems(){const category=$('equipmentSelect').value,type=$('typeSelect').value;const list=items.filter(x=>x.category===category&&x.subcategory===type);const old=$('itemSelect').value;fillSelect('itemSelect',list.map(x=>x.name).sort(),list.some(x=>x.name===old)?old:list[0]?.name);recipe()}
 function recipe(){
+ marketRequestSeq++;
  const item=items.find(x=>x.name===$('itemSelect').value);$('recipe').replaceChildren();$('itemCityNote').textContent=item?'Workbook bonus city: '+(item.bonusCity||'Not specified'):'';if(!item)return;
  for(const [i,m] of item.materials.entries()){
   const d=document.createElement('div');d.className='material';
@@ -30,8 +31,8 @@ function recipe(){
   const tier=$('craftTier').value,ench=$('enchant').value;
   const label=m.name.replace(/Tier 4/g,'Tier '+tier)+(isArtifact?'':'.'+ench);
   d.innerHTML=`<strong></strong><small></small><div class="twocol"><label>Buy price / unit<input type="number" min="0" step="any" placeholder="Required" class="buyprice"></label>${isArtifact?'':`<label>Self-refined cost / unit<input type="number" min="0" step="any" placeholder="Required for comparison" class="refprice"></label>`}</div>${isArtifact?'':`<label>Source<select class="source"><option value="buy">Buy</option><option value="refine">Refine</option></select></label>`}`;
-  d.querySelector('strong').textContent=label;d.querySelector('small').textContent='Required per craft: '+m.qty+(isArtifact?' · no crafting resource return':'');
-  d.dataset.qty=m.qty;d.dataset.artifact=isArtifact?'yes':'no';$('recipe').append(d)
+  d.querySelector('strong').textContent=label;const stamp=document.createElement('span');stamp.className='market-stamp';stamp.textContent='Market price: not fetched';d.append(stamp);d.querySelector('small').textContent='Required per craft: '+m.qty+(isArtifact?' · no crafting resource return':'');
+  d.dataset.materialName=m.name;d.dataset.qty=m.qty;d.dataset.artifact=isArtifact?'yes':'no';$('recipe').append(d)
  }
  $('recipe').querySelectorAll('input,select').forEach(el=>{el.addEventListener('input',craft);el.addEventListener('change',craft)});craft();
 }
@@ -59,4 +60,52 @@ function craft(){
 }
 function refining(){let r=refiningRate(),tier=num('refTier'),raw=qty[tier-2],prev=tier===2?0:1,n=Math.max(1,num('refQty'));let total=n*(raw*num('rawPrice')+prev*num('prevPrice'))*(1-r)+num('refFee');let profit=n*num('refSell')*(1-.065)-total;$('refCost').textContent=r===null?'—':silver(total/n);$('refProfit').textContent=r===null?'—':silver(profit)}
 function database(){let q=$('search').value.trim().toLowerCase();let matched=items.filter(i=>(i.name+' '+i.category+' '+i.subcategory+' '+i.bonusCity).toLowerCase().includes(q));$('itemCount').textContent=matched.length+' items';$('itemRows').replaceChildren();matched.slice(0,300).forEach(item=>{let tr=document.createElement('tr');[item.name,item.category+' / '+item.subcategory,item.bonusCity||'—',item.materials.map(m=>m.qty+' × '+m.name).join(', ')||'Recipe not provided'].forEach(v=>{let td=document.createElement('td');td.textContent=v;tr.append(td)});$('itemRows').append(tr)})}
+// Americas (West) market prices. Never assume an unknown artifact ID is safe to map.
+const MARKET_API='https://west.albion-online-data.com/api/v2/stats/prices/';
+let marketRequestSeq=0;
+const marketKinds={'Plank':'PLANKS','Bar':'METALBAR','Metal Bar':'METALBAR','Cloth':'CLOTH','Leather':'LEATHER','Stone Block':'STONEBLOCK'};
+function materialId(el){
+ if(el.dataset.artifact==='yes')return null;
+ const name=el.dataset.materialName||'';
+ const match=name.match(/^Tier\s+\d+\s+(.+)$/i);
+ if(!match)return null;
+ const kind=marketKinds[match[1].trim()];if(!kind)return null;
+ const tier=Number($('craftTier').value),ench=Number($('enchant').value);
+ return 'T'+tier+'_'+kind+(ench?'@'+ench:'');
+}
+function priceStamp(el,msg,warn=false){const s=el.querySelector('.market-stamp');if(s){s.textContent=msg;s.className='market-stamp '+(warn?'warn':'ok')}}
+function parseMarketDate(s){if(!s||String(s).startsWith('0001-'))return NaN;const d=Date.parse(s.endsWith('Z')||/[+-]\d\d:\d\d$/.test(s)?s:s+'Z');return d;}
+async function fetchMarketPrices(){
+ const button=$('fetchMarket'),status=$('marketStatus'),city=$('marketCity').value;
+ const rows=[...document.querySelectorAll('#recipe .material')],known=rows.map(el=>({el,id:materialId(el)})).filter(x=>x.id);
+ const seq=++marketRequestSeq;
+ if(!known.length){status.textContent='No recognized tradeable resources in this recipe. Enter prices manually.';return}
+ const ids=[...new Set(known.map(x=>x.id))];button.disabled=true;status.textContent='Fetching '+ids.length+' material price(s) from '+city+'…';
+ try{
+  const url=MARKET_API+ids.map(encodeURIComponent).join(',')+'.json?locations='+encodeURIComponent(city)+'&qualities=1';
+  const controller=new AbortController();const timeout=setTimeout(()=>controller.abort(),12000);
+  let response;try{response=await fetch(url,{signal:controller.signal,headers:{'Accept':'application/json'}})}finally{clearTimeout(timeout)}
+  if(!response.ok)throw new Error(response.status===429?'Rate limit reached. Wait before trying again.':'Market API HTTP '+response.status);
+  const records=await response.json();if(!Array.isArray(records))throw new Error('Unexpected market API response');
+  if(seq!==marketRequestSeq)return;
+  let filled=0,missing=0,stale=0;const maxAge=Number($('marketAge').value),now=Date.now();
+  for(const {el,id} of known){
+   const matches=records.filter(x=>x.item_id===id&&String(x.city).toLowerCase()===city.toLowerCase()&&Number(x.quality)===1&&Number(x.sell_price_min)>0);
+   matches.sort((a,b)=>parseMarketDate(b.sell_price_min_date)-parseMarketDate(a.sell_price_min_date));
+   const row=matches[0],stamp=row?parseMarketDate(row.sell_price_min_date):NaN;
+   if(!row||!Number.isFinite(stamp)){missing++;priceStamp(el,'No usable reported sell order in '+city,true);continue}
+   const hours=Math.max(0,(now-stamp)/3600000),age=Math.round(hours)+'h old';
+   if(maxAge>0&&hours>maxAge){stale++;priceStamp(el,'Stale: '+Number(row.sell_price_min).toLocaleString()+' silver · '+age+' (not applied)',true);continue}
+   const input=el.querySelector('.buyprice');input.value=String(row.sell_price_min);input.dataset.marketValue=input.value;
+   filled++;priceStamp(el,'Market: '+Number(row.sell_price_min).toLocaleString()+' silver · '+age+(hours>72?' · older data':''),hours>72);
+  }
+  for(const el of rows.filter(x=>!materialId(x)))priceStamp(el,'Manual price required (no verified market ID)',true);
+  status.textContent='Applied '+filled+' price(s) from '+city+'. '+missing+' missing, '+stale+' too old. Prices remain editable.';
+  craft();
+ }catch(err){if(seq===marketRequestSeq)status.textContent='Market prices unavailable: '+err.message+'. You can still enter prices manually.'}
+ finally{if(seq===marketRequestSeq)button.disabled=false}
+}
+$('fetchMarket').addEventListener('click',fetchMarketPrices);
+$('marketCity').addEventListener('change',()=>{$('marketStatus').textContent='Market city changed. Fetch again to update prices; existing inputs are unchanged.'});
+
 for(const id of ['craftQty','sellPrice','craftCity','craftFocus','craftDaily','craftRrr','craftFee','craftTax'])$(id).addEventListener('input',craft);for(const id of ['resource','refTier','refQty','rawPrice','prevPrice','refSell','refFee','refFocus','refBonus','refDaily','refRrr'])$(id).addEventListener('input',refining);$('equipmentSelect').addEventListener('change',updateTypes);$('typeSelect').addEventListener('change',updateItems);$('itemSelect').addEventListener('change',recipe);$('craftTier').addEventListener('change',recipe);$('enchant').addEventListener('change',recipe);$('search').addEventListener('input',database);fetch('items.json').then(r=>r.json()).then(data=>{items=data;fillSelect('equipmentSelect',['Boots','Chest','Helmets','Capes','Weapons'],'Boots');updateTypes();database()}).catch(()=>{$('recipe').textContent='Item database could not load. Open the site using a local server or GitHub Pages.'});refining();

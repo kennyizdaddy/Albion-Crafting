@@ -37,3 +37,16 @@ Crafting cost now calculates without a selling price. Enter a price for each req
 
 ### Troubleshooting crafting cost
 Selling price is optional. Enter the Buy price for every recipe material, including artifacts, or select Refine and enter its self-refined price. Select No or Yes 10% for Daily Bonus; Yes 20% needs a manual return rate until supplied. Replace both `app.js` and `index.html` in the repository root, commit, then hard refresh.
+
+
+## Live market prices (Americas)
+
+Open Gear crafting, choose an item and tier/enchantment, select a **Buy materials in** city, and press **Fetch market prices**. Recognized refined resources are filled using the latest reported **sell_price_min** (the price to buy the item) at normal quality. The age limit defaults to 3 days. Stale/missing/unknown IDs are not filled; enter those manually. You may overwrite any fetched value. The API is community-contributed, not a guaranteed current market quote.
+
+Only basic resource IDs are mapped: `T{tier}_PLANKS`, `T{tier}_METALBAR`, `T{tier}_CLOTH`, `T{tier}_LEATHER`, and `T{tier}_STONEBLOCK`, with `@{enchantment}` for enchanted resources. Artifact IDs are not guessed. This version does not auto-fetch the crafted item's selling price. No API key or paid hosting is required, but browser CORS and API rate limits may affect availability.
+
+Source: https://west.albion-online-data.com/api-docs
+
+### GitHub upload
+
+Replace **index.html**, **app.js**, and **style.css** in the root of the existing repository; retain **items.json** (included for convenience). Commit changes to the GitHub Pages publishing branch. Refresh with Ctrl+Shift+R.
