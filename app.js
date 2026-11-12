@@ -122,20 +122,51 @@ async function getItemCatalog(){
 }
 function catalogEnglishName(entry){const names=entry.LocalizedNames||entry.localizedNames||{};return names['EN-US']||names['EN']||entry.name||entry.Name||''}
 function catalogItemId(entry){return entry.UniqueName||entry.uniqueName||entry.item_id||entry.id||''}
+// Albion catalogue names are often prefixed with the tier title (Adept's, Expert's, etc.).
+// Compare the base item name, not the tier prefix or quality/enchantment suffix.
+function canonicalEquipmentName(value){
+ return normalizeItemName(String(value||'').replace(/^(?:Beginner's|Novice's|Journeyman's|Adept's|Expert's|Master's|Grandmaster's|Elder's)\s+/i,'').replace(/\s+of\s+quality\s+\w+$/i,''));
+}
+function isBaseEquipmentId(id){return /^T[2-8]_[A-Z0-9_]+$/.test(id)&&!id.includes('@')&&!/_LEVEL\d/.test(id)}
 function applyTierAndEnchantment(base,tier,ench){
  if(!/^T[2-8]_/.test(base))return null;
- let id=base.replace(/^T[2-8]_/,`T${tier}_`).replace(/@\d+$/,'');
+ const id=base.replace(/^T[2-8]_/,`T${tier}_`).replace(/@\d+$/,'');
  return id+(ench?'@'+ench:'');
+}
+// Build a deterministic mapping for every name in items.json from the published item catalogue.
+// Do not guess when names map to multiple distinct item IDs.
+let itemIdMapPromise=null;
+async function getItemIdMap(){
+ if(!itemIdMapPromise)itemIdMapPromise=(async()=>{
+  const catalog=await getItemCatalog();const byName=new Map();
+  for(const entry of catalog){
+   const id=catalogItemId(entry),name=canonicalEquipmentName(catalogEnglishName(entry));
+   if(!isBaseEquipmentId(id)||!name)continue;
+   const suffix=id.replace(/^T[2-8]_/,''),key=name;
+   if(!byName.has(key))byName.set(key,new Set());byName.get(key).add(suffix);
+  }
+  const mapping=new Map(),ambiguous=new Map(),unmapped=[];
+  for(const item of items){
+   const key=canonicalEquipmentName(item.name),candidates=[...(byName.get(key)||[])];
+   if(candidates.length===1)mapping.set(item.name,candidates[0]);
+   else if(candidates.length>1)ambiguous.set(item.name,candidates);
+   else unmapped.push(item.name);
+  }
+  return {mapping,ambiguous,unmapped,total:items.length};
+ })().catch(err=>{itemIdMapPromise=null;throw err});
+ return itemIdMapPromise;
 }
 async function resolveCraftedItemId(){
  const override=$('itemMarketId').value.trim();if(override){if(!/^[A-Za-z0-9_@-]+$/.test(override))throw new Error('Item ID override contains invalid characters');return {id:override,source:'manual item ID'}}
  const item=selectedCraftedItem();if(!item)throw new Error('Select an item first');
  const tier=Number($('craftTier').value),ench=Number($('enchant').value);
- const catalog=await getItemCatalog();const wanted=normalizeItemName(item.name);
- const candidates=catalog.filter(x=>normalizeItemName(catalogEnglishName(x))===wanted&&/^T4_/.test(catalogItemId(x))&&!catalogItemId(x).includes('@'));
- const ids=[...new Set(candidates.map(x=>applyTierAndEnchantment(catalogItemId(x),tier,ench)).filter(Boolean))];
- if(ids.length!==1)throw new Error(ids.length?'Multiple catalogue matches. Enter the exact item ID manually.':'No exact catalogue match for '+item.name+'. Enter its market item ID manually.');
- return {id:ids[0],source:'catalogue match'};
+ const {mapping,ambiguous,unmapped,total}=await getItemIdMap();
+ const suffix=mapping.get(item.name);
+ if(!suffix){
+  const detail=ambiguous.has(item.name)?'Multiple item IDs match this name.':'No reliable item ID found.';
+  throw new Error(detail+' '+item.name+' needs a manual ID. '+mapping.size+' of '+total+' item names matched automatically.');
+ }
+ return {id:`T${tier}_${suffix}`+(ench?'@'+ench:''),source:'mapped item ID ('+mapping.size+'/'+total+' names)'};
 }
 function priceAge(iso){const time=parseMarketDate(iso);if(!Number.isFinite(time))return {label:'Unknown',hours:Infinity};const hours=Math.max(0,(Date.now()-time)/3600000);return {label:hours<48?Math.round(hours)+'h ago':Math.round(hours/24)+'d ago',hours}}
 function validOrder(record,kind,maxHours){const value=Number(record[kind]);const date=priceAge(record[kind+'_date']);return value>0&&Number.isFinite(value)&&Number.isFinite(date.hours)&&(maxHours===0||date.hours<=maxHours)?{value,date}:null}

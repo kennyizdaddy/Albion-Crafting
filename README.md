@@ -1,14 +1,12 @@
-# Albion Atlas — six-city crafted item prices
+# Albion Atlas - item ID mapping update
 
-## Upload to GitHub Pages
-Replace `index.html`, `app.js`, and `style.css` in the root of the `Albion-Crafting` repository. Keep `items.json` unchanged. Commit changes, wait for GitHub Pages deployment, then hard-refresh (Ctrl+Shift+R).
+## GitHub update
+Replace **app.js** in your existing repository with the file from this package. Keep your existing index.html, style.css and items.json. Commit to main, wait for GitHub Pages to publish, then hard-refresh (Ctrl+Shift+R).
 
-## New feature
-Under Gear Crafting, select an item, tier, enchantment, and quality. Click **Compare six cities**. The site looks up an exact English item name in the ao-bin-dumps item catalogue and requests the Americas (West) AODP market API for Martlock, Fort Sterling, Thetford, Lymhurst, Bridgewatch, and Caerleon. It shows lowest sell orders and highest buy orders, with individual observation ages. Click Sell or Buy to copy that city price into Selling price / item and recalculate profit.
+## What changed
+The six-city comparison now builds a mapping for every name in your 232-item `items.json` list from the community Albion item catalogue. It removes tier prefixes such as **Adept's** before matching and deduplicates IDs by their tier-independent suffix. It then creates the correct ID for the chosen tier and enchantment. It does **not** guess when names are missing or ambiguous; the manual item ID field remains available. The comparison reports the number of automatically matched names.
 
-The shared **Maximum price age** setting also applies to finished-item comparisons. Older or missing observations display as unavailable. If automatic item-name matching is ambiguous or missing, enter the verified item ID in **Item ID override**. For enchanted equipment the ID normally ends in `@1`, `@2`, etc. Only one matching base ID is accepted automatically.
+**Note:** This is an automatic catalogue-based mapping system, not a manually verified list of 232 static IDs. The actual match count depends on the catalogue available in the visitor's browser. Live API calls and browser compatibility have not been verified here.
 
-The catalogue is fetched from https://raw.githubusercontent.com/ao-data/ao-bin-dumps/master/formatted/items.json (community-maintained); prices from https://west.albion-online-data.com/api/v2/stats/prices/ . Both services need internet access and may be unavailable, rate-limited, or missing prices. No guarantee of executable prices or order volume. Market prices are player-observed, not exchange quotes. Some unusual items have names that do not match the catalogue; use a verified ID manually. 
-
-## Existing features
-Material price fetch, refining, crafting return rates and manual price entry are retained. 20% daily bonus crafting rates are still unspecified and require manual override.
+## Test
+Choose Heavy Crossbow, tier 4, enchantment 1, and click Compare six cities. If catalogue naming matches, it should request `T4_2HCROSSBOW@1`. If it still fails, use that ID in the override field and report the displayed error.
