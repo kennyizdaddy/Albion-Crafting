@@ -1,0 +1,33 @@
+# Albion Atlas — GitHub Pages website update
+
+Updated using **Albion crafting master - 10 percent daily bonus rates.xlsx**.
+
+## Upload using GitHub's website
+1. Open https://github.com/kennyizdaddy/Albion-Crafting and sign in.
+2. Open the repository's root folder (the folder containing `index.html`).
+3. **Back up** the current files first: click **Code → Download ZIP**.
+4. Click **Add file → Upload files** (if you don't see it, use the `+` near the file list).
+5. Extract the downloaded Albion Atlas ZIP on your computer. Upload the **contents** of the extracted folder, not the ZIP itself and not an extra parent folder: `index.html`, `style.css`, `app.js`, `items.json`, and optionally `README.md`.
+6. If GitHub prompts about files with matching names, allow the replacements. Enter a commit message such as `Update crafting recipes and 10 percent daily bonus rates`, then **Commit changes**.
+7. In **Settings → Pages**, confirm the site is deployed from the expected branch (typically `main`) and root (`/`). Wait a minute or two, then refresh https://kennyizdaddy.github.io/Albion-Crafting/ (Ctrl+Shift+R if you see an old version).
+
+## Editing later
+- **Change page text and labels:** click `index.html` in GitHub, then the pencil **Edit this file**, edit and **Commit changes**.
+- **Change the appearance:** edit `style.css`.
+- **Change calculation logic and bonus rates:** edit `app.js`, specifically `craftingRates` and `craftingRate()`.
+- **Update item names, bonus cities and recipes:** edit `items.json` (or ask for a new export from the latest Excel workbook).
+- **Undo a mistake:** use GitHub's file **History** or repository commit history to restore a previous version.
+
+## Current calculation rules
+- No daily bonus, in bonus city: no focus **24.8%**, focus **47.9%**.
+- No daily bonus, other city: no focus **15.2%**, focus **43.5%**.
+- 10% daily bonus, in bonus city: no focus **30%**, focus **50.4%**.
+- 10% daily bonus, other city: no focus **21.8%**, focus **46.5%**.
+- 20% daily bonus: **not yet provided**; the website shows unavailable rather than guessing.
+- Manual return rate overrides are available for crafting and refining.
+
+## Notes
+- The website is static; uploading a revised Excel file alone will **not** change the website. `items.json` and `app.js` must be updated when the workbook changes.
+- All prices are manual; there is no live market feed.
+- Refining is an estimate using the previous version's inputs, not a full port of every Excel formula.
+- The site's cost model uses expected material consumption and excludes artifact returns. Check item recipes against the game before making large trades.

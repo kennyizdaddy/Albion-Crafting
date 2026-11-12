@@ -1,6 +1,9 @@
 [
   {
     "name": "Battleaxe",
+    "category": "Weapons",
+    "subcategory": "Axes",
+    "bonusCity": "Martlock",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -14,6 +17,9 @@
   },
   {
     "name": "Bear Paws",
+    "category": "Weapons",
+    "subcategory": "Axes",
+    "bonusCity": "Martlock",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -31,6 +37,9 @@
   },
   {
     "name": "Carrioncaller",
+    "category": "Weapons",
+    "subcategory": "Axes",
+    "bonusCity": "Martlock",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -48,6 +57,9 @@
   },
   {
     "name": "Crystal Reaper",
+    "category": "Weapons",
+    "subcategory": "Axes",
+    "bonusCity": "Martlock",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -65,6 +77,9 @@
   },
   {
     "name": "Halberd",
+    "category": "Weapons",
+    "subcategory": "Axes",
+    "bonusCity": "Martlock",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -78,6 +93,9 @@
   },
   {
     "name": "Infernal Scythe",
+    "category": "Weapons",
+    "subcategory": "Axes",
+    "bonusCity": "Martlock",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -95,6 +113,9 @@
   },
   {
     "name": "Realmbreaker",
+    "category": "Weapons",
+    "subcategory": "Axes",
+    "bonusCity": "Martlock",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -112,6 +133,9 @@
   },
   {
     "name": "The Hand of Khor",
+    "category": "Weapons",
+    "subcategory": "Axes",
+    "bonusCity": "Martlock",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -129,6 +153,9 @@
   },
   {
     "name": "Forge Hammers",
+    "category": "Weapons",
+    "subcategory": "Hammers",
+    "bonusCity": "Fort Sterling",
     "materials": [
       {
         "name": "Tier 4 Bar",
@@ -146,6 +173,9 @@
   },
   {
     "name": "Great Hammer",
+    "category": "Weapons",
+    "subcategory": "Hammers",
+    "bonusCity": "Fort Sterling",
     "materials": [
       {
         "name": "Tier 4 Bar",
@@ -159,6 +189,9 @@
   },
   {
     "name": "Grovekeeper",
+    "category": "Weapons",
+    "subcategory": "Hammers",
+    "bonusCity": "Fort Sterling",
     "materials": [
       {
         "name": "Tier 4 Bar",
@@ -176,6 +209,9 @@
   },
   {
     "name": "Hammer",
+    "category": "Weapons",
+    "subcategory": "Hammers",
+    "bonusCity": "Fort Sterling",
     "materials": [
       {
         "name": "Tier 4 Bar",
@@ -185,6 +221,9 @@
   },
   {
     "name": "Hand of Justice",
+    "category": "Weapons",
+    "subcategory": "Hammers",
+    "bonusCity": "Fort Sterling",
     "materials": [
       {
         "name": "Tier 4 Bar",
@@ -202,6 +241,9 @@
   },
   {
     "name": "Polehammer",
+    "category": "Weapons",
+    "subcategory": "Hammers",
+    "bonusCity": "Fort Sterling",
     "materials": [
       {
         "name": "Tier 4 Bar",
@@ -215,6 +257,9 @@
   },
   {
     "name": "Tombhammer",
+    "category": "Weapons",
+    "subcategory": "Hammers",
+    "bonusCity": "Fort Sterling",
     "materials": [
       {
         "name": "Tier 4 Bar",
@@ -232,6 +277,9 @@
   },
   {
     "name": "Truebolt Hammer",
+    "category": "Weapons",
+    "subcategory": "Hammers",
+    "bonusCity": "Fort Sterling",
     "materials": [
       {
         "name": "Tier 4 Bar",
@@ -249,6 +297,9 @@
   },
   {
     "name": "Bedrock Mace",
+    "category": "Weapons",
+    "subcategory": "Maces",
+    "bonusCity": "Thetford",
     "materials": [
       {
         "name": "Tier 4 Bar",
@@ -266,6 +317,9 @@
   },
   {
     "name": "Camlann Mace",
+    "category": "Weapons",
+    "subcategory": "Maces",
+    "bonusCity": "Thetford",
     "materials": [
       {
         "name": "Tier 4 Bar",
@@ -283,6 +337,9 @@
   },
   {
     "name": "Dreadstorm Monarch",
+    "category": "Weapons",
+    "subcategory": "Maces",
+    "bonusCity": "Thetford",
     "materials": [
       {
         "name": "Tier 4 Bar",
@@ -300,6 +357,9 @@
   },
   {
     "name": "Heavy Mace",
+    "category": "Weapons",
+    "subcategory": "Maces",
+    "bonusCity": "Thetford",
     "materials": [
       {
         "name": "Tier 4 Bar",
@@ -313,6 +373,9 @@
   },
   {
     "name": "Incubus Mace",
+    "category": "Weapons",
+    "subcategory": "Maces",
+    "bonusCity": "Thetford",
     "materials": [
       {
         "name": "Tier 4 Bar",
@@ -330,6 +393,9 @@
   },
   {
     "name": "Mace",
+    "category": "Weapons",
+    "subcategory": "Maces",
+    "bonusCity": "Thetford",
     "materials": [
       {
         "name": "Tier 4 Bar",
@@ -343,6 +409,9 @@
   },
   {
     "name": "Morning Star",
+    "category": "Weapons",
+    "subcategory": "Maces",
+    "bonusCity": "Thetford",
     "materials": [
       {
         "name": "Tier 4 Bar",
@@ -356,6 +425,9 @@
   },
   {
     "name": "Oathkeepers",
+    "category": "Weapons",
+    "subcategory": "Maces",
+    "bonusCity": "Thetford",
     "materials": [
       {
         "name": "Tier 4 Bar",
@@ -373,6 +445,9 @@
   },
   {
     "name": "Battle Bracers",
+    "category": "Weapons",
+    "subcategory": "Gloves",
+    "bonusCity": "Caerleon",
     "materials": [
       {
         "name": "Tier 4 Leather",
@@ -386,6 +461,9 @@
   },
   {
     "name": "Brawler Gloves",
+    "category": "Weapons",
+    "subcategory": "Gloves",
+    "bonusCity": "Caerleon",
     "materials": [
       {
         "name": "Tier 4 Leather",
@@ -399,6 +477,9 @@
   },
   {
     "name": "Fists of Avalon",
+    "category": "Weapons",
+    "subcategory": "Gloves",
+    "bonusCity": "Caerleon",
     "materials": [
       {
         "name": "Tier 4 Leather",
@@ -416,6 +497,9 @@
   },
   {
     "name": "Forcepulse Bracers",
+    "category": "Weapons",
+    "subcategory": "Gloves",
+    "bonusCity": "Caerleon",
     "materials": [
       {
         "name": "Tier 4 Leather",
@@ -433,6 +517,9 @@
   },
   {
     "name": "Hellfire Hands",
+    "category": "Weapons",
+    "subcategory": "Gloves",
+    "bonusCity": "Caerleon",
     "materials": [
       {
         "name": "Tier 4 Leather",
@@ -450,6 +537,9 @@
   },
   {
     "name": "Ravenstrike Cestus",
+    "category": "Weapons",
+    "subcategory": "Gloves",
+    "bonusCity": "Caerleon",
     "materials": [
       {
         "name": "Tier 4 Leather",
@@ -467,6 +557,9 @@
   },
   {
     "name": "Spiked Gauntlets",
+    "category": "Weapons",
+    "subcategory": "Gloves",
+    "bonusCity": "Caerleon",
     "materials": [
       {
         "name": "Tier 4 Leather",
@@ -480,6 +573,9 @@
   },
   {
     "name": "Ursine Maulers",
+    "category": "Weapons",
+    "subcategory": "Gloves",
+    "bonusCity": "Caerleon",
     "materials": [
       {
         "name": "Tier 4 Leather",
@@ -497,6 +593,9 @@
   },
   {
     "name": "Arclight Blasters",
+    "category": "Weapons",
+    "subcategory": "Crossbows",
+    "bonusCity": "Bridgewatch",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -514,6 +613,9 @@
   },
   {
     "name": "Boltcasters",
+    "category": "Weapons",
+    "subcategory": "Crossbows",
+    "bonusCity": "Bridgewatch",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -531,6 +633,9 @@
   },
   {
     "name": "Crossbow",
+    "category": "Weapons",
+    "subcategory": "Crossbows",
+    "bonusCity": "Bridgewatch",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -544,6 +649,9 @@
   },
   {
     "name": "Energy Shaper",
+    "category": "Weapons",
+    "subcategory": "Crossbows",
+    "bonusCity": "Bridgewatch",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -561,6 +669,9 @@
   },
   {
     "name": "Heavy Crossbow",
+    "category": "Weapons",
+    "subcategory": "Crossbows",
+    "bonusCity": "Bridgewatch",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -574,6 +685,9 @@
   },
   {
     "name": "Light Crossbow",
+    "category": "Weapons",
+    "subcategory": "Crossbows",
+    "bonusCity": "Bridgewatch",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -587,6 +701,9 @@
   },
   {
     "name": "Siegebow",
+    "category": "Weapons",
+    "subcategory": "Crossbows",
+    "bonusCity": "Bridgewatch",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -604,6 +721,9 @@
   },
   {
     "name": "Weeping Repeater",
+    "category": "Weapons",
+    "subcategory": "Crossbows",
+    "bonusCity": "Bridgewatch",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -621,6 +741,9 @@
   },
   {
     "name": "Broadsword",
+    "category": "Weapons",
+    "subcategory": "Swords",
+    "bonusCity": "Lymhurst",
     "materials": [
       {
         "name": "Tier 4 Bar",
@@ -634,6 +757,9 @@
   },
   {
     "name": "Carving Sword",
+    "category": "Weapons",
+    "subcategory": "Swords",
+    "bonusCity": "Lymhurst",
     "materials": [
       {
         "name": "Tier 4 Bar",
@@ -651,6 +777,9 @@
   },
   {
     "name": "Clarent Blade",
+    "category": "Weapons",
+    "subcategory": "Swords",
+    "bonusCity": "Lymhurst",
     "materials": [
       {
         "name": "Tier 4 Bar",
@@ -668,6 +797,9 @@
   },
   {
     "name": "Claymore",
+    "category": "Weapons",
+    "subcategory": "Swords",
+    "bonusCity": "Lymhurst",
     "materials": [
       {
         "name": "Tier 4 Bar",
@@ -681,6 +813,9 @@
   },
   {
     "name": "Dual Swords",
+    "category": "Weapons",
+    "subcategory": "Swords",
+    "bonusCity": "Lymhurst",
     "materials": [
       {
         "name": "Tier 4 Bar",
@@ -694,6 +829,9 @@
   },
   {
     "name": "Galatine Pair",
+    "category": "Weapons",
+    "subcategory": "Swords",
+    "bonusCity": "Lymhurst",
     "materials": [
       {
         "name": "Tier 4 Bar",
@@ -711,6 +849,9 @@
   },
   {
     "name": "Infinity Blade",
+    "category": "Weapons",
+    "subcategory": "Swords",
+    "bonusCity": "Lymhurst",
     "materials": [
       {
         "name": "Tier 4 Bar",
@@ -728,6 +869,9 @@
   },
   {
     "name": "Kingmaker",
+    "category": "Weapons",
+    "subcategory": "Swords",
+    "bonusCity": "Lymhurst",
     "materials": [
       {
         "name": "Tier 4 Bar",
@@ -745,6 +889,9 @@
   },
   {
     "name": "Bow",
+    "category": "Weapons",
+    "subcategory": "Bows",
+    "bonusCity": "Lymhurst",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -754,6 +901,9 @@
   },
   {
     "name": "Bow of Badon",
+    "category": "Weapons",
+    "subcategory": "Bows",
+    "bonusCity": "Lymhurst",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -767,6 +917,9 @@
   },
   {
     "name": "Longbow",
+    "category": "Weapons",
+    "subcategory": "Bows",
+    "bonusCity": "Lymhurst",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -776,6 +929,9 @@
   },
   {
     "name": "Mistpiercer",
+    "category": "Weapons",
+    "subcategory": "Bows",
+    "bonusCity": "Lymhurst",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -789,6 +945,9 @@
   },
   {
     "name": "Skystrider Bow",
+    "category": "Weapons",
+    "subcategory": "Bows",
+    "bonusCity": "Lymhurst",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -802,6 +961,9 @@
   },
   {
     "name": "Wailing Bow",
+    "category": "Weapons",
+    "subcategory": "Bows",
+    "bonusCity": "Lymhurst",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -815,6 +977,9 @@
   },
   {
     "name": "Warbow",
+    "category": "Weapons",
+    "subcategory": "Bows",
+    "bonusCity": "Lymhurst",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -824,6 +989,9 @@
   },
   {
     "name": "Whispering Bow",
+    "category": "Weapons",
+    "subcategory": "Bows",
+    "bonusCity": "Lymhurst",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -837,6 +1005,9 @@
   },
   {
     "name": "Bloodletter",
+    "category": "Weapons",
+    "subcategory": "Daggers",
+    "bonusCity": "Bridgewatch",
     "materials": [
       {
         "name": "Tier 4 Bar",
@@ -854,6 +1025,9 @@
   },
   {
     "name": "Bridled Fury",
+    "category": "Weapons",
+    "subcategory": "Daggers",
+    "bonusCity": "Bridgewatch",
     "materials": [
       {
         "name": "Tier 4 Bar",
@@ -871,6 +1045,9 @@
   },
   {
     "name": "Claws",
+    "category": "Weapons",
+    "subcategory": "Daggers",
+    "bonusCity": "Bridgewatch",
     "materials": [
       {
         "name": "Tier 4 Bar",
@@ -884,6 +1061,9 @@
   },
   {
     "name": "Dagger",
+    "category": "Weapons",
+    "subcategory": "Daggers",
+    "bonusCity": "Bridgewatch",
     "materials": [
       {
         "name": "Tier 4 Bar",
@@ -897,6 +1077,9 @@
   },
   {
     "name": "Dagger Pair",
+    "category": "Weapons",
+    "subcategory": "Daggers",
+    "bonusCity": "Bridgewatch",
     "materials": [
       {
         "name": "Tier 4 Bar",
@@ -910,6 +1093,9 @@
   },
   {
     "name": "Deathgivers",
+    "category": "Weapons",
+    "subcategory": "Daggers",
+    "bonusCity": "Bridgewatch",
     "materials": [
       {
         "name": "Tier 4 Bar",
@@ -927,6 +1113,9 @@
   },
   {
     "name": "Demonfang",
+    "category": "Weapons",
+    "subcategory": "Daggers",
+    "bonusCity": "Bridgewatch",
     "materials": [
       {
         "name": "Tier 4 Bar",
@@ -944,6 +1133,9 @@
   },
   {
     "name": "Twin Slayers",
+    "category": "Weapons",
+    "subcategory": "Daggers",
+    "bonusCity": "Bridgewatch",
     "materials": [
       {
         "name": "Tier 4 Bar",
@@ -961,6 +1153,9 @@
   },
   {
     "name": "Daybreaker",
+    "category": "Weapons",
+    "subcategory": "Spears",
+    "bonusCity": "Fort Sterling",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -978,6 +1173,9 @@
   },
   {
     "name": "Glaive",
+    "category": "Weapons",
+    "subcategory": "Spears",
+    "bonusCity": "Fort Sterling",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -991,6 +1189,9 @@
   },
   {
     "name": "Heron Spear",
+    "category": "Weapons",
+    "subcategory": "Spears",
+    "bonusCity": "Fort Sterling",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -1008,6 +1209,9 @@
   },
   {
     "name": "Pike",
+    "category": "Weapons",
+    "subcategory": "Spears",
+    "bonusCity": "Fort Sterling",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -1021,6 +1225,9 @@
   },
   {
     "name": "Rift Glaive",
+    "category": "Weapons",
+    "subcategory": "Spears",
+    "bonusCity": "Fort Sterling",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -1038,6 +1245,9 @@
   },
   {
     "name": "Spear",
+    "category": "Weapons",
+    "subcategory": "Spears",
+    "bonusCity": "Fort Sterling",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -1051,6 +1261,9 @@
   },
   {
     "name": "Spirithunter",
+    "category": "Weapons",
+    "subcategory": "Spears",
+    "bonusCity": "Fort Sterling",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -1068,6 +1281,9 @@
   },
   {
     "name": "Trinity Spear",
+    "category": "Weapons",
+    "subcategory": "Spears",
+    "bonusCity": "Fort Sterling",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -1085,6 +1301,9 @@
   },
   {
     "name": "Black Monk Staff",
+    "category": "Weapons",
+    "subcategory": "Quarterstaves",
+    "bonusCity": "Martlock",
     "materials": [
       {
         "name": "Tier 4 Leather",
@@ -1102,6 +1321,9 @@
   },
   {
     "name": "Double Bladed Staff",
+    "category": "Weapons",
+    "subcategory": "Quarterstaves",
+    "bonusCity": "Martlock",
     "materials": [
       {
         "name": "Tier 4 Leather",
@@ -1115,6 +1337,9 @@
   },
   {
     "name": "Grailseeker",
+    "category": "Weapons",
+    "subcategory": "Quarterstaves",
+    "bonusCity": "Martlock",
     "materials": [
       {
         "name": "Tier 4 Leather",
@@ -1132,6 +1357,9 @@
   },
   {
     "name": "Iron-clad Staff",
+    "category": "Weapons",
+    "subcategory": "Quarterstaves",
+    "bonusCity": "Martlock",
     "materials": [
       {
         "name": "Tier 4 Leather",
@@ -1145,6 +1373,9 @@
   },
   {
     "name": "Phantom Twinblade",
+    "category": "Weapons",
+    "subcategory": "Quarterstaves",
+    "bonusCity": "Martlock",
     "materials": [
       {
         "name": "Tier 4 Leather",
@@ -1162,6 +1393,9 @@
   },
   {
     "name": "Quarterstaff",
+    "category": "Weapons",
+    "subcategory": "Quarterstaves",
+    "bonusCity": "Martlock",
     "materials": [
       {
         "name": "Tier 4 Leather",
@@ -1175,6 +1409,9 @@
   },
   {
     "name": "Soulscythe",
+    "category": "Weapons",
+    "subcategory": "Quarterstaves",
+    "bonusCity": "Martlock",
     "materials": [
       {
         "name": "Tier 4 Leather",
@@ -1192,6 +1429,9 @@
   },
   {
     "name": "Staff of Balance",
+    "category": "Weapons",
+    "subcategory": "Quarterstaves",
+    "bonusCity": "Martlock",
     "materials": [
       {
         "name": "Tier 4 Leather",
@@ -1209,6 +1449,9 @@
   },
   {
     "name": "Bloodmoon Staff",
+    "category": "Weapons",
+    "subcategory": "Shapeshifter Staffs",
+    "bonusCity": "Caerleon",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -1226,6 +1469,9 @@
   },
   {
     "name": "Earthrune Staff",
+    "category": "Weapons",
+    "subcategory": "Shapeshifter Staffs",
+    "bonusCity": "Caerleon",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -1243,6 +1489,9 @@
   },
   {
     "name": "Hellspawn Staff",
+    "category": "Weapons",
+    "subcategory": "Shapeshifter Staffs",
+    "bonusCity": "Caerleon",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -1260,6 +1509,9 @@
   },
   {
     "name": "Lightcaller",
+    "category": "Weapons",
+    "subcategory": "Shapeshifter Staffs",
+    "bonusCity": "Caerleon",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -1277,6 +1529,9 @@
   },
   {
     "name": "Primal Staff",
+    "category": "Weapons",
+    "subcategory": "Shapeshifter Staffs",
+    "bonusCity": "Caerleon",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -1294,6 +1549,9 @@
   },
   {
     "name": "Prowling Staff",
+    "category": "Weapons",
+    "subcategory": "Shapeshifter Staffs",
+    "bonusCity": "Caerleon",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -1311,6 +1569,9 @@
   },
   {
     "name": "Rootbound Staff",
+    "category": "Weapons",
+    "subcategory": "Shapeshifter Staffs",
+    "bonusCity": "Caerleon",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -1328,6 +1589,9 @@
   },
   {
     "name": "Stillgaze Staff",
+    "category": "Weapons",
+    "subcategory": "Shapeshifter Staffs",
+    "bonusCity": "Caerleon",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -1345,6 +1609,9 @@
   },
   {
     "name": "Blight Staff",
+    "category": "Weapons",
+    "subcategory": "Nature Staffs",
+    "bonusCity": "Thetford",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -1362,6 +1629,9 @@
   },
   {
     "name": "Druidic Staff",
+    "category": "Weapons",
+    "subcategory": "Nature Staffs",
+    "bonusCity": "Thetford",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -1379,6 +1649,9 @@
   },
   {
     "name": "Forgebark Staff",
+    "category": "Weapons",
+    "subcategory": "Nature Staffs",
+    "bonusCity": "Thetford",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -1396,6 +1669,9 @@
   },
   {
     "name": "Great Nature Staff",
+    "category": "Weapons",
+    "subcategory": "Nature Staffs",
+    "bonusCity": "Thetford",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -1409,6 +1685,9 @@
   },
   {
     "name": "Ironroot Staff",
+    "category": "Weapons",
+    "subcategory": "Nature Staffs",
+    "bonusCity": "Thetford",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -1426,6 +1705,9 @@
   },
   {
     "name": "Nature Staff",
+    "category": "Weapons",
+    "subcategory": "Nature Staffs",
+    "bonusCity": "Thetford",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -1439,6 +1721,9 @@
   },
   {
     "name": "Rampant Staff",
+    "category": "Weapons",
+    "subcategory": "Nature Staffs",
+    "bonusCity": "Thetford",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -1456,6 +1741,9 @@
   },
   {
     "name": "Wild Staff",
+    "category": "Weapons",
+    "subcategory": "Nature Staffs",
+    "bonusCity": "Thetford",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -1469,6 +1757,9 @@
   },
   {
     "name": "Arcane Staff",
+    "category": "Weapons",
+    "subcategory": "Arcane Staffs",
+    "bonusCity": "Lymhurst",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -1482,6 +1773,9 @@
   },
   {
     "name": "Astral Staff",
+    "category": "Weapons",
+    "subcategory": "Arcane Staffs",
+    "bonusCity": "Lymhurst",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -1499,6 +1793,9 @@
   },
   {
     "name": "Enigmatic Staff",
+    "category": "Weapons",
+    "subcategory": "Arcane Staffs",
+    "bonusCity": "Lymhurst",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -1512,6 +1809,9 @@
   },
   {
     "name": "Evensong",
+    "category": "Weapons",
+    "subcategory": "Arcane Staffs",
+    "bonusCity": "Lymhurst",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -1529,6 +1829,9 @@
   },
   {
     "name": "Great Arcane Staff",
+    "category": "Weapons",
+    "subcategory": "Arcane Staffs",
+    "bonusCity": "Lymhurst",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -1542,6 +1845,9 @@
   },
   {
     "name": "Malevolent Locus",
+    "category": "Weapons",
+    "subcategory": "Arcane Staffs",
+    "bonusCity": "Lymhurst",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -1559,6 +1865,9 @@
   },
   {
     "name": "Occult Staff",
+    "category": "Weapons",
+    "subcategory": "Arcane Staffs",
+    "bonusCity": "Lymhurst",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -1576,6 +1885,9 @@
   },
   {
     "name": "Witchwork Staff",
+    "category": "Weapons",
+    "subcategory": "Arcane Staffs",
+    "bonusCity": "Lymhurst",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -1593,6 +1905,9 @@
   },
   {
     "name": "Cursed Skull",
+    "category": "Weapons",
+    "subcategory": "Cursed Staffs",
+    "bonusCity": "Bridgewatch",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -1610,6 +1925,9 @@
   },
   {
     "name": "Cursed Staff",
+    "category": "Weapons",
+    "subcategory": "Cursed Staffs",
+    "bonusCity": "Bridgewatch",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -1623,6 +1941,9 @@
   },
   {
     "name": "Damnation Staff",
+    "category": "Weapons",
+    "subcategory": "Cursed Staffs",
+    "bonusCity": "Bridgewatch",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -1640,6 +1961,9 @@
   },
   {
     "name": "Demonic Staff",
+    "category": "Weapons",
+    "subcategory": "Cursed Staffs",
+    "bonusCity": "Bridgewatch",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -1653,6 +1977,9 @@
   },
   {
     "name": "Great Cursed Staff",
+    "category": "Weapons",
+    "subcategory": "Cursed Staffs",
+    "bonusCity": "Bridgewatch",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -1666,6 +1993,9 @@
   },
   {
     "name": "Lifecurse Staff",
+    "category": "Weapons",
+    "subcategory": "Cursed Staffs",
+    "bonusCity": "Bridgewatch",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -1683,6 +2013,9 @@
   },
   {
     "name": "Rotcaller Staff",
+    "category": "Weapons",
+    "subcategory": "Cursed Staffs",
+    "bonusCity": "Bridgewatch",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -1700,6 +2033,9 @@
   },
   {
     "name": "Shadowcaller",
+    "category": "Weapons",
+    "subcategory": "Cursed Staffs",
+    "bonusCity": "Bridgewatch",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -1717,6 +2053,9 @@
   },
   {
     "name": "Blazing Staff",
+    "category": "Weapons",
+    "subcategory": "Fire Staffs",
+    "bonusCity": "Thetford",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -1734,6 +2073,9 @@
   },
   {
     "name": "Brimstone Staff",
+    "category": "Weapons",
+    "subcategory": "Fire Staffs",
+    "bonusCity": "Thetford",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -1751,6 +2093,9 @@
   },
   {
     "name": "Dawnsong",
+    "category": "Weapons",
+    "subcategory": "Fire Staffs",
+    "bonusCity": "Thetford",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -1768,6 +2113,9 @@
   },
   {
     "name": "Fire Staff",
+    "category": "Weapons",
+    "subcategory": "Fire Staffs",
+    "bonusCity": "Thetford",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -1781,6 +2129,9 @@
   },
   {
     "name": "Flamewalker Staff",
+    "category": "Weapons",
+    "subcategory": "Fire Staffs",
+    "bonusCity": "Thetford",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -1798,6 +2149,9 @@
   },
   {
     "name": "Great Fire Staff",
+    "category": "Weapons",
+    "subcategory": "Fire Staffs",
+    "bonusCity": "Thetford",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -1811,6 +2165,9 @@
   },
   {
     "name": "Infernal Staff",
+    "category": "Weapons",
+    "subcategory": "Fire Staffs",
+    "bonusCity": "Thetford",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -1824,6 +2181,9 @@
   },
   {
     "name": "Wildfire Staff",
+    "category": "Weapons",
+    "subcategory": "Fire Staffs",
+    "bonusCity": "Thetford",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -1841,6 +2201,9 @@
   },
   {
     "name": "Arctic Staff",
+    "category": "Weapons",
+    "subcategory": "Frost Staffs",
+    "bonusCity": "Martlock",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -1858,6 +2221,9 @@
   },
   {
     "name": "Chillhowl",
+    "category": "Weapons",
+    "subcategory": "Frost Staffs",
+    "bonusCity": "Martlock",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -1875,6 +2241,9 @@
   },
   {
     "name": "Frost Staff",
+    "category": "Weapons",
+    "subcategory": "Frost Staffs",
+    "bonusCity": "Martlock",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -1888,6 +2257,9 @@
   },
   {
     "name": "Glacial Staff",
+    "category": "Weapons",
+    "subcategory": "Frost Staffs",
+    "bonusCity": "Martlock",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -1901,6 +2273,9 @@
   },
   {
     "name": "Great Frost Staff",
+    "category": "Weapons",
+    "subcategory": "Frost Staffs",
+    "bonusCity": "Martlock",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -1914,6 +2289,9 @@
   },
   {
     "name": "Hoarfrost Staff",
+    "category": "Weapons",
+    "subcategory": "Frost Staffs",
+    "bonusCity": "Martlock",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -1931,6 +2309,9 @@
   },
   {
     "name": "Icicle Staff",
+    "category": "Weapons",
+    "subcategory": "Frost Staffs",
+    "bonusCity": "Martlock",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -1948,6 +2329,9 @@
   },
   {
     "name": "Permafrost Prism",
+    "category": "Weapons",
+    "subcategory": "Frost Staffs",
+    "bonusCity": "Martlock",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -1965,6 +2349,9 @@
   },
   {
     "name": "Divine Staff",
+    "category": "Weapons",
+    "subcategory": "Holy Staffs",
+    "bonusCity": "Fort Sterling",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -1978,6 +2365,9 @@
   },
   {
     "name": "Exalted Staff",
+    "category": "Weapons",
+    "subcategory": "Holy Staffs",
+    "bonusCity": "Fort Sterling",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -1995,6 +2385,9 @@
   },
   {
     "name": "Fallen Staff",
+    "category": "Weapons",
+    "subcategory": "Holy Staffs",
+    "bonusCity": "Fort Sterling",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -2012,6 +2405,9 @@
   },
   {
     "name": "Great Holy Staff",
+    "category": "Weapons",
+    "subcategory": "Holy Staffs",
+    "bonusCity": "Fort Sterling",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -2025,6 +2421,9 @@
   },
   {
     "name": "Hallowfall",
+    "category": "Weapons",
+    "subcategory": "Holy Staffs",
+    "bonusCity": "Fort Sterling",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -2042,6 +2441,9 @@
   },
   {
     "name": "Holy Staff",
+    "category": "Weapons",
+    "subcategory": "Holy Staffs",
+    "bonusCity": "Fort Sterling",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -2055,6 +2457,9 @@
   },
   {
     "name": "Lifetouch Staff",
+    "category": "Weapons",
+    "subcategory": "Holy Staffs",
+    "bonusCity": "Fort Sterling",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -2072,6 +2477,9 @@
   },
   {
     "name": "Redemption Staff",
+    "category": "Weapons",
+    "subcategory": "Holy Staffs",
+    "bonusCity": "Fort Sterling",
     "materials": [
       {
         "name": "Tier 4 Plank",
@@ -2089,6 +2497,9 @@
   },
   {
     "name": "Scholar Cowl",
+    "category": "Helmets",
+    "subcategory": "Cloth",
+    "bonusCity": "Thetford",
     "materials": [
       {
         "name": "Tier 4 Cloth",
@@ -2098,6 +2509,9 @@
   },
   {
     "name": "Cleric Cowl",
+    "category": "Helmets",
+    "subcategory": "Cloth",
+    "bonusCity": "Thetford",
     "materials": [
       {
         "name": "Tier 4 Cloth",
@@ -2107,6 +2521,9 @@
   },
   {
     "name": "Mage Cowl",
+    "category": "Helmets",
+    "subcategory": "Cloth",
+    "bonusCity": "Thetford",
     "materials": [
       {
         "name": "Tier 4 Cloth",
@@ -2116,6 +2533,9 @@
   },
   {
     "name": "Druid Cowl",
+    "category": "Helmets",
+    "subcategory": "Cloth",
+    "bonusCity": "Thetford",
     "materials": [
       {
         "name": "Tier 4 Cloth",
@@ -2129,6 +2549,9 @@
   },
   {
     "name": "Fiend Cowl",
+    "category": "Helmets",
+    "subcategory": "Cloth",
+    "bonusCity": "Thetford",
     "materials": [
       {
         "name": "Tier 4 Cloth",
@@ -2142,6 +2565,9 @@
   },
   {
     "name": "Cultist Cowl",
+    "category": "Helmets",
+    "subcategory": "Cloth",
+    "bonusCity": "Thetford",
     "materials": [
       {
         "name": "Tier 4 Cloth",
@@ -2155,6 +2581,9 @@
   },
   {
     "name": "Royal Cowl",
+    "category": "Helmets",
+    "subcategory": "Cloth",
+    "bonusCity": "Thetford",
     "materials": [
       {
         "name": "Adept's Scholar Cowl",
@@ -2168,6 +2597,9 @@
   },
   {
     "name": "Cowl of Purity",
+    "category": "Helmets",
+    "subcategory": "Cloth",
+    "bonusCity": "Thetford",
     "materials": [
       {
         "name": "Tier 4 Cloth",
@@ -2181,6 +2613,9 @@
   },
   {
     "name": "Feyscale Hat",
+    "category": "Helmets",
+    "subcategory": "Cloth",
+    "bonusCity": "Thetford",
     "materials": [
       {
         "name": "Tier 4 Cloth",
@@ -2194,6 +2629,9 @@
   },
   {
     "name": "Hunter Hood",
+    "category": "Helmets",
+    "subcategory": "Leather",
+    "bonusCity": "Lymhurst",
     "materials": [
       {
         "name": "Tier 4 Leather",
@@ -2203,6 +2641,9 @@
   },
   {
     "name": "Mercenary Hood",
+    "category": "Helmets",
+    "subcategory": "Leather",
+    "bonusCity": "Lymhurst",
     "materials": [
       {
         "name": "Tier 4 Leather",
@@ -2212,6 +2653,9 @@
   },
   {
     "name": "Assassin Hood",
+    "category": "Helmets",
+    "subcategory": "Leather",
+    "bonusCity": "Lymhurst",
     "materials": [
       {
         "name": "Tier 4 Leather",
@@ -2221,6 +2665,9 @@
   },
   {
     "name": "Stalker Hood",
+    "category": "Helmets",
+    "subcategory": "Leather",
+    "bonusCity": "Lymhurst",
     "materials": [
       {
         "name": "Tier 4 Leather",
@@ -2234,6 +2681,9 @@
   },
   {
     "name": "Hellion Hood",
+    "category": "Helmets",
+    "subcategory": "Leather",
+    "bonusCity": "Lymhurst",
     "materials": [
       {
         "name": "Tier 4 Leather",
@@ -2247,6 +2697,9 @@
   },
   {
     "name": "Specter Hood",
+    "category": "Helmets",
+    "subcategory": "Leather",
+    "bonusCity": "Lymhurst",
     "materials": [
       {
         "name": "Tier 4 Leather",
@@ -2260,6 +2713,9 @@
   },
   {
     "name": "Royal Hood",
+    "category": "Helmets",
+    "subcategory": "Leather",
+    "bonusCity": "Lymhurst",
     "materials": [
       {
         "name": "Adept's Mercenary Hood",
@@ -2273,6 +2729,9 @@
   },
   {
     "name": "Hood of Tenacity",
+    "category": "Helmets",
+    "subcategory": "Leather",
+    "bonusCity": "Lymhurst",
     "materials": [
       {
         "name": "Tier 4 Leather",
@@ -2286,6 +2745,9 @@
   },
   {
     "name": "Mistwalker Hood",
+    "category": "Helmets",
+    "subcategory": "Leather",
+    "bonusCity": "Lymhurst",
     "materials": [
       {
         "name": "Tier 4 Leather",
@@ -2299,6 +2761,9 @@
   },
   {
     "name": "Soldier Helmet",
+    "category": "Helmets",
+    "subcategory": "Plate",
+    "bonusCity": "Fort Sterling",
     "materials": [
       {
         "name": "Tier 4 Bar",
@@ -2308,6 +2773,9 @@
   },
   {
     "name": "Knight Helmet",
+    "category": "Helmets",
+    "subcategory": "Plate",
+    "bonusCity": "Fort Sterling",
     "materials": [
       {
         "name": "Tier 4 Bar",
@@ -2317,6 +2785,9 @@
   },
   {
     "name": "Guardian Helmet",
+    "category": "Helmets",
+    "subcategory": "Plate",
+    "bonusCity": "Fort Sterling",
     "materials": [
       {
         "name": "Tier 4 Bar",
@@ -2326,6 +2797,9 @@
   },
   {
     "name": "Judicator Helmet",
+    "category": "Helmets",
+    "subcategory": "Plate",
+    "bonusCity": "Fort Sterling",
     "materials": [
       {
         "name": "Tier 4 Bar",
@@ -2339,6 +2813,9 @@
   },
   {
     "name": "Demon Helmet",
+    "category": "Helmets",
+    "subcategory": "Plate",
+    "bonusCity": "Fort Sterling",
     "materials": [
       {
         "name": "Tier 4 Bar",
@@ -2352,6 +2829,9 @@
   },
   {
     "name": "Graveguard Helmet",
+    "category": "Helmets",
+    "subcategory": "Plate",
+    "bonusCity": "Fort Sterling",
     "materials": [
       {
         "name": "Tier 4 Bar",
@@ -2365,6 +2845,9 @@
   },
   {
     "name": "Royal Helmet",
+    "category": "Helmets",
+    "subcategory": "Plate",
+    "bonusCity": "Fort Sterling",
     "materials": [
       {
         "name": "Adept's Soldier Helmet",
@@ -2378,6 +2861,9 @@
   },
   {
     "name": "Helmet of Valor",
+    "category": "Helmets",
+    "subcategory": "Plate",
+    "bonusCity": "Fort Sterling",
     "materials": [
       {
         "name": "Tier 4 Bar",
@@ -2391,6 +2877,9 @@
   },
   {
     "name": "Duskweaver Helmet",
+    "category": "Helmets",
+    "subcategory": "Plate",
+    "bonusCity": "Fort Sterling",
     "materials": [
       {
         "name": "Tier 4 Bar",
@@ -2404,6 +2893,9 @@
   },
   {
     "name": "Scholar Robe",
+    "category": "Chest",
+    "subcategory": "Cloth",
+    "bonusCity": "Fort Sterling",
     "materials": [
       {
         "name": "Tier 4 Cloth",
@@ -2413,6 +2905,9 @@
   },
   {
     "name": "Cleric Robe",
+    "category": "Chest",
+    "subcategory": "Cloth",
+    "bonusCity": "Fort Sterling",
     "materials": [
       {
         "name": "Tier 4 Cloth",
@@ -2422,6 +2917,9 @@
   },
   {
     "name": "Mage Robe",
+    "category": "Chest",
+    "subcategory": "Cloth",
+    "bonusCity": "Fort Sterling",
     "materials": [
       {
         "name": "Tier 4 Cloth",
@@ -2431,6 +2929,9 @@
   },
   {
     "name": "Druid Robe",
+    "category": "Chest",
+    "subcategory": "Cloth",
+    "bonusCity": "Fort Sterling",
     "materials": [
       {
         "name": "Tier 4 Cloth",
@@ -2444,6 +2945,9 @@
   },
   {
     "name": "Fiend Robe",
+    "category": "Chest",
+    "subcategory": "Cloth",
+    "bonusCity": "Fort Sterling",
     "materials": [
       {
         "name": "Tier 4 Cloth",
@@ -2457,6 +2961,9 @@
   },
   {
     "name": "Cultist Robe",
+    "category": "Chest",
+    "subcategory": "Cloth",
+    "bonusCity": "Fort Sterling",
     "materials": [
       {
         "name": "Tier 4 Cloth",
@@ -2470,6 +2977,9 @@
   },
   {
     "name": "Royal Robe",
+    "category": "Chest",
+    "subcategory": "Cloth",
+    "bonusCity": "Fort Sterling",
     "materials": [
       {
         "name": "Adept's Scholar Robe",
@@ -2483,6 +2993,9 @@
   },
   {
     "name": "Robe of Purity",
+    "category": "Chest",
+    "subcategory": "Cloth",
+    "bonusCity": "Fort Sterling",
     "materials": [
       {
         "name": "Tier 4 Cloth",
@@ -2496,6 +3009,9 @@
   },
   {
     "name": "Feyscale Robe",
+    "category": "Chest",
+    "subcategory": "Cloth",
+    "bonusCity": "Fort Sterling",
     "materials": [
       {
         "name": "Tier 4 Cloth",
@@ -2509,6 +3025,9 @@
   },
   {
     "name": "Mercenary Jacket",
+    "category": "Chest",
+    "subcategory": "Leather",
+    "bonusCity": "Thetford",
     "materials": [
       {
         "name": "Tier 4 Leather",
@@ -2518,6 +3037,9 @@
   },
   {
     "name": "Hunter Jacket",
+    "category": "Chest",
+    "subcategory": "Leather",
+    "bonusCity": "Thetford",
     "materials": [
       {
         "name": "Tier 4 Leather",
@@ -2527,6 +3049,9 @@
   },
   {
     "name": "Assassin Jacket",
+    "category": "Chest",
+    "subcategory": "Leather",
+    "bonusCity": "Thetford",
     "materials": [
       {
         "name": "Tier 4 Leather",
@@ -2536,6 +3061,9 @@
   },
   {
     "name": "Stalker Jacket",
+    "category": "Chest",
+    "subcategory": "Leather",
+    "bonusCity": "Thetford",
     "materials": [
       {
         "name": "Tier 4 Leather",
@@ -2549,6 +3077,9 @@
   },
   {
     "name": "Hellion Jacket",
+    "category": "Chest",
+    "subcategory": "Leather",
+    "bonusCity": "Thetford",
     "materials": [
       {
         "name": "Tier 4 Leather",
@@ -2562,6 +3093,9 @@
   },
   {
     "name": "Specter Jacket",
+    "category": "Chest",
+    "subcategory": "Leather",
+    "bonusCity": "Thetford",
     "materials": [
       {
         "name": "Tier 4 Leather",
@@ -2575,6 +3109,9 @@
   },
   {
     "name": "Royal Jacket",
+    "category": "Chest",
+    "subcategory": "Leather",
+    "bonusCity": "Thetford",
     "materials": [
       {
         "name": "Adept's Mercenary Jacket",
@@ -2588,6 +3125,9 @@
   },
   {
     "name": "Jacket of Tenacity",
+    "category": "Chest",
+    "subcategory": "Leather",
+    "bonusCity": "Thetford",
     "materials": [
       {
         "name": "Tier 4 Leather",
@@ -2601,6 +3141,9 @@
   },
   {
     "name": "Mistwalker Jacket",
+    "category": "Chest",
+    "subcategory": "Leather",
+    "bonusCity": "Thetford",
     "materials": [
       {
         "name": "Tier 4 Leather",
@@ -2614,6 +3157,9 @@
   },
   {
     "name": "Soldier Armor",
+    "category": "Chest",
+    "subcategory": "Plate",
+    "bonusCity": "Bridgewatch",
     "materials": [
       {
         "name": "Tier 4 Bar",
@@ -2623,6 +3169,9 @@
   },
   {
     "name": "Knight Armor",
+    "category": "Chest",
+    "subcategory": "Plate",
+    "bonusCity": "Bridgewatch",
     "materials": [
       {
         "name": "Tier 4 Bar",
@@ -2632,6 +3181,9 @@
   },
   {
     "name": "Guardian Armor",
+    "category": "Chest",
+    "subcategory": "Plate",
+    "bonusCity": "Bridgewatch",
     "materials": [
       {
         "name": "Tier 4 Bar",
@@ -2641,6 +3193,9 @@
   },
   {
     "name": "Judicator Armor",
+    "category": "Chest",
+    "subcategory": "Plate",
+    "bonusCity": "Bridgewatch",
     "materials": [
       {
         "name": "Tier 4 Bar",
@@ -2654,6 +3209,9 @@
   },
   {
     "name": "Demon Armor",
+    "category": "Chest",
+    "subcategory": "Plate",
+    "bonusCity": "Bridgewatch",
     "materials": [
       {
         "name": "Tier 4 Bar",
@@ -2667,6 +3225,9 @@
   },
   {
     "name": "Graveguard Armor",
+    "category": "Chest",
+    "subcategory": "Plate",
+    "bonusCity": "Bridgewatch",
     "materials": [
       {
         "name": "Tier 4 Bar",
@@ -2680,6 +3241,9 @@
   },
   {
     "name": "Royal Armor",
+    "category": "Chest",
+    "subcategory": "Plate",
+    "bonusCity": "Bridgewatch",
     "materials": [
       {
         "name": "Adept's Soldier Armor",
@@ -2693,6 +3257,9 @@
   },
   {
     "name": "Armor of Valor",
+    "category": "Chest",
+    "subcategory": "Plate",
+    "bonusCity": "Bridgewatch",
     "materials": [
       {
         "name": "Tier 4 Bar",
@@ -2706,6 +3273,9 @@
   },
   {
     "name": "Duskweaver Armor",
+    "category": "Chest",
+    "subcategory": "Plate",
+    "bonusCity": "Bridgewatch",
     "materials": [
       {
         "name": "Tier 4 Bar",
@@ -2719,6 +3289,9 @@
   },
   {
     "name": "Scholar Sandals",
+    "category": "Boots",
+    "subcategory": "Cloth",
+    "bonusCity": "Bridgewatch",
     "materials": [
       {
         "name": "Tier 4 Cloth",
@@ -2728,6 +3301,9 @@
   },
   {
     "name": "Cleric Sandals",
+    "category": "Boots",
+    "subcategory": "Cloth",
+    "bonusCity": "Bridgewatch",
     "materials": [
       {
         "name": "Tier 4 Cloth",
@@ -2737,6 +3313,9 @@
   },
   {
     "name": "Mage Sandals",
+    "category": "Boots",
+    "subcategory": "Cloth",
+    "bonusCity": "Bridgewatch",
     "materials": [
       {
         "name": "Tier 4 Cloth",
@@ -2746,6 +3325,9 @@
   },
   {
     "name": "Druid Sandals",
+    "category": "Boots",
+    "subcategory": "Cloth",
+    "bonusCity": "Bridgewatch",
     "materials": [
       {
         "name": "Tier 4 Cloth",
@@ -2759,6 +3341,9 @@
   },
   {
     "name": "Fiend Sandals",
+    "category": "Boots",
+    "subcategory": "Cloth",
+    "bonusCity": "Bridgewatch",
     "materials": [
       {
         "name": "Tier 4 Cloth",
@@ -2772,6 +3357,9 @@
   },
   {
     "name": "Cultist Sandals",
+    "category": "Boots",
+    "subcategory": "Cloth",
+    "bonusCity": "Bridgewatch",
     "materials": [
       {
         "name": "Tier 4 Cloth",
@@ -2785,6 +3373,9 @@
   },
   {
     "name": "Royal Sandals",
+    "category": "Boots",
+    "subcategory": "Cloth",
+    "bonusCity": "Bridgewatch",
     "materials": [
       {
         "name": "Adept's Scholar Sandals",
@@ -2798,6 +3389,9 @@
   },
   {
     "name": "Sandals of Purity",
+    "category": "Boots",
+    "subcategory": "Cloth",
+    "bonusCity": "Bridgewatch",
     "materials": [
       {
         "name": "Tier 4 Cloth",
@@ -2811,6 +3405,9 @@
   },
   {
     "name": "Feyscale Sandals",
+    "category": "Boots",
+    "subcategory": "Cloth",
+    "bonusCity": "Bridgewatch",
     "materials": [
       {
         "name": "Tier 4 Cloth",
@@ -2824,6 +3421,9 @@
   },
   {
     "name": "Mercenary Shoes",
+    "category": "Boots",
+    "subcategory": "Leather",
+    "bonusCity": "Lymhurst",
     "materials": [
       {
         "name": "Tier 4 Leather",
@@ -2833,6 +3433,9 @@
   },
   {
     "name": "Hunter Shoes",
+    "category": "Boots",
+    "subcategory": "Leather",
+    "bonusCity": "Lymhurst",
     "materials": [
       {
         "name": "Tier 4 Leather",
@@ -2842,6 +3445,9 @@
   },
   {
     "name": "Assassin Shoes",
+    "category": "Boots",
+    "subcategory": "Leather",
+    "bonusCity": "Lymhurst",
     "materials": [
       {
         "name": "Tier 4 Leather",
@@ -2851,6 +3457,9 @@
   },
   {
     "name": "Stalker Shoes",
+    "category": "Boots",
+    "subcategory": "Leather",
+    "bonusCity": "Lymhurst",
     "materials": [
       {
         "name": "Tier 4 Leather",
@@ -2864,6 +3473,9 @@
   },
   {
     "name": "Hellion Shoes",
+    "category": "Boots",
+    "subcategory": "Leather",
+    "bonusCity": "Lymhurst",
     "materials": [
       {
         "name": "Tier 4 Leather",
@@ -2877,6 +3489,9 @@
   },
   {
     "name": "Specter Shoes",
+    "category": "Boots",
+    "subcategory": "Leather",
+    "bonusCity": "Lymhurst",
     "materials": [
       {
         "name": "Tier 4 Leather",
@@ -2890,6 +3505,9 @@
   },
   {
     "name": "Royal Shoes",
+    "category": "Boots",
+    "subcategory": "Leather",
+    "bonusCity": "Lymhurst",
     "materials": [
       {
         "name": "Adept's Mercenary Shoes",
@@ -2903,6 +3521,9 @@
   },
   {
     "name": "Shoes of Tenacity",
+    "category": "Boots",
+    "subcategory": "Leather",
+    "bonusCity": "Lymhurst",
     "materials": [
       {
         "name": "Tier 4 Leather",
@@ -2916,6 +3537,9 @@
   },
   {
     "name": "Mistwalker Shoes",
+    "category": "Boots",
+    "subcategory": "Leather",
+    "bonusCity": "Lymhurst",
     "materials": [
       {
         "name": "Tier 4 Leather",
@@ -2929,6 +3553,9 @@
   },
   {
     "name": "Soldier Boots",
+    "category": "Boots",
+    "subcategory": "Plate",
+    "bonusCity": "Martlock",
     "materials": [
       {
         "name": "Tier 4 Bar",
@@ -2938,6 +3565,9 @@
   },
   {
     "name": "Knight Boots",
+    "category": "Boots",
+    "subcategory": "Plate",
+    "bonusCity": "Martlock",
     "materials": [
       {
         "name": "Tier 4 Bar",
@@ -2947,6 +3577,9 @@
   },
   {
     "name": "Guardian Boots",
+    "category": "Boots",
+    "subcategory": "Plate",
+    "bonusCity": "Martlock",
     "materials": [
       {
         "name": "Tier 4 Bar",
@@ -2956,6 +3589,9 @@
   },
   {
     "name": "Graveguard Boots",
+    "category": "Boots",
+    "subcategory": "Plate",
+    "bonusCity": "Martlock",
     "materials": [
       {
         "name": "Tier 4 Bar",
@@ -2969,6 +3605,9 @@
   },
   {
     "name": "Demon Boots",
+    "category": "Boots",
+    "subcategory": "Plate",
+    "bonusCity": "Martlock",
     "materials": [
       {
         "name": "Tier 4 Bar",
@@ -2982,6 +3621,9 @@
   },
   {
     "name": "Judicator Boots",
+    "category": "Boots",
+    "subcategory": "Plate",
+    "bonusCity": "Martlock",
     "materials": [
       {
         "name": "Tier 4 Bar",
@@ -2995,6 +3637,9 @@
   },
   {
     "name": "Royal Boots",
+    "category": "Boots",
+    "subcategory": "Plate",
+    "bonusCity": "Martlock",
     "materials": [
       {
         "name": "Adept's Soldier Boots",
@@ -3008,6 +3653,9 @@
   },
   {
     "name": "Boots of Valor",
+    "category": "Boots",
+    "subcategory": "Plate",
+    "bonusCity": "Martlock",
     "materials": [
       {
         "name": "Tier 4 Bar",
@@ -3021,6 +3669,9 @@
   },
   {
     "name": "Duskweaver Boots",
+    "category": "Boots",
+    "subcategory": "Plate",
+    "bonusCity": "Martlock",
     "materials": [
       {
         "name": "Tier 4 Bar",
@@ -3031,5 +3682,110 @@
         "qty": 1.0
       }
     ]
+  },
+  {
+    "name": "Cape",
+    "category": "Capes",
+    "subcategory": "Capes",
+    "bonusCity": "",
+    "materials": []
+  },
+  {
+    "name": "Martlock Cape",
+    "category": "Capes",
+    "subcategory": "Capes",
+    "bonusCity": "",
+    "materials": []
+  },
+  {
+    "name": "Lymhurst Cape",
+    "category": "Capes",
+    "subcategory": "Capes",
+    "bonusCity": "",
+    "materials": []
+  },
+  {
+    "name": "Bridgewatch Cape",
+    "category": "Capes",
+    "subcategory": "Capes",
+    "bonusCity": "",
+    "materials": []
+  },
+  {
+    "name": "Fort Sterling Cape",
+    "category": "Capes",
+    "subcategory": "Capes",
+    "bonusCity": "",
+    "materials": []
+  },
+  {
+    "name": "Thetford Cape",
+    "category": "Capes",
+    "subcategory": "Capes",
+    "bonusCity": "",
+    "materials": []
+  },
+  {
+    "name": "Caerleon Cape",
+    "category": "Capes",
+    "subcategory": "Capes",
+    "bonusCity": "",
+    "materials": []
+  },
+  {
+    "name": "Brecilien Cape",
+    "category": "Capes",
+    "subcategory": "Capes",
+    "bonusCity": "",
+    "materials": []
+  },
+  {
+    "name": "Heretic Cape",
+    "category": "Capes",
+    "subcategory": "Capes",
+    "bonusCity": "",
+    "materials": []
+  },
+  {
+    "name": "Undead Cape",
+    "category": "Capes",
+    "subcategory": "Capes",
+    "bonusCity": "",
+    "materials": []
+  },
+  {
+    "name": "Keeper Cape",
+    "category": "Capes",
+    "subcategory": "Capes",
+    "bonusCity": "",
+    "materials": []
+  },
+  {
+    "name": "Morgana Cape",
+    "category": "Capes",
+    "subcategory": "Capes",
+    "bonusCity": "",
+    "materials": []
+  },
+  {
+    "name": "Demon Cape",
+    "category": "Capes",
+    "subcategory": "Capes",
+    "bonusCity": "",
+    "materials": []
+  },
+  {
+    "name": "Avalonian Cape",
+    "category": "Capes",
+    "subcategory": "Capes",
+    "bonusCity": "",
+    "materials": []
+  },
+  {
+    "name": "Smuggler Cape",
+    "category": "Capes",
+    "subcategory": "Capes",
+    "bonusCity": "",
+    "materials": []
   }
 ]
