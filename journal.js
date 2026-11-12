@@ -23,7 +23,7 @@ $('journalSaveRefine').addEventListener('click',()=>{
  const status=$('journalRefineStatus'),qty=Number($('refEffective').dataset.qty),tier=Number($('refTier').value),resource=$('resource').value;
  const cost=Number($('refCost').dataset.batchCost);
  if(!Number.isInteger(qty)||qty<1||!Number.isInteger(tier)||tier<2||tier>8||!['Cloth','Leather','Metal Bar','Plank','Stone Block'].includes(resource)||$('refCost').dataset.batchCost===''||!Number.isFinite(cost)||cost<0){status.textContent='Enter sufficient raw and previous-tier resources to produce at least one refined unit before saving.';return}
- const ok=addBatch({item:resource+' (Refined)',tier,enchant:0,qty,cost});
+ const ok=addBatch({item:resource+' (Refined)',tier,enchant:$('refEnchant').value,qty,cost});
  status.textContent=ok?'Refining batch saved to My Journal with its estimated total production cost.':'Could not save refining batch.';
  if(ok)location.hash='journal';
 });

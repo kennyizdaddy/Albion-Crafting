@@ -73,6 +73,8 @@ function craft(){
 function autofillPreviousTier(){
  const tier=num('refTier'),rawPer=qty[tier-2],previousPer=tier===2?0:1;
  const resource=$('resource').value;
+ const enchant=Number($('refEnchant').value);
+ const suffix=enchant?'.'+enchant:'';
  const names={
   'Cloth':{raw:'hemp',refined:'cloth'},
   'Leather':{raw:'hide',refined:'leather'},
@@ -83,8 +85,8 @@ function autofillPreviousTier(){
  const item=names[resource]||{raw:'raw resource',refined:'refined resource'};
  const cap=x=>x.charAt(0).toUpperCase()+x.slice(1);
  $('refRecipeNote').textContent=tier===2
-  ?`To refine 1 Tier 2 ${item.refined}, you need 1 Tier 2 ${item.raw}. (Before resource returns.)`
-  :`To refine 1 Tier ${tier} ${item.refined}, you need ${rawPer} Tier ${tier} ${item.raw} and 1 Tier ${tier-1} ${item.refined}. (Before resource returns.)`;
+  ?`To refine 1 Tier 2${suffix} ${item.refined}, you need 1 Tier 2${suffix} ${item.raw}. (Before resource returns.)`
+  :`To refine 1 Tier ${tier}${suffix} ${item.refined}, you need ${rawPer} Tier ${tier}${suffix} ${item.raw} and 1 Tier ${tier-1}${suffix} ${item.refined}. (Before resource returns.)`;
  const available=Number($('refRawAvailable').value);
  const next=tier===2?0:(Number.isFinite(available)&&available>=0?Math.floor(available*previousPer/rawPer):0);
  $('refPrevAvailable').value=String(next);
@@ -158,5 +160,5 @@ async function fetchMarketPrices(){
 $('fetchMarket').addEventListener('click',fetchMarketPrices);
 $('marketCity').addEventListener('change',()=>{$('marketStatus').textContent='Market city changed. Fetch again to update prices; existing inputs are unchanged.'});
 
-for(const id of ['resource','refTier','refRawAvailable'])$(id).addEventListener('input',autofillPreviousTier);
+for(const id of ['resource','refTier','refEnchant','refRawAvailable'])$(id).addEventListener('input',autofillPreviousTier);
 for(const id of ['craftQty','sellPrice','craftCity','craftFocus','craftDaily','craftRrr','craftFee','craftTax'])$(id).addEventListener('input',craft);for(const id of ['resource','refTier','refRawAvailable','refPrevAvailable','rawPrice','prevPrice','refSell','refFee','refFocus','refBonus','refDaily','refRrr'])$(id).addEventListener('input',refining);$('equipmentSelect').addEventListener('change',updateTypes);$('typeSelect').addEventListener('change',updateItems);$('itemSelect').addEventListener('change',recipe);$('craftTier').addEventListener('change',recipe);$('enchant').addEventListener('change',recipe);$('search').addEventListener('input',database);fetch('items.json').then(r=>r.json()).then(data=>{items=data;fillSelect('equipmentSelect',['Boots','Chest','Helmets','Capes','Weapons','Off-Hands'],'Boots');updateTypes();database()}).catch(()=>{$('recipe').textContent='Item database could not load. Open the site using a local server or GitHub Pages.'});autofillPreviousTier();

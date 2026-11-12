@@ -31,3 +31,6 @@ Refining uses available raw and previous-tier inventory, with the workbook's `Re
 
 ### Previous-tier refining autofill
 The Refining tab now autofills previous-tier refined quantity when raw quantity or tier changes, using floor(raw available / raw-per-refine) times one previous-tier unit (T3/T4=2, T5=3, T6=4, T7/T8=5). Users may manually edit the suggested quantity; changing raw quantity or tier recalculates it. Effective output and journal saved quantities continue using the compounded return-rate calculation.
+
+### Refining enchantment
+The Refining tab now includes an enchantment selector (0–4) beside tier. The selected enchantment appears in the material recipe note and is stored in My Journal for refining batches. Prices remain user-entered and must correspond to the chosen enchantment.
