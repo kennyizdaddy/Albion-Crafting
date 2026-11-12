@@ -105,6 +105,68 @@ async function fetchMarketPrices(){
  }catch(err){if(seq===marketRequestSeq)status.textContent='Market prices unavailable: '+err.message+'. You can still enter prices manually.'}
  finally{if(seq===marketRequestSeq)button.disabled=false}
 }
+// Six-city finished-equipment comparison. Exact item IDs come from the community item catalogue.
+const ITEM_MARKET_CITIES=['Martlock','Fort Sterling','Thetford','Lymhurst','Bridgewatch','Caerleon'];
+const ITEM_CATALOG_URL='https://raw.githubusercontent.com/ao-data/ao-bin-dumps/master/formatted/items.json';
+let itemCatalogPromise=null,itemPriceRequestSeq=0;
+function selectedCraftedItem(){return items.find(x=>x.name===$('itemSelect').value)}
+function itemMarketReset(){itemPriceRequestSeq++;$('itemMarketRows').innerHTML='<tr><td colspan="5">Choose Compare six cities to load prices for this selection.</td></tr>';$('itemMarketStatus').textContent='Item selection changed. Fetch again for the new item.'}
+function normalizeItemName(name){return String(name||'').toLowerCase().replace(/[’']/g,"'").replace(/[^a-z0-9]+/g,' ').trim()}
+function itemCatalogEntries(json){return Array.isArray(json)?json:(Array.isArray(json?.items)?json.items:[])}
+async function getItemCatalog(){
+ if(!itemCatalogPromise)itemCatalogPromise=(async()=>{
+  const response=await fetch(ITEM_CATALOG_URL);if(!response.ok)throw new Error('Item catalogue HTTP '+response.status);
+  const json=await response.json();const list=itemCatalogEntries(json);if(!list.length)throw new Error('Item catalogue format not recognized');return list;
+ })().catch(err=>{itemCatalogPromise=null;throw err});
+ return itemCatalogPromise;
+}
+function catalogEnglishName(entry){const names=entry.LocalizedNames||entry.localizedNames||{};return names['EN-US']||names['EN']||entry.name||entry.Name||''}
+function catalogItemId(entry){return entry.UniqueName||entry.uniqueName||entry.item_id||entry.id||''}
+function applyTierAndEnchantment(base,tier,ench){
+ if(!/^T[2-8]_/.test(base))return null;
+ let id=base.replace(/^T[2-8]_/,`T${tier}_`).replace(/@\d+$/,'');
+ return id+(ench?'@'+ench:'');
+}
+async function resolveCraftedItemId(){
+ const override=$('itemMarketId').value.trim();if(override){if(!/^[A-Za-z0-9_@-]+$/.test(override))throw new Error('Item ID override contains invalid characters');return {id:override,source:'manual item ID'}}
+ const item=selectedCraftedItem();if(!item)throw new Error('Select an item first');
+ const tier=Number($('craftTier').value),ench=Number($('enchant').value);
+ const catalog=await getItemCatalog();const wanted=normalizeItemName(item.name);
+ const candidates=catalog.filter(x=>normalizeItemName(catalogEnglishName(x))===wanted&&/^T4_/.test(catalogItemId(x))&&!catalogItemId(x).includes('@'));
+ const ids=[...new Set(candidates.map(x=>applyTierAndEnchantment(catalogItemId(x),tier,ench)).filter(Boolean))];
+ if(ids.length!==1)throw new Error(ids.length?'Multiple catalogue matches. Enter the exact item ID manually.':'No exact catalogue match for '+item.name+'. Enter its market item ID manually.');
+ return {id:ids[0],source:'catalogue match'};
+}
+function priceAge(iso){const time=parseMarketDate(iso);if(!Number.isFinite(time))return {label:'Unknown',hours:Infinity};const hours=Math.max(0,(Date.now()-time)/3600000);return {label:hours<48?Math.round(hours)+'h ago':Math.round(hours/24)+'d ago',hours}}
+function validOrder(record,kind,maxHours){const value=Number(record[kind]);const date=priceAge(record[kind+'_date']);return value>0&&Number.isFinite(value)&&Number.isFinite(date.hours)&&(maxHours===0||date.hours<=maxHours)?{value,date}:null}
+async function fetchItemMarketPrices(){
+ const seq=++itemPriceRequestSeq,button=$('fetchItemMarket'),status=$('itemMarketStatus'),tbody=$('itemMarketRows');button.disabled=true;status.textContent='Looking up crafted item ID…';
+ try{
+  const {id,source}=await resolveCraftedItemId();if(seq!==itemPriceRequestSeq)return;
+  const quality=Number($('itemQuality').value),maxAge=Number($('marketAge').value);
+  status.textContent='Fetching '+id+' ('+source+') across six cities…';
+  const url=MARKET_API+encodeURIComponent(id)+'.json?locations='+encodeURIComponent(ITEM_MARKET_CITIES.join(','))+'&qualities='+quality;
+  const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),15000);
+  let response;try{response=await fetch(url,{signal:controller.signal,headers:{Accept:'application/json'}})}finally{clearTimeout(timeout)}
+  if(!response.ok)throw new Error(response.status===429?'API rate limit reached. Wait before retrying.':'Market API HTTP '+response.status);
+  const records=await response.json();if(!Array.isArray(records))throw new Error('Unexpected market response');if(seq!==itemPriceRequestSeq)return;
+  tbody.replaceChildren();let available=0;
+  for(const city of ITEM_MARKET_CITIES){
+   const row=records.find(x=>x.item_id===id&&String(x.city).toLowerCase()===city.toLowerCase()&&Number(x.quality)===quality);
+   const sell=row?validOrder(row,'sell_price_min',maxAge):null,buy=row?validOrder(row,'buy_price_max',maxAge):null;
+   const tr=document.createElement('tr'),tdCity=document.createElement('td');tdCity.textContent=city;tr.append(tdCity);
+   for(const order of [sell,buy]){const td=document.createElement('td');td.textContent=order?order.value.toLocaleString()+' silver':'—';if(order)available++;tr.append(td)}
+   const observed=document.createElement('td');observed.textContent=[sell&&'Sell '+sell.date.label,buy&&'Buy '+buy.date.label].filter(Boolean).join(' · ')||(row?'Missing / older than selected age':'No report');tr.append(observed);
+   const action=document.createElement('td');for(const [label,order] of [['Sell',sell],['Buy',buy]])if(order){const b=document.createElement('button');b.type='button';b.className='price-use';b.textContent=label;b.title='Use '+city+' '+label.toLowerCase()+' order in profit calculation';b.addEventListener('click',()=>{$('sellPrice').value=String(order.value);craft();status.textContent='Using '+city+' '+label.toLowerCase()+' order: '+order.value.toLocaleString()+' silver per item. Confirm actual sale price in game.'});action.append(b)}if(!action.childNodes.length)action.textContent='—';tr.append(action);tbody.append(tr);
+  }
+  status.textContent=id+' · '+source+' · '+available+' usable price observations across six cities. Age limit: '+(maxAge?maxAge+'h':'any')+'.';
+ }catch(err){if(seq===itemPriceRequestSeq){status.textContent='Could not compare prices: '+err.message;tbody.innerHTML='<tr><td colspan="5">No comparison available. Check item ID or try again later.</td></tr>'}}
+ finally{if(seq===itemPriceRequestSeq)button.disabled=false}
+}
+$('fetchItemMarket').addEventListener('click',fetchItemMarketPrices);
+for(const id of ['itemSelect','craftTier','enchant','itemQuality','itemMarketId'])$(id).addEventListener('change',itemMarketReset);
+for(const id of ['equipmentSelect','typeSelect'])$(id).addEventListener('change',itemMarketReset);
+
 $('fetchMarket').addEventListener('click',fetchMarketPrices);
 $('marketCity').addEventListener('change',()=>{$('marketStatus').textContent='Market city changed. Fetch again to update prices; existing inputs are unchanged.'});
 
