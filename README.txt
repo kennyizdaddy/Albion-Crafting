@@ -14,3 +14,5 @@ IMPORTANT:
 - No live market prices yet. Enter prices manually.
 - Refining calculations are estimates based on spreadsheet tier material quantities; additional formula validation, inventory constraints, and item-specific city rules are pending.
 - Open the deployed site to load items.json. Opening index.html directly from a local file may block JSON loading.
+
+Generalist node planner: include node-data.js and general-node.js when uploading.

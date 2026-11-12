@@ -37,3 +37,8 @@ The Refining tab now includes an enchantment selector (0–4) beside tier. The s
 
 
 General node progression: uses fame per refined resource from the Crafting Fame Database workbook, multiplied by standard category resource counts, enchantment multiplier and optional 1.5x premium. Browser-local per-node current fame and manually entered target; no unverified level threshold assumptions.
+
+
+## Generalist node progression (V2)
+
+The Crafting tab has an independent Generalist node planner with workbook names and dependent item selection, tier 4-8, enchantment .0-.4, and a Yes/No Premium dropdown. Fame per item = workbook standard resources × tier fame per resource × 2^enchantment × (1.5 if Premium is Yes, otherwise 1). Enter current node level, fame already earned in that level, and target level. Items required = CEILING(MAX(0, cumulative target fame − cumulative current level fame − fame earned in current level) / fame per item). Fame curves reproduce the workbook's decade block interpolation; values are estimates rather than guaranteed in-game data. Progress is saved per node in browser storage. The additional `node-data.js` file must be uploaded with the site.

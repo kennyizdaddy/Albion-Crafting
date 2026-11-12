@@ -1,41 +1,59 @@
-// General crafting fame: values from Crafting Fame Database in the user workbook.
-// Fame = standard refined resource count * tier fame/resource * 2^enchantment.
-// 1H=24, 2H=32, offhands/helmets/boots=8, chest=16. Capes not modeled.
+// Generalist node progression. Names, item mappings, tier fame and level curves from the user's workbook.
 (()=>{
- const $=id=>document.getElementById(id);
- const perResource={4:22.5,5:90,6:270,7:645,8:1395};
- const fmt=n=>Math.round(n).toLocaleString('en-US');
- const storageKey='albion-atlas-general-node-v1';
- let state={};try{state=JSON.parse(localStorage.getItem(storageKey)||'{}')||{}}catch{}
- const nodeName=()=>{const c=$('equipmentSelect').value;
-  if(c!=='Weapons')return c;
-  const item=window.items?.find(x=>x.name===$('itemSelect').value);
-  if(!item)return 'Weapons';
-  const mats=item.materials||[];
-  const standard=mats.filter(m=>/^Tier 4 (Plank|Bar|Cloth|Leather|Stone|Metal Bar)/i.test(m.name)).reduce((sum,m)=>sum+Number(m.qty||0),0);
-  return standard>=28?'2H Weapons':'1H Weapons';
- };
- const amounts={'1H Weapons':24,'2H Weapons':32,'Off-Hands':8,'Helmets':8,'Boots':8,'Chest':16};
- let active='';
- function save(){try{localStorage.setItem(storageKey,JSON.stringify(state))}catch{}}
- function refresh(){
-  const node=nodeName();if(node!==active){active=node;const v=state[node]||{};$('nodeCurrent').value=v.current??0;$('nodeTarget').value=v.target??'';$('nodePremium').value=v.premium??'1'}
-  const t=Number($('craftTier').value),e=Number($('enchant').value),q=Math.max(1,Math.floor(Number($('craftQty').value)||1));
-  const base=amounts[node];const per=base?base*perResource[t]*2**e*Number($('nodePremium').value):null;
-  const current=Math.max(0,Number($('nodeCurrent').value)||0),target=Number($('nodeTarget').value);
-  $('nodePerItem').textContent=per===null?'Not modeled':fmt(per);
-  $('nodeBatch').textContent=per===null?'—':fmt(per*q);
-  $('nodeProjected').textContent=per===null?'—':fmt(current+per*q);
-  $('nodeNeeded').textContent=per===null||!(target>0)?'—':fmt(Math.ceil(Math.max(0,target-current)/per));
-  $('nodeBar').style.width=(target>0?Math.min(100,100*current/target):0)+'%';
-  $('nodeStatus').textContent=per===null?'No verified fame model for '+node+'.':(node+' · '+fmt(current)+' fame tracked'+(target>0?' · '+fmt(Math.max(0,target-current))+' remaining before this batch':' · set a milestone to track progress')+'.');
-  return {node,per,q,current,target};
- }
- ['nodeCurrent','nodeTarget','nodePremium'].forEach(id=>$(id).addEventListener('input',()=>{const v=refresh();state[v.node]={current:v.current,target:$('nodeTarget').value,premium:$('nodePremium').value};save()}));
- $('nodeApply').addEventListener('click',()=>{const v=refresh();if(v.per===null)return;const next=v.current+v.per*v.q;$('nodeCurrent').value=Math.round(next);state[v.node]={current:Math.round(next),target:$('nodeTarget').value,premium:$('nodePremium').value};save();refresh();$('nodeStatus').textContent='Added '+fmt(v.per*v.q)+' estimated fame to '+v.node+'.'});
- ['equipmentSelect','typeSelect','itemSelect','craftTier','enchant','craftQty'].forEach(id=>$(id).addEventListener('change',()=>setTimeout(refresh,0)));
- $('craftQty').addEventListener('input',refresh);
- // Item database loads asynchronously; refresh after recipe selection is populated.
- const watch=new MutationObserver(()=>refresh());watch.observe($('itemSelect'),{childList:true});
- refresh();
+'use strict';
+const $=id=>document.getElementById(id), data=window.ALBION_NODE_DATA;
+if(!data||!$('nodeSelect'))return;
+const fmt=n=>Math.round(n).toLocaleString('en-US');
+const key='albion-atlas-general-node-v2';
+let saved={};try{saved=JSON.parse(localStorage.getItem(key)||'{}')||{}}catch{}
+const nodes=$('nodeSelect'),item=$('nodeItem');
+for(const n of data.nodes){const o=document.createElement('option');o.value=n.name;o.textContent=n.name;nodes.append(o)}
+function store(){try{localStorage.setItem(key,JSON.stringify(saved))}catch{}}
+function available(){
+ const node=data.nodes.find(n=>n.name===nodes.value);
+ const family=node.name.replace(/ Crafter$/,'');
+ return data.items.filter(x=>{
+  if(x.category!==node.category)return false;
+  if(node.category==='Weapons')return x.family===family;
+  const f=family.toLowerCase(),name=x.name.toLowerCase();
+  if(node.category==='Chest')return f.startsWith('Cloth')?(/robe|garb|jacket|armor/.test(name)&&x.family==='Cloth'):f.startsWith('Leather')?x.family==='Leather':x.family==='Plate';
+  return x.family===(f.startsWith('Cloth')?'Cloth':f.startsWith('Leather')?'Leather':'Plate');
+ });
+}
+function setItems(){
+ const old=item.value;item.replaceChildren();
+ for(const x of available()){const o=document.createElement('option');o.value=x.name;o.textContent=x.name;item.append(o)}
+ if([...item.options].some(o=>o.value===old))item.value=old;
+ render();
+}
+function restore(){const v=saved[nodes.value]||{};
+ $('nodeLevel').value=v.level??0;$('nodeCurrent').value=v.current??0;$('nodeTarget').value=v.target??10;
+ $('nodePremium').value=v.premium??'1';$('nodeTier').value=v.tier??'4';$('nodeEnchant').value=v.enchant??'0';
+ setItems();if(v.item&&[...item.options].some(o=>o.value===v.item))item.value=v.item;render();
+}
+function persist(){saved[nodes.value]={level:$('nodeLevel').value,current:$('nodeCurrent').value,target:$('nodeTarget').value,premium:$('nodePremium').value,tier:$('nodeTier').value,enchant:$('nodeEnchant').value,item:item.value};store()}
+function render(){
+ const n=data.nodes.find(n=>n.name===nodes.value);if(!n)return;
+ const x=data.items.find(x=>x.name===item.value&&x.category===n.category);
+ const tier=Number($('nodeTier').value),ench=Number($('nodeEnchant').value),premium=Number($('nodePremium').value);
+ const fame=x?x.resources*data.famePerResource[tier]*2**ench*premium:NaN;
+ const levels=data.curves[n.group],level=Math.max(0,Math.min(100,Math.trunc(Number($('nodeLevel').value)||0))),target=Math.max(1,Math.min(100,Math.trunc(Number($('nodeTarget').value)||1)));
+ const earned=Math.max(0,Number($('nodeCurrent').value)||0),maxCurrent=level<100?levels[level+1]-levels[level]:0;
+ const invalid=level>=100||target<=level||earned>maxCurrent;
+ const remaining=target<=level?0:Math.max(0,levels[target]-levels[level]-earned);
+ $('nodePerItem').textContent=Number.isFinite(fame)?fmt(fame):'Select an item';
+ $('nodeRemaining').textContent=invalid?'—':fmt(remaining);
+ $('nodeNeeded').textContent=invalid||!Number.isFinite(fame)||fame<=0?'—':fmt(Math.ceil(remaining/fame));
+ $('nodeBar').style.width=level>=100?'100%':Math.min(100,100*earned/Math.max(1,maxCurrent))+'%';
+ let status='';
+ if(!x)status='No matching item found for this node in the workbook.';
+ else if(level>=100)status='Current node is already level 100.';
+ else if(earned>maxCurrent)status='Current-level fame exceeds the fame required for this level. Update the current level or fame.';
+ else if(target<=level)status='Target level must be greater than your current level.';
+ else status=`${n.name} · ${fmt(earned)} / ${fmt(maxCurrent)} fame in current level · ${fmt(remaining)} fame to level ${target}.`;
+ $('nodeStatus').textContent=status;
+}
+nodes.addEventListener('change',restore);
+for(const id of ['nodeItem','nodeTier','nodeEnchant','nodePremium','nodeLevel','nodeCurrent','nodeTarget'])$(id).addEventListener('input',()=>{render();persist()});
+restore();
 })();
