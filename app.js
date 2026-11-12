@@ -161,4 +161,33 @@ $('fetchMarket').addEventListener('click',fetchMarketPrices);
 $('marketCity').addEventListener('change',()=>{$('marketStatus').textContent='Market city changed. Fetch again to update prices; existing inputs are unchanged.'});
 
 for(const id of ['resource','refTier','refEnchant','refRawAvailable'])$(id).addEventListener('input',autofillPreviousTier);
-for(const id of ['craftQty','sellPrice','craftCity','craftFocus','craftDaily','craftRrr','craftFee','craftTax'])$(id).addEventListener('input',craft);for(const id of ['resource','refTier','refRawAvailable','refPrevAvailable','rawPrice','prevPrice','refSell','refFee','refFocus','refBonus','refDaily','refRrr'])$(id).addEventListener('input',refining);$('equipmentSelect').addEventListener('change',updateTypes);$('typeSelect').addEventListener('change',updateItems);$('itemSelect').addEventListener('change',recipe);$('craftTier').addEventListener('change',recipe);$('enchant').addEventListener('change',recipe);$('search').addEventListener('input',database);fetch('items.json').then(r=>r.json()).then(data=>{items=data;fillSelect('equipmentSelect',['Boots','Chest','Helmets','Capes','Weapons','Off-Hands'],'Boots');updateTypes();database()}).catch(()=>{$('recipe').textContent='Item database could not load. Open the site using a local server or GitHub Pages.'});autofillPreviousTier();
+for(const id of ['craftQty','sellPrice','craftCity','craftFocus','craftDaily','craftRrr','craftFee','craftTax'])$(id).addEventListener('input',craft);for(const id of ['resource','refTier','refRawAvailable','refPrevAvailable','rawPrice','prevPrice','refSell','refFee','refFocus','refBonus','refDaily','refRrr'])$(id).addEventListener('input',refining);// Crafting item quick-search: uses the same loaded item catalog as the dependent dropdowns.
+function setupCraftItemSearch(){
+ const input=$('craftItemSearch'), panel=$('craftItemMatches');
+ const close=()=>{panel.hidden=true;input.setAttribute('aria-expanded','false')};
+ const choose=item=>{
+   fillSelect('equipmentSelect',[...new Set(items.map(x=>x.category))].sort(),item.category);
+   updateTypes();
+   $('typeSelect').value=item.subcategory;
+   updateItems();
+   $('itemSelect').value=item.name;
+   recipe();
+   input.value=item.name;
+   close();
+ };
+ const render=()=>{
+   const q=input.value.trim().toLocaleLowerCase();panel.replaceChildren();
+   if(!q){close();return}
+   const matches=items.filter(x=>x.name.toLocaleLowerCase().includes(q)).sort((a,b)=>
+     Number(!a.name.toLocaleLowerCase().startsWith(q))-Number(!b.name.toLocaleLowerCase().startsWith(q)) || a.name.localeCompare(b.name)).slice(0,12);
+   if(!matches.length){const empty=document.createElement('div');empty.className='item-search-empty';empty.textContent='No matching items';panel.append(empty)}
+   for(const item of matches){const b=document.createElement('button');b.type='button';b.className='item-search-choice';b.setAttribute('role','option');b.textContent=item.name+' · '+item.subcategory;b.addEventListener('click',()=>choose(item));panel.append(b)}
+   panel.hidden=false;input.setAttribute('aria-expanded','true');
+ };
+ input.addEventListener('input',render);
+ input.addEventListener('keydown',e=>{if(e.key==='Escape')close();if(e.key==='Enter'&&!panel.hidden){const first=panel.querySelector('button');if(first){e.preventDefault();first.click()}}});
+ document.addEventListener('click',e=>{if(!e.target.closest('.item-quick-search'))close()});
+ for(const id of ['equipmentSelect','typeSelect','itemSelect'])$(id).addEventListener('change',()=>{input.value='';close()});
+}
+setupCraftItemSearch();
+$('equipmentSelect').addEventListener('change',updateTypes);$('typeSelect').addEventListener('change',updateItems);$('itemSelect').addEventListener('change',recipe);$('craftTier').addEventListener('change',recipe);$('enchant').addEventListener('change',recipe);$('search').addEventListener('input',database);fetch('items.json').then(r=>r.json()).then(data=>{items=data;fillSelect('equipmentSelect',['Boots','Chest','Helmets','Capes','Weapons','Off-Hands'],'Boots');updateTypes();database()}).catch(()=>{$('recipe').textContent='Item database could not load. Open the site using a local server or GitHub Pages.'});autofillPreviousTier();
