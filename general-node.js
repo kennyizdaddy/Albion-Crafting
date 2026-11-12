@@ -11,14 +11,12 @@ for(const n of data.nodes){const o=document.createElement('option');o.value=n.na
 function store(){try{localStorage.setItem(key,JSON.stringify(saved))}catch{}}
 function available(){
  const node=data.nodes.find(n=>n.name===nodes.value);
+ if(!node)return [];
+ // Armor nodes use the exact category and subcategory from Crafting Setup (items.json).
+ // No name guessing: Cloth/Leather/Plate and Helmets/Chest/Boots must both match.
+ if(node.subcategory)return data.items.filter(x=>x.category===node.category&&x.family===node.subcategory);
  const family=node.name.replace(/ Crafter$/,'');
- return data.items.filter(x=>{
-  if(x.category!==node.category)return false;
-  if(node.category==='Weapons')return x.family===family;
-  const f=family.toLowerCase(),name=x.name.toLowerCase();
-  if(node.category==='Chest')return f.startsWith('Cloth')?(/robe|garb|jacket|armor/.test(name)&&x.family==='Cloth'):f.startsWith('Leather')?x.family==='Leather':x.family==='Plate';
-  return x.family===(f.startsWith('Cloth')?'Cloth':f.startsWith('Leather')?'Leather':'Plate');
- });
+ return data.items.filter(x=>x.category===node.category&&x.family===family);
 }
 function setItems(){
  const old=item.value;item.replaceChildren();
