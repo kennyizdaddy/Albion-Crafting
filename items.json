@@ -3787,5 +3787,404 @@
     "subcategory": "Capes",
     "bonusCity": "",
     "materials": []
+  },
+  {
+    "name": "Shield",
+    "category": "Off-Hands",
+    "subcategory": "Warrior",
+    "bonusCity": "Martlock",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 4
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 4
+      }
+    ],
+    "recipeSource": "https://wiki.albiononline.com/wiki/Master%27s_Shield",
+    "alternativeArtifact": null
+  },
+  {
+    "name": "Sarcophagus",
+    "category": "Off-Hands",
+    "subcategory": "Warrior",
+    "bonusCity": "Martlock",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 4
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 4
+      },
+      {
+        "name": "Ancient Shield Core",
+        "qty": 1,
+        "artifact": true
+      }
+    ],
+    "recipeSource": "https://allthingsalbion.com/en/items/T7_OFF_TOWERSHIELD_UNDEAD",
+    "alternativeArtifact": "Crystallized Spirit"
+  },
+  {
+    "name": "Caitiff Shield",
+    "category": "Off-Hands",
+    "subcategory": "Warrior",
+    "bonusCity": "Martlock",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 4
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 4
+      },
+      {
+        "name": "Infernal Shield Core",
+        "qty": 1,
+        "artifact": true
+      }
+    ],
+    "recipeSource": "https://wiki.albiononline.com/wiki/Adept%27s_Caitiff_Shield",
+    "alternativeArtifact": "Crystallized Dread"
+  },
+  {
+    "name": "Facebreaker",
+    "category": "Off-Hands",
+    "subcategory": "Warrior",
+    "bonusCity": "Martlock",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 4
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 4
+      },
+      {
+        "name": "Bloodforged Spikes",
+        "qty": 1,
+        "artifact": true
+      }
+    ],
+    "recipeSource": "https://wiki.albiononline.com/wiki/Adept%27s_Facebreaker",
+    "alternativeArtifact": "Crystallized Magic"
+  },
+  {
+    "name": "Astral Aegis",
+    "category": "Off-Hands",
+    "subcategory": "Warrior",
+    "bonusCity": "Martlock",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 4
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 4
+      },
+      {
+        "name": "Crushed Avalonian Heirloom",
+        "qty": 1,
+        "artifact": true
+      }
+    ],
+    "recipeSource": "https://wiki.albiononline.com/wiki/Expert%27s_Astral_Aegis",
+    "alternativeArtifact": "Crystallized Divinity"
+  },
+  {
+    "name": "Unbreakable Ward",
+    "category": "Off-Hands",
+    "subcategory": "Warrior",
+    "bonusCity": "Martlock",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 4
+      },
+      {
+        "name": "Tier 4 Bar",
+        "qty": 4
+      },
+      {
+        "name": "Unbreakable Crystal",
+        "qty": 1,
+        "artifact": true
+      }
+    ],
+    "recipeSource": "https://wiki.albiononline.com/wiki/Master%27s_Unbreakable_Ward",
+    "alternativeArtifact": null
+  },
+  {
+    "name": "Tome of Spells",
+    "category": "Off-Hands",
+    "subcategory": "Mage",
+    "bonusCity": "Martlock",
+    "materials": [
+      {
+        "name": "Tier 4 Leather",
+        "qty": 4
+      },
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 4
+      }
+    ],
+    "recipeSource": "https://wiki.albiononline.com/wiki/Novice%27s_Tome_of_Spells",
+    "alternativeArtifact": null
+  },
+  {
+    "name": "Eye of Secrets",
+    "category": "Off-Hands",
+    "subcategory": "Mage",
+    "bonusCity": "Martlock",
+    "materials": [
+      {
+        "name": "Tier 4 Leather",
+        "qty": 4
+      },
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 4
+      },
+      {
+        "name": "Alluring Crystal",
+        "qty": 1,
+        "artifact": true
+      }
+    ],
+    "recipeSource": "https://wiki.albiononline.com/wiki/Expert%27s_Eye_of_Secrets",
+    "alternativeArtifact": "Crystallized Spirit"
+  },
+  {
+    "name": "Muisak",
+    "category": "Off-Hands",
+    "subcategory": "Mage",
+    "bonusCity": "Martlock",
+    "materials": [
+      {
+        "name": "Tier 4 Leather",
+        "qty": 4
+      },
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 4
+      },
+      {
+        "name": "Demonic Jawbone",
+        "qty": 1,
+        "artifact": true
+      }
+    ],
+    "recipeSource": "https://wiki.albiononline.com/wiki/Adept%27s_Muisak",
+    "alternativeArtifact": "Crystallized Dread"
+  },
+  {
+    "name": "Taproot",
+    "category": "Off-Hands",
+    "subcategory": "Mage",
+    "bonusCity": "Martlock",
+    "materials": [
+      {
+        "name": "Tier 4 Leather",
+        "qty": 4
+      },
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 4
+      },
+      {
+        "name": "Inscribed Stone",
+        "qty": 1,
+        "artifact": true
+      }
+    ],
+    "recipeSource": "https://wiki.albiononline.com/wiki/Elder%27s_Taproot",
+    "alternativeArtifact": "Crystallized Magic"
+  },
+  {
+    "name": "Celestial Censer",
+    "category": "Off-Hands",
+    "subcategory": "Mage",
+    "bonusCity": "Martlock",
+    "materials": [
+      {
+        "name": "Tier 4 Leather",
+        "qty": 4
+      },
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 4
+      },
+      {
+        "name": "Severed Celestial Keepsake",
+        "qty": 1,
+        "artifact": true
+      }
+    ],
+    "recipeSource": "https://wiki.albiononline.com/wiki/Expert%27s_Celestial_Censer",
+    "alternativeArtifact": "Crystallized Divinity"
+  },
+  {
+    "name": "Timelocked Grimoire",
+    "category": "Off-Hands",
+    "subcategory": "Mage",
+    "bonusCity": "Martlock",
+    "materials": [
+      {
+        "name": "Tier 4 Leather",
+        "qty": 4
+      },
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 4
+      },
+      {
+        "name": "Timelocked Crystal",
+        "qty": 1,
+        "artifact": true
+      }
+    ],
+    "recipeSource": "https://wiki.albiononline.com/wiki/Master%27s_Timelocked_Grimoire",
+    "alternativeArtifact": null
+  },
+  {
+    "name": "Torch",
+    "category": "Off-Hands",
+    "subcategory": "Hunter",
+    "bonusCity": "Martlock",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 4
+      },
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 4
+      }
+    ],
+    "recipeSource": "https://allthingsalbion.com/en/items/T4_OFF_TORCH",
+    "alternativeArtifact": null
+  },
+  {
+    "name": "Mistcaller",
+    "category": "Off-Hands",
+    "subcategory": "Hunter",
+    "bonusCity": "Martlock",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 4
+      },
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 4
+      },
+      {
+        "name": "Runed Horn",
+        "qty": 1,
+        "artifact": true
+      }
+    ],
+    "recipeSource": "https://wiki.albiononline.com/wiki/Adept%27s_Mistcaller",
+    "alternativeArtifact": "Crystallized Spirit"
+  },
+  {
+    "name": "Sacred Scepter",
+    "category": "Off-Hands",
+    "subcategory": "Hunter",
+    "bonusCity": "Martlock",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 4
+      },
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 4
+      },
+      {
+        "name": "Shattered Avalonian Memento",
+        "qty": 1,
+        "artifact": true
+      }
+    ],
+    "recipeSource": "https://wiki.albiononline.com/wiki/Sacred_Scepter",
+    "alternativeArtifact": "Crystallized Divinity"
+  },
+  {
+    "name": "Cryptcandle",
+    "category": "Off-Hands",
+    "subcategory": "Hunter",
+    "bonusCity": "Martlock",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 4
+      },
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 4
+      },
+      {
+        "name": "Ghastly Candle",
+        "qty": 1,
+        "artifact": true
+      }
+    ],
+    "recipeSource": "https://wiki.albiononline.com/wiki/Master%27s_Cryptcandle",
+    "alternativeArtifact": "Crystallized Magic"
+  },
+  {
+    "name": "Leering Cane",
+    "category": "Off-Hands",
+    "subcategory": "Hunter",
+    "bonusCity": "Martlock",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 4
+      },
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 4
+      },
+      {
+        "name": "Hellish Handle",
+        "qty": 1,
+        "artifact": true
+      }
+    ],
+    "recipeSource": "https://wiki.albiononline.com/wiki/Master%27s_Leering_Cane",
+    "alternativeArtifact": "Crystallized Dread"
+  },
+  {
+    "name": "Blueflame Torch",
+    "category": "Off-Hands",
+    "subcategory": "Hunter",
+    "bonusCity": "Martlock",
+    "materials": [
+      {
+        "name": "Tier 4 Plank",
+        "qty": 4
+      },
+      {
+        "name": "Tier 4 Cloth",
+        "qty": 4
+      },
+      {
+        "name": "Blueflame Crystal",
+        "qty": 1,
+        "artifact": true
+      }
+    ],
+    "recipeSource": "https://wiki.albiononline.com/wiki/Master%27s_Blueflame_Torch",
+    "alternativeArtifact": null
   }
 ]

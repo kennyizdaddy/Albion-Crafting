@@ -13,3 +13,6 @@ Upload **app.js**, **index.html**, and **style.css** to your GitHub Pages reposi
 The resource ID convention is validated structurally for the workbook's ordinary Plank, Bar, Leather, and Cloth materials, not independently checked against a live market catalogue for every tier/enchantment. The Albion Data Project may lack observations for actual in-game orders. Older reported prices may not reflect currently available orders.
 
 References: https://github.com/ao-data/ao-bin-dumps and https://www.albion-online-data.com/
+
+## Off-Hands update
+Added 18 Off-Hands items from the previous Offhands Website Update dataset (Warrior, Hunter, Mage). Martlock is selected as crafting location for off-hands. The Six-City Crafted Item Marketplace remains removed. Special artifact prices require manual input; verify recipes in game.
