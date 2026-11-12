@@ -49,3 +49,11 @@ Crafting daily bonus is manually selectable: No, Yes 10%, or Yes 20%. The 20% va
 ## November update: journal unit costs and crafting quantities
 - My Journal production batches now show Unit crafting cost = total batch cost / quantity produced. Existing saved batches remain compatible; no storage migration.
 - Gear crafting recipe ingredients now show the per-craft requirement and total gross requirement for the selected craft quantity (e.g. 8 bars x 5 helmets = 40 bars). Totals are before resource returns; the existing expected-cost calculation still accounts for resource return rates.
+
+
+## Focus calculator update
+- Adds a per-item saved crafting mastery/specialization panel, item-family detection, optional related specialization efficiency, and in-game FCE input.
+- Focus per item can always be entered manually, overriding calculated focus. Base focus is manually entered until values are verified.
+- Focus totals, 10,000-focus capacity, and batch focus are shown. Saved crafting batches include focusUsed; existing journal backups remain compatible.
+- No speculative coefficients are used by default. This version does not automatically fill base focus or infer related specializations; enter in-game FCE for accurate estimates.
+- Refining focus is intentionally unchanged.
