@@ -49,10 +49,10 @@ function craft(){
   }return total;
  };
  const selected=sum('selected'),allBuy=sum('buy'),allRef=sum('ref');
- const missing=[];if(num('sellPrice')<=0)missing.push('enter a selling price to calculate profit (not required for crafting cost)');if(isUnsupported)missing.push('return rate unavailable — enter a manual override or choose a supported daily bonus');
- if(selected===null)missing.push('enter prices for all selected material sources');
+ const missing=[];if(isUnsupported)missing.push('return rate unavailable — enter a manual override or choose a supported daily bonus');
+ if(selected===null)missing.push('enter prices for every material under Recipe & prices (the selected Buy or Refine price for each)');
  if(mats.some(el=>el.dataset.artifact==='yes'&&/Weapon-specific|artifact/i.test(el.querySelector('strong').textContent)))missing.push('verify artifact recipe against in-game item');
- $('craftWarning').textContent=missing.length?'Check: '+missing.join('; ')+'.':'All selected inputs provided. Estimates use expected returns, not guaranteed inventory quantities.';
+ $('craftWarning').textContent=missing.length?'Crafting cost unavailable: '+missing.join('; ')+'.':(num('sellPrice')<=0?'Crafting cost calculated. Selling price is optional and only needed for profit.':'Crafting cost and profit calculated. Estimates use expected returns.');
  const show=(id,val,needsSale=false)=>$(id).textContent=val===null||isUnsupported||(needsSale&&num('sellPrice')<=0)?'—':silver(val);
  show('craftCost',selected);show('craftProfit',selected===null?null:revenue-selected,true);
  show('allBuyProfit',allBuy===null?null:revenue-allBuy,true);show('allRefProfit',allRef===null?null:revenue-allRef,true);
