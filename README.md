@@ -86,3 +86,6 @@ Focus now uses the same Generalist node and Item crafted catalog as Generalist N
 - Search, date, focus, inventory-status and sorting controls filter the journal browser. Filtered summary tiles update with the selected batches.
 - The original all-time KPI cards and focus profitability summary remain unchanged and continue to show all recorded batches.
 - Journal data still uses the existing localStorage key and version 1 JSON backup format. Export a backup before updating.
+
+## Homepage redesign (2026-11-12)
+The Home section now introduces Albion Atlas with the headline "Craft Smarter. Profit More.", the one-stop-shop tagline, prominent crafting/refining entry points, and six feature cards. The design uses a scoped dark fantasy/gold theme and responsive layouts. Existing calculator, journal, focus, data, and navigation JavaScript files are unchanged. The progression card opens Gear Crafting, where the Generalist Node Progression panel currently lives.
