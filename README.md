@@ -45,3 +45,7 @@ The Crafting tab has an independent Generalist node planner with workbook names 
 
 ## Daily crafting bonus update
 Crafting daily bonus is manually selectable: No, Yes 10%, or Yes 20%. The 20% values are computed from the existing production-bonus model (bonus-city 33%, other-city 18%, focus adds 59%): RRR = production bonus / (100 + production bonus). Manual return-rate overrides still take priority. Refining already supports all three options.
+
+## November update: journal unit costs and crafting quantities
+- My Journal production batches now show Unit crafting cost = total batch cost / quantity produced. Existing saved batches remain compatible; no storage migration.
+- Gear crafting recipe ingredients now show the per-craft requirement and total gross requirement for the selected craft quantity (e.g. 8 bars x 5 helmets = 40 bars). Totals are before resource returns; the existing expected-cost calculation still accounts for resource return rates.
