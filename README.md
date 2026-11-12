@@ -61,3 +61,28 @@ Crafting daily bonus is manually selectable: No, Yes 10%, or Yes 20%. The 20% va
 
 ## Focus reference values and selector update
 Focus now uses the same Generalist node and Item crafted catalog as Generalist Node Progression, with separate tier/enchantment selectors. Previously gathered T4–T8 unenchanted base focus values are prefilled for recipes with 8, 16, or 32 normal resources; T4 24-resource recipes also prefill 1,286. The values are historical reference values and should be checked in-game. Other combinations, including enchanted equipment, remain blank rather than extrapolating unverified values. Manual base focus and manual actual focus overrides remain available.
+
+
+## Journal focus profitability update
+- Focus Yes/No on each production batch; Gear Crafting Save copies focus selection and calculated batch focus automatically.
+- Manual total focus input and Edit focus action for saved focus batches.
+- Realized profit/focus uses realized sales profit and focus allocated to sold units.
+- Incremental focus value/focus compares focused batch cost to user-entered no-focus batch cost, allocating both by quantity sold. Missing baseline displays dash, not an invented number.
+- Old journal localStorage records and JSON backup version 1 remain compatible. Export a backup before deploying.
+
+
+## Profit percentage in My Journal
+- Added Profit % (on cost) to every batch and a weighted overall Profit % (on cost) KPI.
+- Profit % = realized profit / cost allocated to sold items * 100; excludes unsold inventory.
+- Existing Net profit margin (of revenue) remains separately labeled.
+- Marketplace fees are deducted from sales before calculating profit. Zero allocated cost or no sales shows a dash.
+- Journal localStorage schema and existing backups remain unchanged.
+
+
+## Compact My Journal update
+- Overview groups identical item names, tiers and enchantments into expandable rows. The underlying individual batches and sales are unchanged.
+- Active Inventory view defaults to batches with remaining unsold units.
+- Transaction History preserves individual batch actions, including editing focus and deleting batches.
+- Search, date, focus, inventory-status and sorting controls filter the journal browser. Filtered summary tiles update with the selected batches.
+- The original all-time KPI cards and focus profitability summary remain unchanged and continue to show all recorded batches.
+- Journal data still uses the existing localStorage key and version 1 JSON backup format. Export a backup before updating.
