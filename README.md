@@ -57,3 +57,7 @@ Crafting daily bonus is manually selectable: No, Yes 10%, or Yes 20%. The 20% va
 - Focus totals, 10,000-focus capacity, and batch focus are shown. Saved crafting batches include focusUsed; existing journal backups remain compatible.
 - No speculative coefficients are used by default. This version does not automatically fill base focus or infer related specializations; enter in-game FCE for accurate estimates.
 - Refining focus is intentionally unchanged.
+
+
+## Focus reference values and selector update
+Focus now uses the same Generalist node and Item crafted catalog as Generalist Node Progression, with separate tier/enchantment selectors. Previously gathered T4–T8 unenchanted base focus values are prefilled for recipes with 8, 16, or 32 normal resources; T4 24-resource recipes also prefill 1,286. The values are historical reference values and should be checked in-game. Other combinations, including enchanted equipment, remain blank rather than extrapolating unverified values. Manual base focus and manual actual focus overrides remain available.
