@@ -16,3 +16,7 @@ References: https://github.com/ao-data/ao-bin-dumps and https://www.albion-onlin
 
 ## Off-Hands update
 Added 18 Off-Hands items from the previous Offhands Website Update dataset (Warrior, Hunter, Mage). Martlock is selected as crafting location for off-hands. The Six-City Crafted Item Marketplace remains removed. Special artifact prices require manual input; verify recipes in game.
+
+
+## My Journal (browser storage)
+The Journal tab tracks crafting batches, partial sales, realized profit, margins, and unsold inventory. It uses `localStorage` under key `albionAtlasJournalV1`; no server or accounts. Users should regularly export JSON backups. Import merges by batch ID. Use the Crafting calculator's Save craft to My Journal button after calculating cost, or enter batches manually. This is an initial version; actual costs may differ from expected returns.
