@@ -71,7 +71,7 @@ function materialId(el){
  if(!match)return null;
  const kind=marketKinds[match[1].trim()];if(!kind)return null;
  const tier=Number($('craftTier').value),ench=Number($('enchant').value);
- return 'T'+tier+'_'+kind+(ench?'@'+ench:'');
+ return 'T'+tier+'_'+kind+(ench?'_LEVEL'+ench+'@'+ench:'');
 }
 function priceStamp(el,msg,warn=false){const s=el.querySelector('.market-stamp');if(s){s.textContent=msg;s.className='market-stamp '+(warn?'warn':'ok')}}
 function parseMarketDate(s){if(!s||String(s).startsWith('0001-'))return NaN;const d=Date.parse(s.endsWith('Z')||/[+-]\d\d:\d\d$/.test(s)?s:s+'Z');return d;}

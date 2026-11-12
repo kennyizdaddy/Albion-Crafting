@@ -50,3 +50,12 @@ Source: https://west.albion-online-data.com/api-docs
 ### GitHub upload
 
 Replace **index.html**, **app.js**, and **style.css** in the root of the existing repository; retain **items.json** (included for convenience). Commit changes to the GitHub Pages publishing branch. Refresh with Ctrl+Shift+R.
+
+
+## Enchanted material market ID correction (November 2026)
+
+The price API requires `T4_CLOTH_LEVEL1@1`, `T4_CLOTH_LEVEL2@2`, etc., **not** `T4_CLOTH@1`. This package corrects enchanted material IDs for cloth, leather, planks, metal bars, and stone blocks while preserving `.0` IDs. The API can still return missing/stale records for particular cities; manual input remains available.
+
+**To install this fix:** Replace only `app.js` in your existing GitHub repository. `index.html`, `style.css`, and `items.json` are included for convenience but are unchanged. Commit and hard-refresh the live site.
+
+References: https://west.albion-online-data.com/api-docs and https://github.com/vkorne-web/albion-market/blob/main/extract_recipes.py
