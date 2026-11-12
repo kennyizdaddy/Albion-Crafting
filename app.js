@@ -26,14 +26,14 @@ function recipe(){
  const item=items.find(x=>x.name===$('itemSelect').value);$('recipe').replaceChildren();$('itemCityNote').textContent=item?'Workbook bonus city: '+(item.bonusCity||'Not specified'):'';if(!item)return;
  for(const [i,m] of item.materials.entries()){
   const d=document.createElement('div');d.className='material';
-  const isArtifact=i===2 || !/^Tier \d+ (Plank|Bar|Cloth|Leather|Stone|Metal Bar)/i.test(m.name);
+  const isArtifact=!/^Tier \d+ (Plank|Bar|Cloth|Leather|Stone|Metal Bar)/i.test(m.name);
   const tier=$('craftTier').value,ench=$('enchant').value;
   const label=m.name.replace(/Tier 4/g,'Tier '+tier)+(isArtifact?'':'.'+ench);
   d.innerHTML=`<strong></strong><small></small><div class="twocol"><label>Buy price / unit<input type="number" min="0" step="any" placeholder="Required" class="buyprice"></label>${isArtifact?'':`<label>Self-refined cost / unit<input type="number" min="0" step="any" placeholder="Required for comparison" class="refprice"></label>`}</div>${isArtifact?'':`<label>Source<select class="source"><option value="buy">Buy</option><option value="refine">Refine</option></select></label>`}`;
   d.querySelector('strong').textContent=label;d.querySelector('small').textContent='Required per craft: '+m.qty+(isArtifact?' · no crafting resource return':'');
   d.dataset.qty=m.qty;d.dataset.artifact=isArtifact?'yes':'no';$('recipe').append(d)
  }
- $('recipe').querySelectorAll('input,select').forEach(el=>el.addEventListener('input',craft));craft();
+ $('recipe').querySelectorAll('input,select').forEach(el=>{el.addEventListener('input',craft);el.addEventListener('change',craft)});craft();
 }
 function craft(){
  const r=craftingRate(),q=Math.max(1,num('craftQty'));
@@ -49,13 +49,13 @@ function craft(){
   }return total;
  };
  const selected=sum('selected'),allBuy=sum('buy'),allRef=sum('ref');
- const missing=[];if(num('sellPrice')<=0)missing.push('enter a selling price');if(isUnsupported)missing.push('return rate unavailable — enter a manual override or choose a supported daily bonus');
+ const missing=[];if(num('sellPrice')<=0)missing.push('enter a selling price to calculate profit (not required for crafting cost)');if(isUnsupported)missing.push('return rate unavailable — enter a manual override or choose a supported daily bonus');
  if(selected===null)missing.push('enter prices for all selected material sources');
  if(mats.some(el=>el.dataset.artifact==='yes'&&/Weapon-specific|artifact/i.test(el.querySelector('strong').textContent)))missing.push('verify artifact recipe against in-game item');
  $('craftWarning').textContent=missing.length?'Check: '+missing.join('; ')+'.':'All selected inputs provided. Estimates use expected returns, not guaranteed inventory quantities.';
- const show=(id,val)=>$(id).textContent=val===null||isUnsupported||num('sellPrice')<=0?'—':silver(val);
- show('craftCost',selected);show('craftProfit',selected===null?null:revenue-selected);
- show('allBuyProfit',allBuy===null?null:revenue-allBuy);show('allRefProfit',allRef===null?null:revenue-allRef);
+ const show=(id,val,needsSale=false)=>$(id).textContent=val===null||isUnsupported||(needsSale&&num('sellPrice')<=0)?'—':silver(val);
+ show('craftCost',selected);show('craftProfit',selected===null?null:revenue-selected,true);
+ show('allBuyProfit',allBuy===null?null:revenue-allBuy,true);show('allRefProfit',allRef===null?null:revenue-allRef,true);
 }
 function refining(){let r=refiningRate(),tier=num('refTier'),raw=qty[tier-2],prev=tier===2?0:1,n=Math.max(1,num('refQty'));let total=n*(raw*num('rawPrice')+prev*num('prevPrice'))*(1-r)+num('refFee');let profit=n*num('refSell')*(1-.065)-total;$('refCost').textContent=r===null?'—':silver(total/n);$('refProfit').textContent=r===null?'—':silver(profit)}
 function database(){let q=$('search').value.trim().toLowerCase();let matched=items.filter(i=>(i.name+' '+i.category+' '+i.subcategory+' '+i.bonusCity).toLowerCase().includes(q));$('itemCount').textContent=matched.length+' items';$('itemRows').replaceChildren();matched.slice(0,300).forEach(item=>{let tr=document.createElement('tr');[item.name,item.category+' / '+item.subcategory,item.bonusCity||'—',item.materials.map(m=>m.qty+' × '+m.name).join(', ')||'Recipe not provided'].forEach(v=>{let td=document.createElement('td');td.textContent=v;tr.append(td)});$('itemRows').append(tr)})}

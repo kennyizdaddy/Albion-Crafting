@@ -31,3 +31,6 @@ Updated using **Albion crafting master - 10 percent daily bonus rates.xlsx**.
 - All prices are manual; there is no live market feed.
 - Refining is an estimate using the previous version's inputs, not a full port of every Excel formula.
 - The site's cost model uses expected material consumption and excludes artifact returns. Check item recipes against the game before making large trades.
+
+## Crafting cost fix (November 2026)
+Crafting cost now calculates without a selling price. Enter a price for each required material, choose Buy or Refine where relevant, and set the crafting city, focus, and daily bonus. Selling price is only needed for profit. If the 20% daily bonus is selected, supply a manual return-rate override until those rates are provided.
