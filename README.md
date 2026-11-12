@@ -28,3 +28,6 @@ The Refining tab now includes a Save refining batch to My Journal button. It sav
 
 ## Effective amount refined (spreadsheet parity)
 Refining uses available raw and previous-tier inventory, with the workbook's `Refining!Q2:Q8` compounded-return formula: `floor(min(rawAvailable/(rawPerUnit*(1-RRR)), prevAvailable/(previousPerUnit*(1-RRR))))` (T2 omits the previous-tier constraint). The displayed effective output becomes the journal batch quantity; cost and profit are recalculated for that output. This is a mathematical expectation, not guaranteed in-game output.
+
+### Previous-tier refining autofill
+The Refining tab now autofills previous-tier refined quantity when raw quantity or tier changes, using floor(raw available / raw-per-refine) times one previous-tier unit (T3/T4=2, T5=3, T6=4, T7/T8=5). Users may manually edit the suggested quantity; changing raw quantity or tier recalculates it. Effective output and journal saved quantities continue using the compounded return-rate calculation.
