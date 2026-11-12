@@ -93,3 +93,6 @@ The Home section now introduces Albion Atlas with the headline "Craft Smarter. P
 
 ## Simplified focus tracking update
 Removed the specialization/base-focus calculator. In Gear Crafting > Crafting setup, select Focus used? Yes and enter total focus for the batch. Saving to My Journal records the exact amount; the Journal retains focus profit metrics and editing. No-focus batches require no focus amount. Existing journal records are not modified.
+
+
+Theme update: unified navigation, calculators, Journal, forms, cards and buttons with the homepage charcoal/gold palette. No JavaScript or journal data schema changes.
