@@ -22,3 +22,9 @@ Added 18 Off-Hands items from the previous Offhands Website Update dataset (Warr
 The Journal tab tracks crafting batches, partial sales, realized profit, margins, and unsold inventory. It uses `localStorage` under key `albionAtlasJournalV1`; no server or accounts. Users should regularly export JSON backups. Import merges by batch ID. Use the Crafting calculator's Save craft to My Journal button after calculating cost, or enter batches manually. This is an initial version; actual costs may differ from expected returns.
 
 Refining update: displays the bonus city for each resource and automatically calculates refining resource return rates using royal-city base production bonus 18, specialty 40, focus 59, and optional daily 10/20. Manual override remains available.
+
+## Refining journal integration
+The Refining tab now includes a Save refining batch to My Journal button. It saves the resource, tier, output quantity, and total estimated production cost (including station fees and expected returns). Sales and partial sales use the same journal workflow as crafting. Existing browser-stored journal records are retained.
+
+## Effective amount refined (spreadsheet parity)
+Refining uses available raw and previous-tier inventory, with the workbook's `Refining!Q2:Q8` compounded-return formula: `floor(min(rawAvailable/(rawPerUnit*(1-RRR)), prevAvailable/(previousPerUnit*(1-RRR))))` (T2 omits the previous-tier constraint). The displayed effective output becomes the journal batch quantity; cost and profit are recalculated for that output. This is a mathematical expectation, not guaranteed in-game output.

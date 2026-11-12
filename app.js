@@ -67,7 +67,22 @@ function craft(){
  show('craftCost',selected);show('craftProfit',selected===null?null:revenue-selected,true);
  show('allBuyProfit',allBuy===null?null:revenue-allBuy,true);show('allRefProfit',allRef===null?null:revenue-allRef,true);
 }
-function refining(){let r=refiningRate(),tier=num('refTier'),raw=qty[tier-2],prev=tier===2?0:1,n=Math.max(1,num('refQty'));let total=n*(raw*num('rawPrice')+prev*num('prevPrice'))*(1-r)+num('refFee');let profit=n*num('refSell')*(1-.065)-total;$('refCost').textContent=r===null?'—':silver(total/n);$('refProfit').textContent=r===null?'—':silver(profit)}
+function refining(){
+ const r=refiningRate(),tier=num('refTier'),raw=qty[tier-2],prev=tier===2?0:1;
+ const rawAvailable=Number($('refRawAvailable').value),prevAvailable=Number($('refPrevAvailable').value);
+ $('refPrevAvailableWrap').hidden=tier===2;
+ const valid=r!==null&&Number.isInteger(rawAvailable)&&rawAvailable>=0&&(tier===2||(Number.isInteger(prevAvailable)&&prevAvailable>=0));
+ // Spreadsheet Refining!Q2: ROUNDDOWN(O2/(D2*(1-M2)),0)
+ // Refining!Q3: ROUNDDOWN(MIN(O3/(D3*(1-M3)),P3/(I3*(1-M3))),0)
+ const n=!valid?null:Math.max(0,Math.floor(Math.min(rawAvailable/(raw*(1-r)),tier===2?Infinity:prevAvailable/(prev*(1-r)))+1e-9));
+ const total=n===null?null:n*(raw*num('rawPrice')+prev*num('prevPrice'))*(1-r)+num('refFee');
+ const profit=total===null?null:n*num('refSell')*(1-.065)-total;
+ $('refEffective').textContent=n===null?'—':n.toLocaleString()+' units';
+ $('refEffective').dataset.qty=n===null?'':String(n);
+ $('refCost').textContent=n===null||n===0?'—':silver(total/n);
+ $('refProfit').textContent=profit===null?'—':silver(profit);
+ $('refCost').dataset.batchCost=n===null||n===0?'':String(total);
+}
 function database(){let q=$('search').value.trim().toLowerCase();let matched=items.filter(i=>(i.name+' '+i.category+' '+i.subcategory+' '+i.bonusCity).toLowerCase().includes(q));$('itemCount').textContent=matched.length+' items';$('itemRows').replaceChildren();matched.slice(0,300).forEach(item=>{let tr=document.createElement('tr');[item.name,item.category+' / '+item.subcategory,item.bonusCity||'—',item.materials.map(m=>m.qty+' × '+m.name).join(', ')||'Recipe not provided'].forEach(v=>{let td=document.createElement('td');td.textContent=v;tr.append(td)});$('itemRows').append(tr)})}
 // Americas (West) market prices. Never assume an unknown artifact ID is safe to map.
 const MARKET_API='https://west.albion-online-data.com/api/v2/stats/prices/';
@@ -120,4 +135,4 @@ async function fetchMarketPrices(){
 $('fetchMarket').addEventListener('click',fetchMarketPrices);
 $('marketCity').addEventListener('change',()=>{$('marketStatus').textContent='Market city changed. Fetch again to update prices; existing inputs are unchanged.'});
 
-for(const id of ['craftQty','sellPrice','craftCity','craftFocus','craftDaily','craftRrr','craftFee','craftTax'])$(id).addEventListener('input',craft);for(const id of ['resource','refTier','refQty','rawPrice','prevPrice','refSell','refFee','refFocus','refBonus','refDaily','refRrr'])$(id).addEventListener('input',refining);$('equipmentSelect').addEventListener('change',updateTypes);$('typeSelect').addEventListener('change',updateItems);$('itemSelect').addEventListener('change',recipe);$('craftTier').addEventListener('change',recipe);$('enchant').addEventListener('change',recipe);$('search').addEventListener('input',database);fetch('items.json').then(r=>r.json()).then(data=>{items=data;fillSelect('equipmentSelect',['Boots','Chest','Helmets','Capes','Weapons','Off-Hands'],'Boots');updateTypes();database()}).catch(()=>{$('recipe').textContent='Item database could not load. Open the site using a local server or GitHub Pages.'});refining();
+for(const id of ['craftQty','sellPrice','craftCity','craftFocus','craftDaily','craftRrr','craftFee','craftTax'])$(id).addEventListener('input',craft);for(const id of ['resource','refTier','refRawAvailable','refPrevAvailable','rawPrice','prevPrice','refSell','refFee','refFocus','refBonus','refDaily','refRrr'])$(id).addEventListener('input',refining);$('equipmentSelect').addEventListener('change',updateTypes);$('typeSelect').addEventListener('change',updateItems);$('itemSelect').addEventListener('change',recipe);$('craftTier').addEventListener('change',recipe);$('enchant').addEventListener('change',recipe);$('search').addEventListener('input',database);fetch('items.json').then(r=>r.json()).then(data=>{items=data;fillSelect('equipmentSelect',['Boots','Chest','Helmets','Capes','Weapons','Off-Hands'],'Boots');updateTypes();database()}).catch(()=>{$('recipe').textContent='Item database could not load. Open the site using a local server or GitHub Pages.'});refining();
