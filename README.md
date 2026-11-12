@@ -34,3 +34,6 @@ Updated using **Albion crafting master - 10 percent daily bonus rates.xlsx**.
 
 ## Crafting cost fix (November 2026)
 Crafting cost now calculates without a selling price. Enter a price for each required material, choose Buy or Refine where relevant, and set the crafting city, focus, and daily bonus. Selling price is only needed for profit. If the 20% daily bonus is selected, supply a manual return-rate override until those rates are provided.
+
+### Troubleshooting crafting cost
+Selling price is optional. Enter the Buy price for every recipe material, including artifacts, or select Refine and enter its self-refined price. Select No or Yes 10% for Daily Bonus; Yes 20% needs a manual return rate until supplied. Replace both `app.js` and `index.html` in the repository root, commit, then hard refresh.
