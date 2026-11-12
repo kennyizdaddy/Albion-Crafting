@@ -31,7 +31,7 @@ function recipe(){
   const tier=$('craftTier').value,ench=$('enchant').value;
   const label=m.name.replace(/Tier 4/g,'Tier '+tier)+(isArtifact?'':'.'+ench);
   d.innerHTML=`<strong></strong><small></small><div class="twocol"><label>Buy price / unit<input type="number" min="0" step="any" placeholder="Required" class="buyprice"></label>${isArtifact?'':`<label>Self-refined cost / unit<input type="number" min="0" step="any" placeholder="Required for comparison" class="refprice"></label>`}</div>${isArtifact?'':`<label>Source<select class="source"><option value="buy">Buy</option><option value="refine">Refine</option></select></label>`}`;
-  d.querySelector('strong').textContent=label;const stamp=document.createElement('span');stamp.className='market-stamp';stamp.textContent='Market price: not fetched';d.append(stamp);d.querySelector('small').textContent='Required per craft: '+m.qty+(isArtifact?' · no crafting resource return':'');
+  d.querySelector('strong').textContent=label;const stamp=document.createElement('span');stamp.className='market-stamp';stamp.textContent='Market price: not fetched';d.append(stamp);const idLine=document.createElement('div');idLine.className='material-id';idLine.textContent='Market item ID: checking…';d.append(idLine);d.querySelector('small').textContent='Required per craft: '+m.qty+(isArtifact?' · no crafting resource return':'');
   d.dataset.materialName=m.name;d.dataset.qty=m.qty;d.dataset.artifact=isArtifact?'yes':'no';$('recipe').append(d)
  }
  $('recipe').querySelectorAll('input,select').forEach(el=>{el.addEventListener('input',craft);el.addEventListener('change',craft)});craft();
@@ -64,6 +64,8 @@ function database(){let q=$('search').value.trim().toLowerCase();let matched=ite
 const MARKET_API='https://west.albion-online-data.com/api/v2/stats/prices/';
 let marketRequestSeq=0;
 const marketKinds={'Plank':'PLANKS','Bar':'METALBAR','Metal Bar':'METALBAR','Cloth':'CLOTH','Leather':'LEATHER','Stone Block':'STONEBLOCK'};
+// Resource ID conventions; artifacts have separate IDs and are not guessed.
+const MATERIAL_ID_REFERENCE='https://github.com/ao-data/ao-bin-dumps';
 function materialId(el){
  if(el.dataset.artifact==='yes')return null;
  const name=el.dataset.materialName||'';
@@ -80,6 +82,7 @@ async function fetchMarketPrices(){
  const rows=[...document.querySelectorAll('#recipe .material')],known=rows.map(el=>({el,id:materialId(el)})).filter(x=>x.id);
  const seq=++marketRequestSeq;
  if(!known.length){status.textContent='No recognized tradeable resources in this recipe. Enter prices manually.';return}
+ for(const el of rows){const id=materialId(el);el.querySelector('.material-id').textContent=id?'Market item ID: '+id+' · generated from resource type / tier / enchantment':'Market item ID: not verified (artifact / special ingredient)';}
  const ids=[...new Set(known.map(x=>x.id))];button.disabled=true;status.textContent='Fetching '+ids.length+' material price(s) from '+city+'…';
  try{
   const url=MARKET_API+ids.map(encodeURIComponent).join(',')+'.json?locations='+encodeURIComponent(city)+'&qualities=1';
@@ -93,9 +96,9 @@ async function fetchMarketPrices(){
    const matches=records.filter(x=>x.item_id===id&&String(x.city).toLowerCase()===city.toLowerCase()&&Number(x.quality)===1&&Number(x.sell_price_min)>0);
    matches.sort((a,b)=>parseMarketDate(b.sell_price_min_date)-parseMarketDate(a.sell_price_min_date));
    const row=matches[0],stamp=row?parseMarketDate(row.sell_price_min_date):NaN;
-   if(!row||!Number.isFinite(stamp)){missing++;priceStamp(el,'No usable reported sell order in '+city,true);continue}
+   if(!row||!Number.isFinite(stamp)){missing++;const all=records.filter(x=>x.item_id===id&&String(x.city).toLowerCase()===city.toLowerCase()&&Number(x.quality)===1);const hasBuy=all.some(x=>Number(x.buy_price_max)>0);priceStamp(el,'No API sell observation for '+id+' in '+city+(hasBuy?' · buy orders exist, but are not purchase prices':''),true);continue}
    const hours=Math.max(0,(now-stamp)/3600000),age=Math.round(hours)+'h old';
-   if(maxAge>0&&hours>maxAge){stale++;priceStamp(el,'Stale: '+Number(row.sell_price_min).toLocaleString()+' silver · '+age+' (not applied)',true);continue}
+   if(maxAge>0&&hours>maxAge){stale++;priceStamp(el,'Older reported price: '+Number(row.sell_price_min).toLocaleString()+' silver · '+age+' · '+row.sell_price_min_date+' UTC (not auto-applied; choose Any age to use)',true);continue}
    const input=el.querySelector('.buyprice');input.value=String(row.sell_price_min);input.dataset.marketValue=input.value;
    filled++;priceStamp(el,'Market: '+Number(row.sell_price_min).toLocaleString()+' silver · '+age+(hours>72?' · older data':''),hours>72);
   }
@@ -169,28 +172,30 @@ async function resolveCraftedItemId(){
  return {id:`T${tier}_${suffix}`+(ench?'@'+ench:''),source:'mapped item ID ('+mapping.size+'/'+total+' names)'};
 }
 function priceAge(iso){const time=parseMarketDate(iso);if(!Number.isFinite(time))return {label:'Unknown',hours:Infinity};const hours=Math.max(0,(Date.now()-time)/3600000);return {label:hours<48?Math.round(hours)+'h ago':Math.round(hours/24)+'d ago',hours}}
-function validOrder(record,kind,maxHours){const value=Number(record[kind]);const date=priceAge(record[kind+'_date']);return value>0&&Number.isFinite(value)&&Number.isFinite(date.hours)&&(maxHours===0||date.hours<=maxHours)?{value,date}:null}
+function validOrder(record,kind,maxHours){const value=Number(record[kind]);const date=priceAge(record[kind+'_date']);return value>0&&Number.isFinite(value)&&Number.isFinite(date.hours)?{value,date,stale:maxHours>0&&date.hours>maxHours}:null}
 async function fetchItemMarketPrices(){
  const seq=++itemPriceRequestSeq,button=$('fetchItemMarket'),status=$('itemMarketStatus'),tbody=$('itemMarketRows');button.disabled=true;status.textContent='Looking up crafted item ID…';
  try{
   const {id,source}=await resolveCraftedItemId();if(seq!==itemPriceRequestSeq)return;
   const quality=Number($('itemQuality').value),maxAge=Number($('marketAge').value);
   status.textContent='Fetching '+id+' ('+source+') across six cities…';
-  const url=MARKET_API+encodeURIComponent(id)+'.json?locations='+encodeURIComponent(ITEM_MARKET_CITIES.join(','))+'&qualities='+quality;
+  const url=MARKET_API+encodeURIComponent(id)+'.json?locations='+encodeURIComponent(ITEM_MARKET_CITIES.join(','))+'&qualities=1,2,3,4,5';
   const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),15000);
   let response;try{response=await fetch(url,{signal:controller.signal,headers:{Accept:'application/json'}})}finally{clearTimeout(timeout)}
   if(!response.ok)throw new Error(response.status===429?'API rate limit reached. Wait before retrying.':'Market API HTTP '+response.status);
   const records=await response.json();if(!Array.isArray(records))throw new Error('Unexpected market response');if(seq!==itemPriceRequestSeq)return;
   tbody.replaceChildren();let available=0;
   for(const city of ITEM_MARKET_CITIES){
-   const row=records.find(x=>x.item_id===id&&String(x.city).toLowerCase()===city.toLowerCase()&&Number(x.quality)===quality);
+   const cityRecords=records.filter(x=>x.item_id===id&&String(x.city).toLowerCase()===city.toLowerCase());
+   const row=cityRecords.find(x=>Number(x.quality)===quality);
+   const otherQualities=[...new Set(cityRecords.filter(x=>Number(x.quality)!==quality&&(Number(x.sell_price_min)>0||Number(x.buy_price_max)>0)).map(x=>Number(x.quality)))].sort();
    const sell=row?validOrder(row,'sell_price_min',maxAge):null,buy=row?validOrder(row,'buy_price_max',maxAge):null;
    const tr=document.createElement('tr'),tdCity=document.createElement('td');tdCity.textContent=city;tr.append(tdCity);
-   for(const order of [sell,buy]){const td=document.createElement('td');td.textContent=order?order.value.toLocaleString()+' silver':'—';if(order)available++;tr.append(td)}
-   const observed=document.createElement('td');observed.textContent=[sell&&'Sell '+sell.date.label,buy&&'Buy '+buy.date.label].filter(Boolean).join(' · ')||(row?'Missing / older than selected age':'No report');tr.append(observed);
-   const action=document.createElement('td');for(const [label,order] of [['Sell',sell],['Buy',buy]])if(order){const b=document.createElement('button');b.type='button';b.className='price-use';b.textContent=label;b.title='Use '+city+' '+label.toLowerCase()+' order in profit calculation';b.addEventListener('click',()=>{$('sellPrice').value=String(order.value);craft();status.textContent='Using '+city+' '+label.toLowerCase()+' order: '+order.value.toLocaleString()+' silver per item. Confirm actual sale price in game.'});action.append(b)}if(!action.childNodes.length)action.textContent='—';tr.append(action);tbody.append(tr);
+   for(const order of [sell,buy]){const td=document.createElement('td');td.textContent=order?order.value.toLocaleString()+' silver'+(order.stale?' (older)':''):'—';if(order){available++;if(order.stale)td.classList.add('stale-price')}tr.append(td)}
+   const observed=document.createElement('td');observed.textContent=[sell&&'Sell '+sell.date.label+(sell.stale?' · older':''),buy&&'Buy '+buy.date.label+(buy.stale?' · older':'')].filter(Boolean).join(' · ')||(row?'No valid reported orders':otherQualities.length?'Only other qualities reported: '+otherQualities.map(q=>['','Normal','Good','Outstanding','Excellent','Masterpiece'][q]).join(', '):'No reported orders');tr.append(observed);
+   const action=document.createElement('td');for(const [label,order] of [['Sell',sell],['Buy',buy]])if(order){const b=document.createElement('button');b.type='button';b.className='price-use';b.textContent=label;b.title='Use '+city+' '+label.toLowerCase()+' order in profit calculation'+(order.stale?' (older observation)':'');b.addEventListener('click',()=>{$('sellPrice').value=String(order.value);craft();status.textContent='Using '+city+' '+label.toLowerCase()+' order: '+order.value.toLocaleString()+' silver per item'+(order.stale?' (OLDER reported price)':'')+'. Confirm actual sale price in game.'});action.append(b)}if(!action.childNodes.length)action.textContent='—';tr.append(action);tbody.append(tr);
   }
-  status.textContent=id+' · '+source+' · '+available+' usable price observations across six cities. Age limit: '+(maxAge?maxAge+'h':'any')+'.';
+  status.textContent=id+' · '+source+' · '+available+' usable order prices for '+['','Normal','Good','Outstanding','Excellent','Masterpiece'][quality]+' quality. Age limit: '+(maxAge?maxAge+'h':'any')+'. Older prices are visible and labelled; dashes mean the API has no valid reported order for this quality.';
  }catch(err){if(seq===itemPriceRequestSeq){status.textContent='Could not compare prices: '+err.message;tbody.innerHTML='<tr><td colspan="5">No comparison available. Check item ID or try again later.</td></tr>'}}
  finally{if(seq===itemPriceRequestSeq)button.disabled=false}
 }

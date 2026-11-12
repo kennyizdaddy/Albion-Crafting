@@ -3,3 +3,5 @@
 .market-panel{background:#0d1b2d;border:1px solid #2c6a67;border-radius:12px;padding:16px;margin-bottom:14px}.market-panel h4{margin:0 0 13px;color:#6ee2ba}.market-button{padding:12px 16px;background:#4dd3ab;border:0;border-radius:9px;font-weight:800;color:#081d1a;cursor:pointer}.market-button:disabled{opacity:.5;cursor:wait}.market-stamp{display:block;color:#a9c1d4;font-size:11px;margin:6px 0}.market-stamp.warn{color:#f4b96b}.market-stamp.ok{color:#71e2be}
 
 .item-market-panel{margin:18px 0 22px}.item-market-panel h4{margin:0 0 8px}.item-market-table{width:100%;min-width:620px}.item-market-table td,.item-market-table th{padding:11px 9px;text-align:left}.item-market-table td:nth-child(2),.item-market-table td:nth-child(3){white-space:nowrap}.price-use{background:#123e56;color:#c9fbf5;border:1px solid #238d93;border-radius:7px;padding:6px 9px;margin:2px;cursor:pointer}.price-use:hover{background:#166879}.item-market-panel .tablewrap{overflow-x:auto;margin-top:12px}
+
+.material-id{font-size:12px;color:#a5c4e8;margin:5px 0;overflow-wrap:anywhere}.stale-price{color:#f6c77d}

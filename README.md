@@ -1,12 +1,15 @@
-# Albion Atlas - item ID mapping update
+# Albion Atlas — older price visibility and crafting material IDs
 
-## GitHub update
-Replace **app.js** in your existing repository with the file from this package. Keep your existing index.html, style.css and items.json. Commit to main, wait for GitHub Pages to publish, then hard-refresh (Ctrl+Shift+R).
+Upload **app.js**, **index.html**, and **style.css** to your GitHub Pages repository root. Keep items.json unchanged.
 
-## What changed
-The six-city comparison now builds a mapping for every name in your 232-item `items.json` list from the community Albion item catalogue. It removes tier prefixes such as **Adept's** before matching and deduplicates IDs by their tier-independent suffix. It then creates the correct ID for the chosen tier and enchantment. It does **not** guess when names are missing or ambiguous; the manual item ID field remains available. The comparison reports the number of automatically matched names.
+## Changes
+- Six-city equipment prices now display older observations, marked **(older)** with observed age. Buttons can use those older prices, with a warning.
+- Enchanted resource IDs are displayed alongside each recipe material. For example T4_METALBAR_LEVEL2@2, T4_CLOTH_LEVEL2@2. These are generated from the resource naming convention.
+- Older material sell observations show their price, age, and timestamp even if the freshness threshold excludes auto-fill. Choose **Any age** to apply old observations automatically.
+- Artifacts and special ingredients are flagged as **not verified** rather than assigned guessed market IDs.
+- No changes to crafting formulas or equipment ID mapping.
 
-**Note:** This is an automatic catalogue-based mapping system, not a manually verified list of 232 static IDs. The actual match count depends on the catalogue available in the visitor's browser. Live API calls and browser compatibility have not been verified here.
+## Limitations
+The resource ID convention is validated structurally for the workbook's ordinary Plank, Bar, Leather, and Cloth materials, not independently checked against a live market catalogue for every tier/enchantment. The Albion Data Project may lack observations for actual in-game orders. Older reported prices may not reflect currently available orders.
 
-## Test
-Choose Heavy Crossbow, tier 4, enchantment 1, and click Compare six cities. If catalogue naming matches, it should request `T4_2HCROSSBOW@1`. If it still fails, use that ID in the override field and report the displayed error.
+References: https://github.com/ao-data/ao-bin-dumps and https://www.albion-online-data.com/
