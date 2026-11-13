@@ -101,3 +101,41 @@ footer{border-color:#39464b;color:#aab7bb}
 #crafting .results small{font-size:13px}
 #crafting #journalSaveCraft{width:100%;margin:3px 0 0;padding:15px;font-size:15px}
 @media(max-width:450px){#crafting .material>strong{padding-right:0;margin-bottom:8px}#crafting .material-quantity{position:static;display:inline-block;margin-bottom:4px}#crafting .craft-rate-grid>div{padding:10px}}
+
+/* Compact Gear Crafting layout: no stretched cards or oversized focus input. */
+#crafting .layout{align-items:start}
+#crafting .layout>.panel{align-self:start;min-width:0}
+#crafting .focus-amount{display:flex;align-items:center;flex-wrap:wrap;gap:7px 10px;padding:8px 10px;margin:0 0 12px;background:#1d2b30;border:1px solid #7e6945;border-radius:9px}
+#crafting .focus-amount[hidden]{display:none}
+#crafting .focus-amount label{margin:0;white-space:nowrap;font-size:12px}
+#crafting .focus-amount input{margin:0;width:108px;max-width:108px;padding:7px 8px;font-size:13px}
+#crafting .focus-amount .hint{margin:0;font-size:11px;line-height:1.3;flex:1 1 130px}
+#crafting .craft-material-panel{padding:18px 20px}
+#crafting .craft-material-panel>h3{margin:0 0 12px;font-size:19px}
+#crafting .craft-material-panel .market-panel{padding:12px;margin:0 0 10px}
+#crafting .craft-material-panel .market-panel h4{margin:0 0 9px}
+#crafting .craft-material-panel .market-panel label{margin-bottom:8px}
+#crafting .craft-material-panel .market-panel input,#crafting .craft-material-panel .market-panel select{padding:8px;margin-top:4px;font-size:12px}
+#crafting .craft-material-panel .market-button{padding:10px 12px}
+#crafting .craft-material-panel .market-panel .hint{margin:7px 0 0;line-height:1.4}
+#crafting .craft-market-help{padding:6px 0 0;margin:7px 0 0}
+#crafting .craft-market-help summary{margin:0;font-size:12px}
+#crafting .craft-section-label{margin:12px 0 4px;font-size:15px}
+#crafting .material{padding:10px 0 8px}
+#crafting .material>strong{font-size:15px;line-height:1.4;padding-right:100px}
+#crafting .material-quantity{top:9px;padding:5px 7px;font-size:13px}
+#crafting .material>small{font-size:11px;margin:4px 0 6px;line-height:1.35}
+#crafting .material .twocol{margin-top:5px;gap:8px}
+#crafting .material label{font-size:11px;margin-bottom:6px}
+#crafting .material input,#crafting .material select{padding:8px 9px;margin-top:4px;font-size:12px}
+#crafting .material-details{margin:4px 0 0;padding:4px 0 0}
+#crafting .material-details summary{font-size:11px;margin:0;color:#d9c49e}
+#crafting .material-details .market-stamp,#crafting .material-details .material-id{font-size:11px;margin:4px 0}
+#crafting .craft-material-panel>.twocol label{margin-bottom:9px}
+#crafting .craft-material-panel>.twocol input{padding:9px;margin-top:4px}
+#crafting .craft-material-panel .craft-subhead{margin:14px 0 10px;padding-top:12px;font-size:16px}
+#crafting .craft-material-panel .results{margin:9px 0;gap:8px}
+#crafting .craft-material-panel .results>div{padding:10px}
+#crafting .craft-material-panel .results small{font-size:11px}
+#crafting .craft-material-panel .results strong{font-size:21px;margin-top:5px}
+@media(max-width:450px){#crafting .craft-material-panel{padding:14px}#crafting .material>strong{padding-right:0}#crafting .material-quantity{position:static;margin:4px 0}#crafting .focus-amount .hint{flex-basis:100%}}
