@@ -157,3 +157,10 @@ footer{border-color:#39464b;color:#aab7bb}
 #crafting .craft-focus-inline .focus-amount .hint{flex:1 1 100%;margin:0;font-size:10px;line-height:1.25}
 #crafting .sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 @media(max-width:500px){#crafting .craft-focus-inline{flex-wrap:wrap}#crafting .craft-focus-inline>.focus-amount{flex:0 1 auto}}
+
+/* Gear Crafting: independent vertical stacks prevent tall material recipes
+   from pushing down Generalist progression on the opposite side. */
+#crafting .craft-independent-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;align-items:start}
+#crafting .craft-independent-layout>.craft-column{display:flex;flex-direction:column;gap:20px;min-width:0;align-self:start}
+#crafting .craft-independent-layout>.craft-column>.panel{width:100%;min-width:0;align-self:stretch}
+@media(max-width:750px){#crafting .craft-independent-layout{grid-template-columns:minmax(0,1fr)}}
