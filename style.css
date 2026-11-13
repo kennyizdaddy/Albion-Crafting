@@ -170,7 +170,7 @@ footer{border-color:#39464b;color:#aab7bb}
 #progression .progression-page-content>.panel{width:100%;}
 
 /* Original Albion Atlas artwork and asymmetric home toolkit */
-.atlas-home .home-hero{background-image:linear-gradient(90deg,rgba(9,15,21,.96) 0%,rgba(11,17,23,.9) 33%,rgba(11,17,23,.5) 62%,rgba(11,17,23,.1) 100%),url("assets/blacksmith-hero.png");background-position:center;background-size:cover;min-height:510px}
+.atlas-home .home-hero{background-image:linear-gradient(90deg,rgba(9,15,21,.96) 0%,rgba(11,17,23,.9) 33%,rgba(11,17,23,.5) 62%,rgba(11,17,23,.1) 100%),url("blacksmith-hero.png");background-position:center;background-size:cover;min-height:510px}
 .atlas-home .home-hero::before{display:none}
 .atlas-home .home-hero-content{max-width:580px}
 .atlas-home .home-description{max-width:480px;color:#e0e1de}
@@ -199,4 +199,4 @@ footer{border-color:#39464b;color:#aab7bb}
 .home-showcase-progression strong{font-size:19px;color:#f8f1e5}
 .home-showcase-progression small{color:#b7c4c9;font-size:13px}
 .home-progression-arrow{font-size:24px;color:#e8c780}
-@media(max-width:700px){.atlas-home .home-hero{min-height:420px;background-position:62% center;background-image:linear-gradient(90deg,#091018ef,#091018bd 68%,#09101870),url("assets/blacksmith-hero.png")}.home-showcase-main{height:320px}.home-showcase-main .home-showcase-copy{padding:40px 25px}.home-showcase-pair{grid-template-columns:1fr}.home-showcase-small{min-height:0}.home-showcase-small img{height:185px}.home-showcase-progression{padding:20px 17px;gap:13px}}
+@media(max-width:700px){.atlas-home .home-hero{min-height:420px;background-position:62% center;background-image:linear-gradient(90deg,#091018ef,#091018bd 68%,#09101870),url("blacksmith-hero.png")}.home-showcase-main{height:320px}.home-showcase-main .home-showcase-copy{padding:40px 25px}.home-showcase-pair{grid-template-columns:1fr}.home-showcase-small{min-height:0}.home-showcase-small img{height:185px}.home-showcase-progression{padding:20px 17px;gap:13px}}

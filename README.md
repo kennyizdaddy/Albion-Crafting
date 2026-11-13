@@ -112,3 +112,6 @@ Focus UI update: Focus Used selection and optional amount now share one compact 
 
 
 Homepage artwork update: original AI-generated assets in assets/. Home now features the blacksmith hero banner and asymmetric image-backed Gear Crafting, Refining, My Journal, and Progression navigation. No calculator or Journal storage code changed.
+
+
+IMAGE UPLOAD FIX: All four PNG files are at the website root. Upload all files from this ZIP (including the four PNGs) to the root of the GitHub Pages repository, alongside index.html. No assets subfolder is needed.
