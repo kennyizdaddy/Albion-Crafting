@@ -126,3 +126,7 @@ Short banner using the original gear-crafting.png, subtle gold step headings, pr
 - Artifact quantities are calculated per recipe and batch, with no resource returns.
 - Artifact prices are always entered manually; market fetching only requests recognized ordinary resources.
 - Single Craft labels artifacts as `T4 Hallowfall Artifact` (for example). These are friendly shopping labels, **not verified in-game artifact item names**. Verify the actual artifact in Albion Online before buying.
+
+
+## Compound Refining (new)
+Open Refining > Compound Refining. The automatic chain supports tier-by-tier settings, returns, manual focus and focus budget, sourcing, cost breakdown, grouped compound run history, partial-stage confirmation, shared refining inventory movements, and JSON preset import/export. Browser storage is local. Verify current Albion recipes, station fees, city bonuses, prices, and focus consumption in-game. Export your existing inventory backup before using a new release.
