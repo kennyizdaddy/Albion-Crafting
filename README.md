@@ -109,3 +109,6 @@ Theme update: unified navigation, calculators, Journal, forms, cards and buttons
 
 
 Focus UI update: Focus Used selection and optional amount now share one compact inline row.
+
+
+Homepage artwork update: original AI-generated assets in assets/. Home now features the blacksmith hero banner and asymmetric image-backed Gear Crafting, Refining, My Journal, and Progression navigation. No calculator or Journal storage code changed.
