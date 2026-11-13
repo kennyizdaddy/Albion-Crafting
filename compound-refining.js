@@ -1,5 +1,24 @@
 (()=>{'use strict';
 const root=document.getElementById('atlasCompoundRefining');if(!root)return;
+// Refining subtab navigation: keep both calculators mounted and toggle visibility.
+const standardTab=document.getElementById('atlasStandardTab');
+const compoundTab=document.getElementById('atlasCompoundTab');
+const standardPanel=document.getElementById('atlasStandardRefining');
+if(standardTab&&compoundTab&&standardPanel){
+  function selectRefiningTab(which){
+    const compound=which==='compound';
+    standardPanel.hidden=compound;
+    root.hidden=!compound;
+    standardTab.classList.toggle('active',!compound);
+    compoundTab.classList.toggle('active',compound);
+    standardTab.setAttribute('aria-selected',String(!compound));
+    compoundTab.setAttribute('aria-selected',String(compound));
+  }
+  standardTab.addEventListener('click',()=>selectRefiningTab('standard'));
+  compoundTab.addEventListener('click',()=>selectRefiningTab('compound'));
+  selectRefiningTab('standard');
+}
+
 const recipes={'Metal Bar':{city:'Thetford',per:[0,0,1,2,2,3,4,5,5]},'Plank':{city:'Fort Sterling',per:[0,0,1,2,2,3,4,5,5]},'Cloth':{city:'Lymhurst',per:[0,0,1,2,2,3,4,5,5]},'Leather':{city:'Martlock',per:[0,0,1,2,2,3,4,5,5]},'Stone Block':{city:'Bridgewatch',per:[0,0,1,2,2,3,4,5,5]}};
 const storage='albionAtlasCompoundSimpleV1';let saved={};try{saved=JSON.parse(localStorage.getItem(storage)||'{}')||{}}catch(e){}
 const defaults={resource:'Metal Bar',tier:7,enchant:0,rate:36.71,mode:'backward',target:100,ores:{2:11,3:34,4:52,5:123,6:256,7:505,8:795}};
