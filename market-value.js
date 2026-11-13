@@ -11,7 +11,7 @@ const catalogUrls=[
 let request=0,quote=null,catalogPromise=null,manual=false;
 const money=n=>Math.round(n).toLocaleString()+' silver';
 const stamp=s=>{if(!s||String(s).startsWith('0001-'))return NaN;return Date.parse(/[zZ]$|[+-]\d\d:\d\d$/.test(s)?s:s+'Z')};
-const normalize=s=>String(s||'').toLowerCase().replace(/[^a-z0-9]/g,'');
+const normalize=s=>String(s||'').toLowerCase().replace(/^(beginner.s|novice.s|journeyman.s|adept.s|expert.s|master.s|grandmaster.s|elder.s)\s+/,'').replace(/[^a-z0-9]/g,'');
 const key=()=>[get('itemSelect').value,get('craftTier').value,get('enchant').value,get('craftCity').value,get('craftQuality').value,get('craftMarketItemId').value.trim()].join('|');
 const status=s=>get('craftMarketStatus').textContent=s;
 function update(){
@@ -38,7 +38,7 @@ async function loadCatalog(){
     const index=new Map();
     for(const row of rows){
      const id=row.UniqueName||row.uniqueName||row.unique_name;
-     const name=row.LocalizedNames?.['EN-US']||row.LocalizedNames?.['en-US']||row.localizedNames?.['EN-US']||row.name;
+     const name=row.LocalizedNames?.['EN-US']||row.LocalizedNames?.['en-US']||row.localizedNames?.['EN-US']||row.localizedNames?.['en-US']||row.name;
      if(!id||!name||!/^T[4-8]_/.test(id))continue;
      const n=normalize(name);if(!index.has(n))index.set(n,new Set());index.get(n).add(id);
     }
@@ -99,7 +99,11 @@ async function fetchQuote(){
  finally{button.disabled=false}
 }
 get('fetchCraftMarket').addEventListener('click',fetchQuote);
-for(const id of ['itemSelect','craftTier','enchant'])get(id).addEventListener('change',()=>{manual=false;get('craftMarketItemId').value='';invalidate('Item changed. Its exact ID will be resolved automatically when you fetch.')});
+function selectionChanged(){manual=false;get('craftMarketItemId').value='';invalidate('Item changed. Looking up its Albion item ID…');if(get('itemSelect').value)resolveId()}
+for(const id of ['itemSelect','craftTier','enchant'])get(id).addEventListener('change',selectionChanged);
+for(const id of ['equipmentSelect','typeSelect'])get(id).addEventListener('change',()=>setTimeout(selectionChanged,0));
+get('craftItemMatches')?.addEventListener('click',()=>setTimeout(selectionChanged,0));
+setTimeout(()=>{if(get('itemSelect').value)resolveId()},800);
 for(const id of ['craftCity','craftQuality','marketAge'])get(id).addEventListener('change',()=>invalidate('Selection changed. Fetch again for an updated market price.'));
 get('craftMarketItemId').addEventListener('input',()=>{manual=!!get('craftMarketItemId').value.trim();invalidate('Manual item ID updated. Fetch again.')});
 get('craftQty').addEventListener('input',update);
