@@ -1,0 +1,16 @@
+Albion Atlas Compound Refining V2 — staged update
+
+Implemented: backward T2 chain, expected net returns, inventory-aware stage planning, consolidated shopping and confirmed purchase additions, editable per-tier controls, improved cost allocation, actual-stage recording safeguards, grouped Journal mirror, separate preset and browser backups, price refresh, responsive inherited styling.
+
+IMPORTANT LIMITATIONS / NOT YET VERIFIED:
+- Albion recipe table and return rounding have NOT been independently verified against current game data; enchanted and stone recipes are blocked for recorded batches.
+- Return estimates use cumulative expected-value flooring, not an empirically verified per-operation in-game simulator.
+- Station fees are actual silver inputs, not automatically converted from usage fees.
+- Automatic market lookup uses Albion Online Data Project West prices and depends on available data and network access.
+- Purchase comparisons and starting-material estimates are incomplete; shop list represents net estimated shortages.
+- No general audit-safe correction/reversal workflow for completed compound batches. Deletion is deliberately disabled after completion.
+- Full backups are export-only; automatic full restore and cross-version migration are not implemented.
+- Multiple independent draft projects and extensive browser/mobile end-to-end tests are not complete.
+- Verify inventory and costs on a copy of your existing data before using for actual bookkeeping.
+
+Back up existing localStorage data before replacing site files. Do not assume this is a fully validated production release.
