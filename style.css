@@ -261,3 +261,6 @@ footer{border-color:#39464b;color:#aab7bb}
 /* Crafting presets and focus comparison */
 .craft-presets,.craft-focus-compare{margin:18px 0;padding:16px;border:1px solid var(--border,#35404d);border-radius:12px;background:rgba(120,140,160,.055)}
 .craft-presets h4,.craft-focus-compare h4{margin:0 0 12px}.preset-actions{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}.preset-actions button{padding:9px 12px;border:1px solid #536174;border-radius:7px;background:#263343;color:#f4f6f9;cursor:pointer}.preset-actions button:hover{background:#35465b}.craft-focus-compare .craft-rate-grid{margin-bottom:12px}.craft-focus-compare .results{margin-top:12px}
+
+/* Refining upgrade */
+.atlas-refining-upgrade{margin:18px 0}.atlas-ref-actions{display:flex;gap:8px;flex-wrap:wrap}.atlas-ref-actions button,.atlas-ref-batch button,#refAdjustSave{border:1px solid #5a7183;border-radius:8px;padding:9px 14px;background:#213a4a;color:#f0f6fa;cursor:pointer}.atlas-ref-batch{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:9px;border-bottom:1px solid #354958}.atlas-ref-breakdown p{border-bottom:1px solid #354958;padding:6px 0}.atlas-refining-upgrade input[type=checkbox]{width:auto;margin-right:8px}
