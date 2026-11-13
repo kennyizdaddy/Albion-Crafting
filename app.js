@@ -24,7 +24,7 @@ function refiningRate(){
  const bonus=$('refBonus').value==='Yes',focus=$('refFocus').value==='Yes',daily=Number($('refDaily').value)||0;
  const productionBonus=18+(bonus?40:0)+(focus?59:0)+daily;
  const r=productionBonus/(100+productionBonus);
- $('refRateNote').textContent='Automatic return rate: '+(r*100).toFixed(1)+'% · '+(bonus?city+' bonus':'Other royal city')+' · Focus '+(focus?'on':'off')+(daily?' · Daily +'+daily+'%':'')+'.';
+ $('refRateNote').textContent='Automatic return rate: '+(r*100).toFixed(2)+'% · '+(bonus?city+' bonus':'Other royal city')+' · Focus '+(focus?'on':'off')+(daily?' · Daily +'+daily+'%':'')+'.';
  return r;
 }
 function fillSelect(id,values,selected){const el=$(id);el.replaceChildren();values.forEach(v=>{const o=document.createElement('option');o.value=o.textContent=v;el.append(o)});if(values.includes(selected))el.value=selected}
@@ -105,7 +105,9 @@ function refining(){
  const valid=r!==null&&Number.isInteger(rawAvailable)&&rawAvailable>=0&&(tier===2||(Number.isInteger(prevAvailable)&&prevAvailable>=0));
  // Spreadsheet Refining!Q2: ROUNDDOWN(O2/(D2*(1-M2)),0)
  // Refining!Q3: ROUNDDOWN(MIN(O3/(D3*(1-M3)),P3/(I3*(1-M3))),0)
- const n=!valid?null:Math.max(0,Math.floor(Math.min(rawAvailable/(raw*(1-r)),tier===2?Infinity:prevAvailable/(prev*(1-r)))+1e-9));
+ const continual=$('refContinual').checked;
+ const factor=continual?1-r:1;
+ const n=!valid?null:Math.max(0,Math.floor(Math.min(rawAvailable/(raw*factor),tier===2?Infinity:prevAvailable/(prev*factor))+1e-9));
  const total=n===null?null:n*(raw*num('rawPrice')+prev*num('prevPrice'))*(1-r)+num('refFee');
  const profit=total===null?null:n*num('refSell')*(1-.065)-total;
  $('refEffective').textContent=n===null?'—':n.toLocaleString()+' units';
@@ -192,7 +194,7 @@ $('fetchMarket').addEventListener('click',fetchMarketPrices);
 $('marketCity').addEventListener('change',()=>{$('marketStatus').textContent='Market city changed. Fetch again to update prices; existing inputs are unchanged.'});
 
 for(const id of ['resource','refTier','refEnchant','refRawAvailable'])$(id).addEventListener('input',autofillPreviousTier);
-for(const id of ['craftQty','sellPrice','craftCity','craftFocus','craftDaily','craftRrr','craftFee','craftTax','craftListingFee','craftFocusAmount'])$(id).addEventListener('input',craft);for(const id of ['resource','refTier','refRawAvailable','refPrevAvailable','rawPrice','prevPrice','refSell','refFee','refFocus','refBonus','refDaily','refRrr'])$(id).addEventListener('input',refining);// Crafting item quick-search: uses the same loaded item catalog as the dependent dropdowns.
+for(const id of ['craftQty','sellPrice','craftCity','craftFocus','craftDaily','craftRrr','craftFee','craftTax','craftListingFee','craftFocusAmount'])$(id).addEventListener('input',craft);for(const id of ['resource','refTier','refRawAvailable','refPrevAvailable','rawPrice','prevPrice','refSell','refFee','refFocus','refBonus','refDaily','refRrr','refContinual'])$(id).addEventListener('input',refining);// Crafting item quick-search: uses the same loaded item catalog as the dependent dropdowns.
 function setupCraftItemSearch(){
  const input=$('craftItemSearch'), panel=$('craftItemMatches');
  const close=()=>{panel.hidden=true;input.setAttribute('aria-expanded','false')};
