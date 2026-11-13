@@ -254,3 +254,9 @@ footer{border-color:#39464b;color:#aab7bb}
 .bulk-artifact-section{margin-top:20px;padding-top:14px;border-top:1px solid #53677a}
 .bulk-artifact-section h3{margin:0 0 6px;color:#edca77}
 .bulk-artifact-section[hidden]{display:none!important}
+
+/* Lowest sell order valuation, crafting tab */
+#crafting .craft-market-valuation{margin:15px 0;padding:15px;border:1px solid #8e7547;border-radius:12px;background:linear-gradient(120deg,#19252d,#20261f)}
+#crafting .craft-market-valuation h4{margin:0 0 8px;color:#f0d29a}
+#crafting .craft-market-valuation .results{margin:12px 0}
+#crafting #craftMarketItemId{text-transform:uppercase}
