@@ -115,3 +115,7 @@ Homepage artwork update: original AI-generated assets in assets/. Home now featu
 
 
 IMAGE UPLOAD FIX: All four PNG files are at the website root. Upload all files from this ZIP (including the four PNGs) to the root of the GitHub Pages repository, alongside index.html. No assets subfolder is needed.
+
+
+## Gear Crafting visual polish
+Short banner using the original gear-crafting.png, subtle gold step headings, profit color emphasis, and input/save feedback. Calculator and Journal logic unchanged.

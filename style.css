@@ -210,3 +210,26 @@ footer{border-color:#39464b;color:#aab7bb}
 .atlas-guide-body li{margin:0 0 9px;padding-left:3px}
 .atlas-guide-note{font-size:.91rem;color:#bac5d0;margin:12px 0 0}
 @media(max-width:600px){.atlas-guide-body{padding:0 14px 14px}.atlas-guide>summary{padding:12px 14px}}
+
+/* Gear Crafting visual polish: presentation only, no calculator/layout changes. */
+#crafting .crafting-art-header{position:relative;isolation:isolate;overflow:hidden;display:flex;align-items:flex-end;min-height:148px;margin:14px 0 17px;border:1px solid #786542;border-radius:15px;background:#18212a url("gear-crafting.png") center 53%/cover no-repeat}
+#crafting .crafting-art-header::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(10,17,24,.97) 0%,rgba(10,17,24,.85) 43%,rgba(10,17,24,.14) 100%)}
+#crafting .crafting-art-copy{padding:23px 27px;max-width:570px}
+#crafting .crafting-art-copy .eyebrow{color:#e5c47c;font-size:10px;letter-spacing:1.7px}
+#crafting .crafting-art-copy h1{font-size:clamp(23px,3vw,32px);margin:6px 0 7px;line-height:1.13;color:#fff4df}
+#crafting .crafting-art-copy p{font-size:13px;line-height:1.4;color:#d6dce0;margin:0}
+#crafting .panel>h3,#crafting .panel>.craft-subhead{display:flex;align-items:center;gap:9px;color:#f1e8d8}
+#crafting .craft-step-number{font-size:12px;font-weight:800;letter-spacing:.5px;color:#e6c47c;background:rgba(223,189,120,.11);border:1px solid rgba(223,189,120,.25);border-radius:7px;padding:5px 7px;flex:none}
+#crafting .craft-step-icon{margin-left:auto;color:#c3a76f;font-size:18px;font-weight:400;opacity:.8}
+#crafting .craft-profit-results>div{border-color:rgba(216,179,99,.38);background:linear-gradient(110deg,rgba(216,179,99,.10),rgba(14,28,44,.85))}
+#crafting .craft-profit-results strong{color:#e7c783;transition:color .25s ease,text-shadow .25s ease}
+#crafting .craft-profit-results strong.profit-positive{color:#6de0a6}
+#crafting .craft-profit-results strong.profit-negative{color:#f18b8b}
+#crafting input:focus-visible,#crafting select:focus-visible{outline:2px solid #e0bd77;outline-offset:1px;border-color:#e0bd77;box-shadow:0 0 0 3px rgba(224,189,119,.11)}
+#crafting #journalSaveCraft{transition:background-color .16s ease,box-shadow .16s ease,filter .16s ease}
+#crafting #journalSaveCraft:hover{filter:brightness(1.1);box-shadow:0 0 0 2px rgba(224,189,119,.18)}
+#crafting .craft-value-updated{animation:craft-value-flash .55s ease-out}
+@keyframes craft-value-flash{0%{text-shadow:0 0 13px rgba(238,200,117,.75)}100%{text-shadow:none}}
+#crafting #journalSaveStatus.craft-save-success{color:#79e0ac;font-weight:650}
+@media(max-width:600px){#crafting .crafting-art-header{min-height:136px;background-position:62% center}#crafting .crafting-art-copy{padding:19px 17px}#crafting .crafting-art-header::before{background:linear-gradient(90deg,rgba(10,17,24,.95),rgba(10,17,24,.75) 65%,rgba(10,17,24,.4))}}
+@media(prefers-reduced-motion:reduce){#crafting .craft-value-updated{animation:none}#crafting #journalSaveCraft{transition:none}}
