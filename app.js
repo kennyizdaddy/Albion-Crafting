@@ -32,21 +32,21 @@ function updateTypes(){const category=$('equipmentSelect').value;const types=[..
 function updateItems(){const category=$('equipmentSelect').value,type=$('typeSelect').value;const list=items.filter(x=>x.category===category&&x.subcategory===type);const old=$('itemSelect').value;fillSelect('itemSelect',list.map(x=>x.name).sort(),list.some(x=>x.name===old)?old:list[0]?.name);if(category==='Off-Hands')$('craftCity').value='Martlock';recipe()}
 function recipe(){
  marketRequestSeq++;
- const item=items.find(x=>x.name===$('itemSelect').value);$('recipe').replaceChildren();$('itemCityNote').textContent=item?'Workbook bonus city: '+(item.bonusCity||'Not specified'):'';if(!item)return;
+ const item=items.find(x=>x.name===$('itemSelect').value);$('recipe').replaceChildren();$('itemCityNote').textContent=item?(item.bonusCity?'Preferred city for this item':'No crafting city bonus listed for this item'):'';$('craftBonusCity').textContent=item?(item.bonusCity||'Not specified'):'—';if(!item)return;
  for(const [i,m] of item.materials.entries()){
   const d=document.createElement('div');d.className='material';
   const isArtifact=!/^Tier \d+ (Plank|Bar|Cloth|Leather|Stone|Metal Bar)/i.test(m.name);
   const tier=$('craftTier').value,ench=$('enchant').value;
   const label=m.name.replace(/Tier 4/g,'Tier '+tier)+(isArtifact?'':'.'+ench);
   d.innerHTML=`<strong></strong><small></small><div class="twocol"><label>Buy price / unit<input type="number" min="0" step="any" placeholder="Required" class="buyprice"></label>${isArtifact?'':`<label>Self-refined cost / unit<input type="number" min="0" step="any" placeholder="Required for comparison" class="refprice"></label>`}</div>${isArtifact?'':`<label>Source<select class="source"><option value="buy">Buy</option><option value="refine">Refine</option></select></label>`}`;
-  d.querySelector('strong').textContent=label;const stamp=document.createElement('span');stamp.className='market-stamp';stamp.textContent='Market price: not fetched';d.append(stamp);const idLine=document.createElement('div');idLine.className='material-id';idLine.textContent='Market item ID: checking…';d.append(idLine);d.querySelector('small').textContent='Required per craft: '+m.qty+' · Total for '+Math.max(1,Math.floor(num('craftQty')||1))+' craft(s): '+(m.qty*Math.max(1,Math.floor(num('craftQty')||1)))+(isArtifact?' · no crafting resource return':'');
-  d.dataset.materialName=m.name;d.dataset.qty=m.qty;d.dataset.artifact=isArtifact?'yes':'no';$('recipe').append(d)
+  d.querySelector('strong').textContent=label;const qtyBadge=document.createElement('span');qtyBadge.className='material-quantity';d.insertBefore(qtyBadge,d.querySelector('small'));const stamp=document.createElement('span');stamp.className='market-stamp';stamp.textContent='Market price: not fetched';d.append(stamp);const idLine=document.createElement('div');idLine.className='material-id';idLine.textContent='Market item ID: checking…';d.append(idLine);d.querySelector('small').textContent='Required per craft: '+m.qty+' · Total for '+Math.max(1,Math.floor(num('craftQty')||1))+' craft(s): '+(m.qty*Math.max(1,Math.floor(num('craftQty')||1)))+(isArtifact?' · no crafting resource return':'');
+  qtyBadge.textContent=(m.qty*Math.max(1,Math.floor(num('craftQty')||1))).toLocaleString()+' required';d.dataset.materialName=m.name;d.dataset.qty=m.qty;d.dataset.artifact=isArtifact?'yes':'no';$('recipe').append(d)
  }
  $('recipe').querySelectorAll('input,select').forEach(el=>{el.addEventListener('input',craft);el.addEventListener('change',craft)});craft();
 }
 function craft(){
- const r=craftingRate(),q=Math.max(1,num('craftQty'));
- for(const el of document.querySelectorAll('#recipe .material')){const per=Number(el.dataset.qty),count=Math.max(1,Math.floor(q));el.querySelector('small').textContent='Required per craft: '+per+' · Total for '+count+' craft(s): '+(per*count)+(el.dataset.artifact==='yes'?' · no crafting resource return':'');}
+ const r=craftingRate(),q=Math.max(1,num('craftQty'));const currentItem=items.find(x=>x.name===$('itemSelect').value);if(currentItem){const match=!!currentItem.bonusCity&&currentItem.bonusCity===$('craftCity').value;const daily=$('craftDaily').value;const rates=craftingRates[daily]?.[match?'bonus':'other'];$('craftRateNoFocus').textContent=rates?(rates.No*100).toFixed(1)+'%':'—';$('craftRateWithFocus').textContent=rates?(rates.Yes*100).toFixed(1)+'%':'—';}
+ for(const el of document.querySelectorAll('#recipe .material')){const per=Number(el.dataset.qty),count=Math.max(1,Math.floor(q));el.querySelector('small').textContent='Required per craft: '+per+' · Total for '+count+' craft(s): '+(per*count)+(el.dataset.artifact==='yes'?' · no crafting resource return':'');el.querySelector('.material-quantity').textContent=(per*count).toLocaleString()+' required';}
  const mats=[...document.querySelectorAll('.material')];
  const isUnsupported=r===null;
  const pct=num('craftTax')/100,fee=num('craftFee'),revenue=num('sellPrice')*q*(1-pct);

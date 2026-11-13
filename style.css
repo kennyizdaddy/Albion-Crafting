@@ -70,3 +70,34 @@ footer{border-color:#39464b;color:#aab7bb}
 
 /* Keep four primary navigation tabs usable on narrow screens. */
 @media(max-width:750px){.top nav{gap:12px;flex-wrap:wrap}.top nav a{white-space:nowrap;padding:5px 0}}
+
+/* Gear crafting visual hierarchy — scoped to avoid changing refining or journal. */
+#crafting .craft-subhead{font-size:18px;margin:24px 0 15px;padding-top:16px;border-top:1px solid #514837;color:#f2d39a}
+#crafting .craft-city-banner{margin:16px 0 20px;padding:16px 18px;background:#242b2a;border:1px solid #7e6945;border-radius:12px}
+#crafting .craft-city-banner>span{display:block;font-size:11px;font-weight:800;letter-spacing:1.4px;color:#d8b979}
+#crafting .craft-city-banner>strong{display:block;font-size:clamp(23px,3vw,30px);margin-top:5px;color:#f4d69c}
+#crafting .craft-city-banner .hint{margin:3px 0 0}
+#crafting .focus-amount{padding:10px 13px 7px;margin:0 0 14px}
+#crafting .focus-amount label{margin-bottom:5px}
+#crafting .focus-amount input{padding:9px 11px;max-width:260px}
+#crafting .focus-amount .hint{margin:4px 0 0}
+#crafting .optional{font-weight:400;color:#c9bca5}
+#crafting .craft-return-card{padding:15px;background:#15212a;border:1px solid #62553e;border-radius:12px;margin-top:13px}
+#crafting .craft-return-card h4{margin:0 0 12px;font-size:16px;color:#f3e7d4}
+#crafting .craft-rate-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+#crafting .craft-rate-grid>div{padding:14px;background:#202c31;border:1px solid #514837;border-radius:10px}
+#crafting .craft-rate-grid small{display:block;font-size:12px;color:#b8c4c7}
+#crafting .craft-rate-grid strong{display:block;margin-top:6px;font-size:clamp(23px,3vw,30px);color:#f3d18e}
+#crafting .craft-advanced{margin:13px 0 4px;padding-top:10px}
+#crafting .craft-advanced summary{margin-bottom:7px;font-size:13px}
+#crafting .craft-return-card #craftRateNote{margin:7px 0 0;font-size:13px}
+#crafting .craft-panel-intro{color:#b8c4c7;line-height:1.5;font-size:13px}
+#crafting .craft-section-label{font-size:17px;margin:22px 0 10px;color:#f2d39a}
+#crafting .material{position:relative;padding:16px 0}
+#crafting .material>strong{font-size:17px;padding-right:118px;color:#f7f1e8}
+#crafting .material-quantity{position:absolute;right:0;top:14px;padding:7px 9px;border-radius:8px;background:#3b3325;border:1px solid #8e7346;color:#f3d18e;font-size:15px;font-weight:800}
+#crafting .material>small{font-size:13px;line-height:1.6;margin:9px 0;color:#d1d7d8}
+#crafting .results strong{font-size:clamp(21px,2.7vw,27px);color:#f4d28d}
+#crafting .results small{font-size:13px}
+#crafting #journalSaveCraft{width:100%;margin:3px 0 0;padding:15px;font-size:15px}
+@media(max-width:450px){#crafting .material>strong{padding-right:0;margin-bottom:8px}#crafting .material-quantity{position:static;display:inline-block;margin-bottom:4px}#crafting .craft-rate-grid>div{padding:10px}}
