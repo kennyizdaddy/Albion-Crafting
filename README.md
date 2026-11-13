@@ -119,3 +119,10 @@ IMAGE UPLOAD FIX: All four PNG files are at the website root. Upload all files f
 
 ## Gear Crafting visual polish
 Short banner using the original gear-crafting.png, subtle gold step headings, profit color emphasis, and input/save feedback. Calculator and Journal logic unchanged.
+
+
+### Artifact shopping list update
+- Bulk Crafting separates regular resources from artifacts, grouped by equipment name and tier (not enchantment).
+- Artifact quantities are calculated per recipe and batch, with no resource returns.
+- Artifact prices are always entered manually; market fetching only requests recognized ordinary resources.
+- Single Craft labels artifacts as `T4 Hallowfall Artifact` (for example). These are friendly shopping labels, **not verified in-game artifact item names**. Verify the actual artifact in Albion Online before buying.

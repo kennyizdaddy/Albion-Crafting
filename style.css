@@ -249,3 +249,8 @@ footer{border-color:#39464b;color:#aab7bb}
 @media(max-width:850px){.bulk-add-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.bulk-add-grid label:first-child{grid-column:1/-1}.bulk-row{grid-template-columns:minmax(120px,1fr) 70px 70px auto;gap:6px}.bulk-row .bulk-tier{display:none}}
 
 .bulk-price-input{width:120px;max-width:100%;padding:8px}.bulk-price-note{display:block;font-size:11px;color:#b6c5d2;margin-top:4px}.bulk-summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:18px 0}.bulk-summary>div{background:#22374a;border:1px solid #52677c;border-radius:10px;padding:14px}.bulk-summary small{display:block;color:#cad4df}.bulk-summary strong{display:block;color:#f2cd75;font-size:1.35rem;margin-top:6px}.bulk-market{margin-top:18px}.bulk-shopping .tablewrap{overflow-x:auto}.bulk-table{min-width:740px}@media(max-width:650px){.bulk-summary{grid-template-columns:1fr}}
+
+/* Artifact prices are manual and shown separately from standard resources. */
+.bulk-artifact-section{margin-top:20px;padding-top:14px;border-top:1px solid #53677a}
+.bulk-artifact-section h3{margin:0 0 6px;color:#edca77}
+.bulk-artifact-section[hidden]{display:none!important}
