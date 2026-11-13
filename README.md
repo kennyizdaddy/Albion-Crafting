@@ -102,3 +102,10 @@ Theme update: unified navigation, calculators, Journal, forms, cards and buttons
 - Gear Crafting and Refining now have their own top-level navigation tabs instead of a shared Calculators dropdown.
 - Item Database has been removed from visible navigation and homepage feature cards; its underlying item data and lookup code remain intact.
 - Journal and other features are unchanged.
+
+## Latest UI adjustment
+- Crafting station fee and sales tax fields are grouped inside a collapsed **Fees** disclosure in Gear Crafting. Field IDs and calculation behavior are unchanged.
+- Removed the explanatory paragraph below Save craft to My Journal. The live save-status message remains.
+
+
+Focus UI update: Focus Used selection and optional amount now share one compact inline row.

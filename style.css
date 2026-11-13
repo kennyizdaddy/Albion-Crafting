@@ -139,3 +139,21 @@ footer{border-color:#39464b;color:#aab7bb}
 #crafting .craft-material-panel .results small{font-size:11px}
 #crafting .craft-material-panel .results strong{font-size:21px;margin-top:5px}
 @media(max-width:450px){#crafting .craft-material-panel{padding:14px}#crafting .material>strong{padding-right:0}#crafting .material-quantity{position:static;margin:4px 0}#crafting .focus-amount .hint{flex-basis:100%}}
+
+/* Compact expandable fee controls */
+#crafting .craft-fees{margin:9px 0 4px;border:1px solid var(--border, #454545);border-radius:9px;padding:9px 12px}
+#crafting .craft-fees>summary{cursor:pointer;font-weight:650}
+#crafting .craft-fees .twocol{margin-top:12px}
+#crafting .craft-fees label{margin-bottom:4px}
+
+/* Inline focus selector: one compact row, without a full-width card. */
+#crafting .craft-focus-field{min-width:0;margin-bottom:16px}
+#crafting .craft-focus-field>label{display:block;margin:0 0 7px;font-size:13px}
+#crafting .craft-focus-inline{display:flex;align-items:flex-start;gap:8px;min-width:0}
+#crafting .craft-focus-inline>#craftFocus{flex:0 0 86px;width:86px;min-width:0;margin:0;padding:9px 8px;font-size:13px}
+#crafting .craft-focus-inline>.focus-amount{display:flex;flex:1 1 auto;min-width:0;align-items:center;gap:6px;padding:0;margin:0;background:transparent;border:0;border-radius:0;flex-wrap:wrap}
+#crafting .craft-focus-inline>.focus-amount[hidden]{display:none}
+#crafting .craft-focus-inline .focus-amount input{flex:0 0 102px;width:102px;max-width:102px;min-width:0;margin:0;padding:9px 7px;font-size:13px}
+#crafting .craft-focus-inline .focus-amount .hint{flex:1 1 100%;margin:0;font-size:10px;line-height:1.25}
+#crafting .sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:500px){#crafting .craft-focus-inline{flex-wrap:wrap}#crafting .craft-focus-inline>.focus-amount{flex:0 1 auto}}

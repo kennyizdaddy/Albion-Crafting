@@ -38,7 +38,7 @@ function recipe(){
   const isArtifact=!/^Tier \d+ (Plank|Bar|Cloth|Leather|Stone|Metal Bar)/i.test(m.name);
   const tier=$('craftTier').value,ench=$('enchant').value;
   const label=m.name.replace(/Tier 4/g,'Tier '+tier)+(isArtifact?'':'.'+ench);
-  d.innerHTML=`<strong></strong><small></small><div class="twocol"><label>Buy price / unit<input type="number" min="0" step="any" placeholder="Required" class="buyprice"></label>${isArtifact?'':`<label>Self-refined cost / unit<input type="number" min="0" step="any" placeholder="Required for comparison" class="refprice"></label>`}</div>${isArtifact?'':`<label>Source<select class="source"><option value="buy">Buy</option><option value="refine">Refine</option></select></label>`}`;
+  d.innerHTML=`<strong></strong><small></small><label>Material buy price / unit<input type="number" min="0" step="any" placeholder="Required" class="buyprice"></label>`;
   d.querySelector('strong').textContent=label;const qtyBadge=document.createElement('span');qtyBadge.className='material-quantity';d.insertBefore(qtyBadge,d.querySelector('small'));const meta=document.createElement('details');meta.className='material-details';const metaSummary=document.createElement('summary');metaSummary.textContent='Price details';meta.append(metaSummary);const stamp=document.createElement('span');stamp.className='market-stamp';stamp.textContent='Market price: not fetched';meta.append(stamp);const idLine=document.createElement('div');idLine.className='material-id';idLine.textContent='Market item ID: checking…';meta.append(idLine);d.append(meta);d.querySelector('small').textContent='Required per craft: '+m.qty+' · Total for '+Math.max(1,Math.floor(num('craftQty')||1))+' craft(s): '+(m.qty*Math.max(1,Math.floor(num('craftQty')||1)))+(isArtifact?' · no crafting resource return':'');
   qtyBadge.textContent=(m.qty*Math.max(1,Math.floor(num('craftQty')||1))).toLocaleString()+' required';d.dataset.materialName=m.name;d.dataset.qty=m.qty;d.dataset.artifact=isArtifact?'yes':'no';$('recipe').append(d)
  }
@@ -50,22 +50,20 @@ function craft(){
  const mats=[...document.querySelectorAll('.material')];
  const isUnsupported=r===null;
  const pct=num('craftTax')/100,fee=num('craftFee'),revenue=num('sellPrice')*q*(1-pct);
- const prices=el=>{const buy=el.querySelector('.buyprice').value,ref=el.querySelector('.refprice')?.value;return {buy:buy===''?null:Number(buy),ref:ref==null||ref===''?null:Number(ref)}};
- const sum=mode=>{
-  let total=fee;
-  for(const el of mats){const p=prices(el),artifact=el.dataset.artifact==='yes';const source=artifact?'buy':mode==='selected'?el.querySelector('.source').value:mode;
-   const price=p[source];if(price===null||!Number.isFinite(price)||price<0)return null;
-   total+=Number(el.dataset.qty)*q*price*(artifact?1:1-r);
-  }return total;
- };
- const selected=sum('selected'),allBuy=sum('buy'),allRef=sum('ref');
+ let selected=fee;
+ for(const el of mats){
+  const value=el.querySelector('.buyprice').value;
+  const price=value===''?null:Number(value);
+  if(price===null||!Number.isFinite(price)||price<0){selected=null;break}
+  const artifact=el.dataset.artifact==='yes';
+  selected+=Number(el.dataset.qty)*q*price*(artifact?1:1-r);
+ }
  const missing=[];if(isUnsupported)missing.push('return rate unavailable — enter a manual override or choose a supported daily bonus');
- if(selected===null)missing.push('enter prices for every material under Recipe & prices (the selected Buy or Refine price for each)');
+ if(selected===null)missing.push('enter a buy price for every required material');
  if(mats.some(el=>el.dataset.artifact==='yes'&&/Weapon-specific|artifact/i.test(el.querySelector('strong').textContent)))missing.push('verify artifact recipe against in-game item');
  $('craftWarning').textContent=missing.length?'Crafting cost unavailable: '+missing.join('; ')+'.':(num('sellPrice')<=0?'Crafting cost calculated. Selling price is optional and only needed for profit.':'Crafting cost and profit calculated. Estimates use expected returns.');
  const show=(id,val,needsSale=false)=>$(id).textContent=val===null||isUnsupported||(needsSale&&num('sellPrice')<=0)?'—':silver(val);
- show('craftCost',selected);show('craftProfit',selected===null?null:revenue-selected,true);
- show('allBuyProfit',allBuy===null?null:revenue-allBuy,true);show('allRefProfit',allRef===null?null:revenue-allRef,true);
+ show('craftCost',selected);show('craftUnitCost',selected===null?null:selected/q);show('craftProfit',selected===null?null:revenue-selected,true);
 }
 // Autofill the previous-tier input from the workbook recipe (Refining rows T3-T8):
 // each refined unit consumes 1 previous-tier unit and 2/2/3/4/5/5 raw units.
